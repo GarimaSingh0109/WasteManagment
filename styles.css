@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Light blue background */
+}
+
+header {
+    background-color: #00796b; /* Teal color */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #004d40; /* Darker teal */
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.upload, .classification, .disposal, .feedback {
+    margin-bottom: 30px;
+}
+
+.feature-card {
+    background-color: #a5d6a7; /* Light green */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    display: inline-block;
+    width: calc(33% - 20px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+}
+
+.feedback form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback input, .feedback textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+}
+
+#footer {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+#newsletter-form input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.social-media {
+    margin: 10px 0;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
