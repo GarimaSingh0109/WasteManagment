@@ -3,6 +3,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #e0f7fa; /* Light blue background */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #00796b; /* Dark background matching navbar */
+    color: #ffffff; /* Light text color */
 }
 
 header {
@@ -128,14 +134,11 @@ main {
 }
 
 .feature-card {
-    background-color: #a5d6a7;
-
-    /* Light green */
+    background-color: #a5d6a7; /* Light green */
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
     transition: transform 0.2s;
-
     display: inline-block;
     width: calc(33% - 20px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -180,8 +183,8 @@ main {
 }
 
 .feedback button {
-    background-color: #00796b;
-    color: white;
+    background-color: #00796b; /* Light mode button color (same as header) */
+    color: white; /* Text color for contrast */
     padding: 12px;
     border: none;
     border-radius: 5px;
@@ -193,7 +196,6 @@ main {
 .feedback button:hover {
     background-color: #004d40; /* Darker teal on hover */
 }
-
 
 #footer {
     background-color: #00796b;
@@ -217,4 +219,87 @@ main {
     color: white;
     margin: 0 10px;
     text-decoration: none;
+}
+
+.toggle-button {
+    background-color: #26a69a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.dark-mode header {
+    background-color: #1f1f1f; /* Darker header */
+}
+
+.dark-mode .hero {
+    background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+}
+
+.dark-mode .feature-card {
+    background-color: #00796b; /* Card color in dark mode */
+}
+
+.dark-mode .feedback {
+    background-color: #1f1f1f; /* Feedback section background */
+}
+
+.dark-mode .feedback button {
+    background-color: #1c1c1c; /* Dark mode button color (matches dark header) */
+    color: #ffffff; /* Light text color for contrast */
+}
+
+
+.moon-icon {
+    font-size: 30px; /* Adjust size of the moon icon */
+    margin-right: 8px; 
+    /* Match the header color */
+    color: white; /* Set the icon color to white for contrast */
+    border-radius: 50%; /* Optional: add rounded corners */
+    padding: 5px; /* Optional: add some padding */
+}
+
+
+body.dark-mode {
+    background-color: black; /* Dark background matching navbar */
+    color: white; /* Light text color */
+}
+
+#dark-mode-toggle {
+    background-color: #00796b; /* Match the navbar color */
+    color: white; /* White text for contrast */
+   
+    border: none;
+   
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+body.dark-mode #dark-mode-toggle {
+    background-color: #1c1c1c; /* Dark mode button color */
+    color: white; /* Keep text white */
+}
+  
+
+header.dark-mode {
+    background-color: #1c1c1c; /* Dark header background */
+}
+
+footer.dark-mode {
+    background-color: #1c1c1c; /* Dark footer background */
+}
+
+.feature-card.dark-mode {
+    background-color: #333; /* Dark feature cards */
+}
+
+.feedback.dark-mode {
+    background-color: #444; /* Dark feedback section */
 }
