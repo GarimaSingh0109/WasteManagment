@@ -57,6 +57,22 @@ main {
     transform: scale(1.05);
 }
 
+.feedback {
+    margin-bottom: 30px;
+    background-color: #ffffff; /* White background for better contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.feedback h2 {
+    text-align: center;
+    color: #00796b; /* Consistent color with the theme */
+    margin-bottom: 20px;
+}
+
 .feedback form {
     display: flex;
     flex-direction: column;
@@ -64,10 +80,32 @@ main {
 
 .feedback input, .feedback textarea {
     margin: 10px 0;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #00796b;
     border-radius: 5px;
+    font-size: 16px;
+    background-color: #e0f7fa; /* Matches the background theme */
 }
+
+.feedback textarea {
+    min-height: 100px; /* Larger space for feedback text */
+}
+
+.feedback button {
+    background-color: #00796b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
 
 #footer {
     background-color: #00796b;
