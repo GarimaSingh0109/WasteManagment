@@ -6,10 +6,18 @@ body {
 }
 
 header {
-    background-color: #00796b; /* Teal color */
+    background-color: #00796b;
+    /* Teal color */
     color: white;
     padding: 15px;
+    display: flex;
     text-align: center;
+    justify-content: space-between;
+}
+
+nav {
+    margin: auto;
+    margin-right: 0;
 }
 
 nav ul {
@@ -42,15 +50,30 @@ main {
     margin-bottom: 30px;
 }
 
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.features h2 {
+    text-align: center;
+    width: 100%;
+}
+
 .feature-card {
-    background-color: #a5d6a7; /* Light green */
+    background-color: #a5d6a7;
+
+    /* Light green */
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
     transition: transform 0.2s;
+
     display: inline-block;
     width: calc(33% - 20px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .feature-card:hover {
