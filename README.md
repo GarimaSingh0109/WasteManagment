@@ -2,7 +2,8 @@
   <h1> Waste Management</h1>
 </div>
 
-![Preview](image-1.png)
+![image](https://github.com/user-attachments/assets/29e2fcdd-dbe3-4618-a100-f0a2d0b8dc70)
+
 
 This website is a platform designed to help users manage the waste effectively and contribute to a cleaner, greener planet. It offers features such as image upload for waste classification, disposal information, real-time monitoring, eco-friendly tips, and community engagement opportunities.
 
