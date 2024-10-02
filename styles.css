@@ -366,3 +366,14 @@ footer.dark-mode {
 .feedback.dark-mode {
     background-color: #444; /* Dark feedback section */
 }
+
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #26a69a; 
+    z-index: 1001;
+}
