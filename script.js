@@ -22,6 +22,14 @@ uploadButton.addEventListener('click', () => {
     .catch(error => console.error(error));  
 });
 
+ feature/your-new-feature
+
+
+// Optional: Check the initial mode on page load
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    enableDarkMode();
+}
+ main
 
 // Feedback form validation
 const feedbackForm = document.getElementById('feedback-form');
@@ -97,6 +105,7 @@ newsletterForm.addEventListener('submit', (event) => {
     newsletterErrorMessage.textContent = '';
 
 
+ feature/your-new-feature
     if (!emailPattern.test(email)) {
         newsletterErrorMessage.textContent = 'Please enter a valid email address.';
     } else {
@@ -105,3 +114,6 @@ newsletterForm.addEventListener('submit', (event) => {
         newsletterForm.reset(); // Reset the form after successful submission
     }
 });
+
+
+ main
