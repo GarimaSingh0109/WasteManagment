@@ -41,3 +41,15 @@ themeSwitch.addEventListener('click', () => {
         localStorage.removeItem('dark-mode');
     }
 });
+
+// Function to update progress bar width based on scroll position
+function updateProgressBar() {
+    const scrollTop = window.scrollY; // How far you've scrolled
+    const windowHeight = document.body.scrollHeight - window.innerHeight; // Total scrollable height
+    const progressWidth = (scrollTop / windowHeight) * 100; // Calculate the progress as a percentage
+
+    document.getElementById('progress-bar').style.width = progressWidth + '%'; // Update the width of the progress bar
+}
+
+// Attach the update function to the scroll event
+window.addEventListener('scroll', updateProgressBar);
