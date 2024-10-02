@@ -276,6 +276,49 @@ main {
     transform: scale(1.05);
     cursor: pointer;
 }
+.faqs {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.faqs h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 1.4em;
+  color: #000000;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+  background-color:  #a5d6a7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: rgb(53, 53, 53);
+  border-radius: 5px;
+}
+
+.faq-item p {
+  font-size: 1em;
+  color: #555;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #a5d6a7;
+  border-radius: 5px;
+  display: none; /* Hide the answer initially */
+}
+
+.faq-item.active p {
+  display: block; /* Show the answer when the question is clicked */
+}
 
 /*eco-tips-features*/
 /*button*/
