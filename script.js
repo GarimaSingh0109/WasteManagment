@@ -28,6 +28,14 @@ themeSwitch.addEventListener('click', () => {
     }
 });
 
+  const faqItems = document.querySelectorAll('.faq-item h3');
+    
+    faqItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const parent = this.parentElement;
+            parent.classList.toggle('active');
+        });
+    });
 
 // Optional: Check the initial mode on page load
 if (localStorage.getItem('dark-mode') === 'enabled') {
