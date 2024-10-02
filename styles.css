@@ -377,3 +377,20 @@ footer.dark-mode {
     background-color: #26a69a; 
     z-index: 1001;
 }
+
+#newsletter-form button {
+    background-color: #00796b; /* Teal color to match the theme */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#newsletter-form button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
