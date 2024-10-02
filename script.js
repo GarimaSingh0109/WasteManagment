@@ -42,6 +42,7 @@ themeSwitch.addEventListener('click', () => {
     }
 });
 
+
 // Function to update progress bar width based on scroll position
 function updateProgressBar() {
     const scrollTop = window.scrollY; // How far you've scrolled
@@ -53,3 +54,17 @@ function updateProgressBar() {
 
 // Attach the update function to the scroll event
 window.addEventListener('scroll', updateProgressBar);
+
+
+window.onscroll = function() {
+  updateProgressBar();
+};
+
+function updateProgressBar() {
+  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrollPercent = (scrollTop / scrollHeight) * 100;
+  
+  document.getElementById("progress-bar").style.width = scrollPercent + "%";
+}
+

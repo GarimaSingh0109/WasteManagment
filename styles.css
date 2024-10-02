@@ -78,6 +78,11 @@ header {
     display: flex;
     text-align: center;
     justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav {
@@ -421,6 +426,19 @@ footer.dark-mode {
 .feedback.dark-mode {
     background-color: #444; /* Dark feedback section */
 }
+
+
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #26a69a; 
+    z-index: 1001;
+}
+
 
 #newsletter-form button {
     background-color: #00796b; /* Teal color to match the theme */
