@@ -1,15 +1,14 @@
-const darkModeToggle = document.getElementById('dark-mode-toggle');
+const themeSwitch = document.getElementById('theme-switch'); 
 const body = document.body;
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
-const icon = document.getElementById('icon');
 
 // Function to enable dark mode
 function enableDarkMode() {
     body.classList.add('dark-mode');
     header.classList.add('dark-mode');
     footer.classList.add('dark-mode');
-    icon.textContent = '☀️'; // Change icon to sun
+    themeSwitch.classList.add('dark-theme'); // Update the switch appearance
 }
 
 // Function to disable dark mode
@@ -17,11 +16,11 @@ function disableDarkMode() {
     body.classList.remove('dark-mode');
     header.classList.remove('dark-mode');
     footer.classList.remove('dark-mode');
-    icon.textContent = '🌙'; // Change icon to moon
+    themeSwitch.classList.remove('dark-theme'); // Update the switch appearance
 }
 
 // Event listener for dark mode toggle button
-darkModeToggle.addEventListener('click', () => {
+themeSwitch.addEventListener('click', () => {
     if (body.classList.contains('dark-mode')) {
         disableDarkMode(); // Switch to light mode
     } else {
@@ -35,7 +34,7 @@ if (localStorage.getItem('dark-mode') === 'enabled') {
 }
 
 // Save the mode in local storage
-darkModeToggle.addEventListener('click', () => {
+themeSwitch.addEventListener('click', () => {
     if (body.classList.contains('dark-mode')) {
         localStorage.setItem('dark-mode', 'enabled');
     } else {
