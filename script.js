@@ -28,6 +28,7 @@ themeSwitch.addEventListener('click', () => {
     }
 });
 
+
 // Optional: Check the initial mode on page load
 if (localStorage.getItem('dark-mode') === 'enabled') {
     enableDarkMode();
@@ -67,4 +68,5 @@ function updateProgressBar() {
   
   document.getElementById("progress-bar").style.width = scrollPercent + "%";
 }
+
 
