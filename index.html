@@ -37,12 +37,21 @@
         </div>
     </section>
 
-    <main>
-        <section class="upload" id="upload">
-            <h2>Upload Image</h2>
-            <input type="file" id="image-input" accept="image/*">
-            <button id="upload-button">Upload</button>
-        </section>
+    <main><br>
+      <section class="upload" id="upload">
+    <div class="upload-container">
+        <div class="upload-text">
+            <h2> Upload Your Files Here </h2><br>
+            <label for="image-input" class="custom-file-upload">
+                <input type="file" id="image-input" accept="image/*" hidden>
+                <span> Select Image </span>
+            </label>
+        </div>
+        <div class="upload-submit">
+            <button id="upload-button"> Submit </button>
+        </div>
+    </div>
+</section>
         
         <section class="classification">
             <h2>Classification</h2>
