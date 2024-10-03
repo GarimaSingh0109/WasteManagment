@@ -32,7 +32,14 @@ body {
     background-color: #e0f7fa; /* Light blue background */
     transition: background-color 0.3s, color 0.3s;
 }
+body::-webkit-scrollbar{
+  width:8px ;
+}
 
+body::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background:rgb(34, 236, 135);
+}
 .dark-mode {
     background-color: #00796b; /* Dark background matching navbar */
     color: #ffffff; /* Light text color */
@@ -865,10 +872,14 @@ blockquote {
 
 #newsletter-form input {
     margin: 10px 0;
+    
     padding: 10px;
     border: 1px solid #fff;
     border-radius: 5px;
 }
+#newsletter-form input:focus {
+   outline: none;
+} 
 
 .social-media {
     margin: 10px 0;
