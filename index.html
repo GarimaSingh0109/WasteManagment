@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management</title>
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div id="progress-bar"></div>
+
+    <header>
+        <h1>Waste Management</h1>
+        <nav>
+            <ul>
+                <li><a href="#upload">Upload</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#footer">Contact</a></li>
+                <li class="theme-switch" id="theme-switch"></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Manage Your Waste Effectively</h2>
+            <p>Join us in making a cleaner, greener planet.</p>
+            <a href="#features" class="hero-btn">Explore Features</a>
+        </div>
+    </section>
+
+    <main><br>
+      <section class="upload" id="upload">
+    <div class="upload-container">
+        <div class="upload-text">
+            <h2> Upload Your Files Here </h2><br>
+            <label for="image-input" class="custom-file-upload">
+                <input type="file" id="image-input" accept="image/*" hidden>
+                <span> Select Image </span>
+            </label>
+        </div>
+        <div class="upload-submit">
+            <button id="upload-button"> Submit </button>
+        </div>
+    </div>
+</section>
+        
+        <section class="classification">
+            <h2>Classification</h2>
+            <p id="classification-result"></p>
+        </section>
+        
+        <section class="disposal">
+            <h2>Disposal Information</h2>
+            <p id="disposal-information"></p>
+        </section>
+<section class="classification-info" id="classification-info">
+            <h2> Waste Classification</h2>
+                       
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span>Biodegradable Waste</span>
+                        </div>
+                        <div class="card-back">
+                            <h3>Biodegradable Waste</h3>
+                            <p>These wastes come from our kitchen and include food remains, garden waste, etc. They can be composted to obtain manure and decompose over time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span>Non-Biodegradable Waste</span>
+                        </div>
+                        <div class="card-back">
+                            <h3>Non-Biodegradable Waste</h3>
+                            <p>This type includes old newspapers, broken glass, plastics, etc. They do not decompose and are major pollutants but can be recycled and reused.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <h2>Our Features</h2>
+            <div class="feature-card">
+                <h3>Real-time Monitoring</h3>
+                <p>Track your waste management activities in real-time.</p>
+            </div>
+            <div class="feature-card" id="eco-friendly">
+                <h3>Eco-Friendly Tips</h3>
+    <blockquote id="eco-fact">Do you know <span id="fact-highlight">only 9% of plastic ever produced has been recycled?</span></blockquote>
+    <p>
+      Be <span class="highlight">Eco-savvy</span> by embracing simple, comprehensive, and quick solutions from the comfort of your home. 
+      Contribute in managing the overwhelming burden of waste generation. Get personalized tips to manage waste sustainably and 
+      <strong>be the change you want to see in the world!</strong>.
+    </p>
+    <a href="ecotips.html" id="eco-tips" class="cta-button">I'm in!</a>
+                
+            </div>
+            <div class="feature-card">
+                <h3>Community Engagement</h3>
+                <p>Join community efforts to promote waste management.</p>
+            </div>
+        </section>
+
+
+        <section class="feedback" id="feedback">
+            <h2>Your Feedback</h2>
+            <form id="feedback-form">
+                <input type="text" placeholder="Your Name" required>
+                <textarea placeholder="Your Feedback" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <h2>Stay Connected</h2>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        
+        <!-- Community and Sustainability Section -->
+        <div class="community-message">
+            <h3>Our Commitment to Sustainability</h3>
+            <p>At Waste Management, we are dedicated to building a greener future. Through our community recycling programs and sustainability initiatives, we strive to reduce waste and protect the environment for generations to come. Join us in our mission to create a cleaner, healthier planet.</p>
+        </div>
+    
+        <p>&copy; 2024 Waste Management. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
