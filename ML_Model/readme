@@ -2,3 +2,5 @@ This dataset contains waste image dataset .Its Kaggle link -
 1)https://www.kaggle.com/datasets/gufranamu/waste-dataset/code?datasetId=5065184&sortBy=dateRun&tab=profile&excludeNonAccessedDatasources=false
 this can be used to count categories of waste in photo or video
 2)https://www.kaggle.com/datasets/abhaynb/precious-metal-content-in-e-waste/code
+b-n ml model is for biodegradable and non biodegradable waste distinguisher .
+e-waste model is for understand price of electronic goods thrown away along with elements composition.
