@@ -121,6 +121,85 @@ main {
     margin-bottom: 30px;
 }
 
+
+/* Styling for the upload section */
+.upload {
+    background-color: #f5f9ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Container to hold the two rows */
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    gap: 15px;
+}
+
+/* Text section styling */
+.upload-text h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin: 0;
+}
+
+/* Custom file input styling */
+.custom-file-upload {
+    background-color: #44bf49;
+    color: white;
+    padding: 9px; /* Adjusted for better height control */
+    height: 50px; /* Set specific height */
+    width: 95%; /* Set width to 60% */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex; /* Allows centering of text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-top: 10px;
+}
+
+/* Hidden input field */
+.custom-file-upload input {
+    display: none;
+}
+
+/* Hover effect for file upload button */
+.custom-file-upload:hover {
+    background-color: #3a873d;
+}
+
+/* Submit button styling */
+.upload-submit #upload-button {
+    background-color: #007bff;
+    color: white;
+     height: 40px; /* Set specific height */
+    /*width: 95%; */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Hover effect for submit button */
+.upload-submit #upload-button:hover {
+    background-color: #0056b3;
+}
+
+
 .features {
     display: flex;
     flex-wrap: wrap;
