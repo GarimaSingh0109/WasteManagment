@@ -1,46 +1,272 @@
+
+/* Progress Bar Container */
+#progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9px;
+    z-index: 99990;
+}
+
+/* Progress Bar Styling */
+#progress-bar {
+    height: 53%;
+    width: 0;
+    background: linear-gradient(90deg, rgb(38, 166, 154) 0%, rgb(102, 187, 106) 50%, rgb(76, 175, 80) 100%); /* Light theme with teal/green */
+    box-shadow: 0 0 4px rgba(38, 166, 154, 0.7), 0 0 10px rgba(76, 175, 80, 0.7);
+    transition: width 0.09s ease-in-out;
+    border-radius: 10px;
+}
+
+/* Dark Mode Progress Bar */
+.dark-mode #progress-bar {
+    background: linear-gradient(90deg, rgb(0, 204, 204) 0%, rgb(153, 255, 255) 50%, rgb(0, 150, 150) 100%); /* Dark mode */
+    box-shadow: 0 0 4px rgba(0, 204, 204, 0.7), 0 0 10px #009696b3;
+}
+
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #e0f7fa; /* Light blue background */
 }
 
+
 header {
     background-color: #00796b; /* Teal color */
     color: white;
     padding: 15px;
+    display: flex;
     text-align: center;
+    justify-content: space-between;
+ feature/your-new-feature
+
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+ main
 }
+
+
+nav {
+    margin: auto;
+    margin-right: 0;
+}
+
 
 nav ul {
     list-style-type: none;
     padding: 0;
 }
 
+
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
+
 
 nav ul li a {
     color: white;
     text-decoration: none;
 }
 
+
 .hero {
-    background-color: #004d40; /* Darker teal */
+    background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
     color: white;
-    padding: 40px;
+    padding: 80px 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
 }
+
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+
+.hero-btn {
+    background-color: #26a69a;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.hero-btn:hover {
+    background-color: #004d40;
+}
+
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+   
+    .hero p {
+        font-size: 1rem;
+    }
+   
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+   
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+
+    .hero-btn {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+}
+
 
 main {
     padding: 20px;
 }
 
+
 .upload, .classification, .disposal, .feedback {
     margin-bottom: 30px;
 }
+
+
+
+/* Styling for the upload section */
+.upload {
+    background-color: #f5f9ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Container to hold the two rows */
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    gap: 15px;
+}
+
+/* Text section styling */
+.upload-text h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin: 0;
+}
+
+/* Custom file input styling */
+.custom-file-upload {
+    background-color: #44bf49;
+    color: white;
+    padding: 9px; /* Adjusted for better height control */
+    height: 50px; /* Set specific height */
+    width: 95%; /* Set width to 60% */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex; /* Allows centering of text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-top: 10px;
+}
+
+/* Hidden input field */
+.custom-file-upload input {
+    display: none;
+}
+
+/* Hover effect for file upload button */
+.custom-file-upload:hover {
+    background-color: #3a873d;
+}
+
+/* Submit button styling */
+.upload-submit #upload-button {
+    background-color: #007bff;
+    color: white;
+     height: 40px; /* Set specific height */
+    /*width: 95%; */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Hover effect for submit button */
+.upload-submit #upload-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+
+.features h2 {
+    text-align: center;
+    width: 100%;
+}
+
 
 .feature-card {
     background-color: #a5d6a7; /* Light green */
@@ -50,24 +276,524 @@ main {
     transition: transform 0.2s;
     display: inline-block;
     width: calc(33% - 20px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .feature-card:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
+
+/*eco-tips-features*/
+/*button*/
+#eco-friendly{
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+ #eco-friendly #eco-tips{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+ #eco-friendly #eco-tips:hover{
+  background: none;
+  background-image: linear-gradient(
+    to right,
+    #006D77,
+    #EDF6F9
+  );
+  animation: pulsate 1s ease-in-out;
+  
+}
+.eco-friendly-content h3 {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #333;
+  background-color: #c8e6c9;
+  padding: 1rem;
+  border-left: 4px solid #43a047;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+#fact-highlight {
+  font-weight: bold;
+  color: #e53935;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.eco-friendly-content p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/*Ecoblog Page*/
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #EDF6F9;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  .hero-text {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .hero-text h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #006D77;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .hero-image {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  #eco-tips-container {
+    /* position: relative; */
+    overflow: hidden;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 5.2rem auto;
+    border-top: 4px solid #006D77;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+
+.eco-tips-header {
+  background-color: #EDF6F9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  font-family: 'Arial', sans-serif;
+}
+
+.eco-tips-header h3 {
+  color: #006D77; 
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.eco-tips-header p {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.eco-tips-header p span {
+  color: #83C5BE; 
+  font-weight: bold;
+}
+
+.eco-tips-header em {
+  color: #E29578; 
+  font-size: 1.1rem;
+  font-style: normal;
+  display: block;
+  margin-top: 1.5rem;
+  background-color: #006D77;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+
+#eco-tips-container {
+  padding: 2rem;
+  background-color: #EDF6F9;  
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 3.4rem auto;
+  position: relative;
+}
+
+.slider-control {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #006D77; 
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+#prev-slide {
+  left: 10px;
+}
+
+#next-slide {
+  right: 10px;
+}
+
+/* Eco Tips Slider Content */
+.eco-tips-slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; 
+}
+
+.eco-tips-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out; 
+  width: 100%;
+}
+
+.eco-tip {
+  min-width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  /* background-color: #FFDDD2;  */
+  border-radius: 10px;
+  text-align: center;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
+}
+
+.eco-tip h3 {
+  color: #006D77; 
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.eco-tip p {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+ feature/your-new-feature
+
+.eco-tip img, .eco-tip video {
+  max-width: 90%;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+  .fa-chevron-left, .fa-chevron-right {
+    font-size: 2rem;
+    color: #E29578;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .fa-chevron-left:hover, .fa-chevron-right:hover {
+    color: #006D77;
+  }
+
+  /*Eco-blog-cards*/
+  .eco-blogs{
+    margin: 5rem 2.4rem 2.4rem 5rem;
+    padding: 2.4rem;
+
+  }
+  .blogs-section-title {
+    text-align: center;
+    font-size: 2.5rem;
+   
+    color: #006D77;
+    font-weight: 600;
+  }
+  
+  .eco-blogs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-top: 4.4rem;
+    margin: 3.1rem;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-top: 4px solid #006D77;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+  
+  .eco-blogs-card {
+    border-radius: 10px;
+    border: 2px solid #83C5BE;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .eco-blogs-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 24px 15px #006D77;
+    cursor: pointer;
+    background-color: #006D77;
+  }
+  .card-header {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+  } 
+  .card-content {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .card-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    color: #83C5BE;
+    margin-bottom: 20px;
+  }
+  
+  .read-more {
+    text-decoration: none;
+    color: #28a745;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+  }
+  
+  .read-more:hover {
+    border-bottom: 2px solid #28a745;
+  }
+  
+/* Responsive media query */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin: 0;
+  }
+
+  .hero-image {
+    margin-top: 20px;
+  }
+  .eco-friendly-tips {
+    padding: 1.5rem;
+  }
+
+  .eco-friendly-content h3 {
+    font-size: 1.75rem;
+  }
+
+  blockquote {
+    font-size: 1.1rem;
+  }
+
+  .eco-friendly-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  .eco-tips-header {
+    padding: 1.5rem;
+  }
+
+  .eco-tips-header h3 {
+    font-size: 1.8rem;
+  }
+
+  .eco-tips-header p {
+    font-size: 1rem;
+  }
+
+  .eco-tips-header em {
+    font-size: 1rem;
+  }
+  .eco-tip h3 {
+    font-size: 1.5rem;
+  }
+  .eco-tip p {
+    font-size: 1rem;
+  }
+
+  .slider-control {
+    font-size: 1.8rem;
+  }
+
+  .card-header {
+    height: 150px;
+  }
+
+  .card-content h4 {
+    font-size: 1.3rem;
+  }
+
+  .card-content p {
+    font-size: 0.9rem;
+  }
+  .eco-tip h3 {
+    font-size: 1.5rem;
+  }
+  
+  .eco-tip p {
+    font-size: 0.9rem;
+  }
+
+  .fa-chevron-left, .fa-chevron-right {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .eco-tips-header {
+    padding: 1rem;
+  }
+  .eco-tip h3 {
+    font-size: 1.3rem;
+  }
+  .eco-tip p {
+    font-size: 0.9rem;
+  }
+
+  .slider-control {
+    font-size: 1.5rem;
+  }
+
+  .eco-tips-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .eco-tips-header p {
+    font-size: 0.9rem;
+  }
+
+  .eco-tips-header em {
+    font-size: 0.9rem;
+  }
+  .card-header {
+    height: 120px;
+  }
+
+  .card-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .card-content p {
+    font-size: 0.85rem;
+  }
+}
+
+
+/*End of ECO-FRIENDLY TIPS Styling*/
+
+ main
+
+.feedback {
+    margin-bottom: 30px;
+    background-color: #ffffff; /* White background for better contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.feedback h2 {
+    text-align: center;
+    color: #00796b; /* Consistent color with the theme */
+    margin-bottom: 20px;
+}
+
 
 .feedback form {
     display: flex;
     flex-direction: column;
 }
 
+
 .feedback input, .feedback textarea {
     margin: 10px 0;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #00796b;
     border-radius: 5px;
+    font-size: 16px;
+    background-color: #e0f7fa; /* Matches the background theme */
 }
+
+
+.feedback textarea {
+    min-height: 100px; /* Larger space for feedback text */
+}
+
+
+.feedback button {
+    background-color: #00796b;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.feedback button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
 
 #footer {
     background-color: #00796b;
@@ -76,6 +802,7 @@ main {
     padding: 20px;
 }
 
+
 #newsletter-form input {
     margin: 10px 0;
     padding: 10px;
@@ -83,9 +810,11 @@ main {
     border-radius: 5px;
 }
 
+
 .social-media {
     margin: 10px 0;
 }
+
 
 .social-media a {
     color: white;
@@ -136,5 +865,26 @@ main {
 
 .signup button:hover {
     background-color: #005f46;
+
+
+#newsletter-form button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.logo{
+  position: absolute;
+  left: 83px;
+  font-size: 35px;
+  color: #ffffff;
+  font-weight: bold;
+  img{
+      position: absolute;
+   top: -15px;
+   left: -77px;
+   width: 80px; 
+   height: 80px; 
+  
+  }
 }
 
