@@ -1,3 +1,4 @@
+
 /* Progress Bar Container */
 #progress-container {
     position: fixed;
@@ -21,8 +22,9 @@
 /* Dark Mode Progress Bar */
 .dark-mode #progress-bar {
     background: linear-gradient(90deg, rgb(0, 204, 204) 0%, rgb(153, 255, 255) 50%, rgb(0, 150, 150) 100%); /* Dark mode */
-    box-shadow: 0 0 4px rgba(0, 204, 204, 0.7), 0 0 10px rgba(0, 150, 150, 0.7);
+    box-shadow: 0 0 4px rgba(0, 204, 204, 0.7), 0 0 10px #009696b3;
 }
+
 
 
 body {
@@ -30,47 +32,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #e0f7fa; /* Light blue background */
-    transition: background-color 0.3s, color 0.3s;
 }
 
-.dark-mode {
-    background-color: #00796b; /* Dark background matching navbar */
-    color: #ffffff; /* Light text color */
-}
-.theme-switch {
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-    border-radius: 30px;
-    background: linear-gradient(82deg, #ffffff, #00796b);
-    position: relative;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    vertical-align: middle;
-}
 
-.theme-switch::before {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: left 0.3s ease-in-out, background-image 0.3s ease-in-out;
-    background-image: url('assets/moon.png'); 
-}
-
-.theme-switch.dark-theme {
-    background: linear-gradient(82deg, #ffffff, #1f1f1f);
-}
-
-.theme-switch.dark-theme::before {
-    left: 33px;
-    background-image: url('assets/sun.png');
-}
 header {
     background-color: #00796b; /* Teal color */
     color: white;
@@ -78,6 +42,8 @@ header {
     display: flex;
     text-align: center;
     justify-content: space-between;
+ feature/your-new-feature
+
 
     position: sticky;
     top: 0;
@@ -88,27 +54,33 @@ header {
     width: 100%;
     z-index: 1000;
 
+ main
 }
+
 
 nav {
     margin: auto;
     margin-right: 0;
 }
 
+
 nav ul {
     list-style-type: none;
     padding: 0;
 }
+
 
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
 
+
 nav ul li a {
     color: white;
     text-decoration: none;
 }
+
 
 .hero {
     background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
@@ -122,17 +94,20 @@ nav ul li a {
     height: 55vh;
 }
 
+
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 30px;
     max-width: 600px;
 }
+
 
 .hero-btn {
     background-color: #26a69a;
@@ -145,37 +120,42 @@ nav ul li a {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+
 .hero-btn:hover {
     background-color: #004d40;
 }
+
 
 @media (max-width: 768px) {
     .hero h2 {
         font-size: 2rem;
     }
-    
+   
     .hero p {
         font-size: 1rem;
     }
-    
+   
     .hero-btn {
         padding: 10px 20px;
         font-size: 1rem;
     }
 }
 
+
 @media (max-width: 480px) {
     .hero {
         padding: 60px 15px;
     }
 
+
     .hero h2 {
         font-size: 1.8rem;
     }
-    
+   
     .hero p {
         font-size: 0.9rem;
     }
+
 
     .hero-btn {
         padding: 8px 18px;
@@ -183,13 +163,96 @@ nav ul li a {
     }
 }
 
+
 main {
     padding: 20px;
 }
 
+
 .upload, .classification, .disposal, .feedback {
     margin-bottom: 30px;
 }
+
+
+
+/* Styling for the upload section */
+.upload {
+    background-color: #f5f9ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Container to hold the two rows */
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    gap: 15px;
+}
+
+/* Text section styling */
+.upload-text h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin: 0;
+}
+
+/* Custom file input styling */
+.custom-file-upload {
+    background-color: #44bf49;
+    color: white;
+    padding: 9px; /* Adjusted for better height control */
+    height: 50px; /* Set specific height */
+    width: 95%; /* Set width to 60% */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex; /* Allows centering of text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-top: 10px;
+}
+
+/* Hidden input field */
+.custom-file-upload input {
+    display: none;
+}
+
+/* Hover effect for file upload button */
+.custom-file-upload:hover {
+    background-color: #3a873d;
+}
+
+/* Submit button styling */
+.upload-submit #upload-button {
+    background-color: #007bff;
+    color: white;
+     height: 40px; /* Set specific height */
+    /*width: 95%; */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Hover effect for submit button */
+.upload-submit #upload-button:hover {
+    background-color: #0056b3;
+}
+
+
 
 .features {
     display: flex;
@@ -197,69 +260,13 @@ main {
     justify-content: center;
     margin-bottom: 5px;
 }
-.classification-info h2{
-    text-align: center;
-}
-.card-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
 
-.card {
-    width: 45%;
-    height: 300px;
-    perspective: 1000px;
-    margin: 10px;
-}
-
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.card-front {
-    background-color: #a5d6a7;
-    color: black;
-}
-
-.card-back {
-    background-color: #f9f9f9;
-    color: #333;
-    transform: rotateY(180deg);
-    padding: 10px;
-    text-align: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-}
-
-.card:hover .card-inner {
-    transform: rotateY(180deg);
-}
 
 .features h2 {
     text-align: center;
     width: 100%;
 }
+
 
 .feature-card {
     background-color: #a5d6a7; /* Light green */
@@ -271,6 +278,7 @@ main {
     width: calc(33% - 20px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .feature-card:hover {
     transform: scale(1.05);
@@ -548,6 +556,8 @@ blockquote {
   margin-bottom: 1.5rem;
 }
 
+ feature/your-new-feature
+
 .eco-tip img, .eco-tip video {
   max-width: 90%;
   border-radius: 8px;
@@ -770,6 +780,7 @@ blockquote {
 
 /*End of ECO-FRIENDLY TIPS Styling*/
 
+ main
 
 .feedback {
     margin-bottom: 30px;
@@ -781,16 +792,19 @@ blockquote {
     margin: 0 auto;
 }
 
+
 .feedback h2 {
     text-align: center;
     color: #00796b; /* Consistent color with the theme */
     margin-bottom: 20px;
 }
 
+
 .feedback form {
     display: flex;
     flex-direction: column;
 }
+
 
 .feedback input, .feedback textarea {
     margin: 10px 0;
@@ -801,13 +815,15 @@ blockquote {
     background-color: #e0f7fa; /* Matches the background theme */
 }
 
+
 .feedback textarea {
     min-height: 100px; /* Larger space for feedback text */
 }
 
+
 .feedback button {
-    background-color: #00796b; /* Light mode button color (same as header) */
-    color: white; /* Text color for contrast */
+    background-color: #00796b;
+    color: white;
     padding: 12px;
     border: none;
     border-radius: 5px;
@@ -816,9 +832,11 @@ blockquote {
     transition: background-color 0.3s ease;
 }
 
+
 .feedback button:hover {
     background-color: #004d40; /* Darker teal on hover */
 }
+
 
 #footer {
     background-color: #00796b;
@@ -827,6 +845,7 @@ blockquote {
     padding: 20px;
 }
 
+
 #newsletter-form input {
     margin: 10px 0;
     padding: 10px;
@@ -834,9 +853,11 @@ blockquote {
     border-radius: 5px;
 }
 
+
 .social-media {
     margin: 10px 0;
 }
+
 
 .social-media a {
     color: white;
@@ -844,115 +865,26 @@ blockquote {
     text-decoration: none;
 }
 
-.toggle-button {
-    background-color: #26a69a;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-
-
-.dark-mode header {
-    background-color: #1f1f1f; /* Darker header */
-}
-
-.dark-mode .hero {
-    background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
-}
-
-.dark-mode .feature-card {
-    background-color: #00796b; /* Card color in dark mode */
-}
-
-.dark-mode .feedback {
-    background-color: #1f1f1f; /* Feedback section background */
-}
-
-.dark-mode .feedback button {
-    background-color: #1c1c1c; /* Dark mode button color (matches dark header) */
-    color: #ffffff; /* Light text color for contrast */
-}
-
-
-.moon-icon {
-    font-size: 30px; /* Adjust size of the moon icon */
-    margin-right: 8px; 
-    /* Match the header color */
-    color: white; /* Set the icon color to white for contrast */
-    border-radius: 50%; /* Optional: add rounded corners */
-    padding: 5px; /* Optional: add some padding */
-}
-
-
-body.dark-mode {
-    background-color: black; /* Dark background matching navbar */
-    color: white; /* Light text color */
-}
-
-#dark-mode-toggle {
-    background-color: #00796b; /* Match the navbar color */
-    color: white; /* White text for contrast */
-   
-    border: none;
-   
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-
-
-body.dark-mode #dark-mode-toggle {
-    background-color: #1c1c1c; /* Dark mode button color */
-    color: white; /* Keep text white */
-}
-  
-
-header.dark-mode {
-    background-color: #1c1c1c; /* Dark header background */
-}
-
-footer.dark-mode {
-    background-color: #1c1c1c; /* Dark footer background */
-}
-
-.feature-card.dark-mode {
-    background-color: #333; /* Dark feature cards */
-}
-
-.feedback.dark-mode {
-    background-color: #444; /* Dark feedback section */
-}
-
-
-
-#progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 5px;
-    background-color: #26a69a; 
-    z-index: 1001;
-}
-
-
-#newsletter-form button {
-    background-color: #00796b; /* Teal color to match the theme */
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 #newsletter-form button:hover {
     background-color: #004d40; /* Darker teal on hover */
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
+
+.logo{
+  position: absolute;
+  left: 83px;
+  font-size: 35px;
+  color: #ffffff;
+  font-weight: bold;
+  img{
+      position: absolute;
+   top: -15px;
+   left: -77px;
+   width: 80px; 
+   height: 80px; 
+  
+  }
+}
+
