@@ -10,7 +10,12 @@
 </head>
 <body>
     <header>
-        <h1>Waste Management</h1>
+        
+        <a href="#" class="logo">
+            <img src="logo.png" >
+            Waste Management
+          </a>
+
         <nav>
             <ul>
                 <li><a href="#upload">Upload</a></li>
@@ -37,6 +42,24 @@
             <button id="upload-button">Upload</button>
         </section>
        
+
+    <main><br>
+      <section class="upload" id="upload">
+    <div class="upload-container">
+        <div class="upload-text">
+            <h2> Upload Your Files Here </h2><br>
+            <label for="image-input" class="custom-file-upload">
+                <input type="file" id="image-input" accept="image/*" hidden>
+                <span> Select Image </span>
+            </label>
+        </div>
+        <div class="upload-submit">
+            <button id="upload-button"> Submit </button>
+        </div>
+    </div>
+</section>
+        
+
         <section class="classification">
             <h2>Classification</h2>
             <p id="classification-result"></p>
