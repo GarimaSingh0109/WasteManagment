@@ -1,364 +1,378 @@
 /* Progress Bar Container */
 #progress-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 9px;
-    z-index: 99990;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 9px;
+  z-index: 99990;
 }
 
 /* Progress Bar Styling */
 #progress-bar {
-    height: 53%;
-    width: 0;
-    background: linear-gradient(90deg, rgb(38, 166, 154) 0%, rgb(102, 187, 106) 50%, rgb(76, 175, 80) 100%); /* Light theme with teal/green */
-    box-shadow: 0 0 4px rgba(38, 166, 154, 0.7), 0 0 10px rgba(76, 175, 80, 0.7);
-    transition: width 0.09s ease-in-out;
-    border-radius: 10px;
+  height: 9px;
+  /* Changed from 53% to 9px */
+  width: 0;
+  background: linear-gradient(90deg, rgb(38, 166, 154) 0%, rgb(102, 187, 106) 50%, rgb(76, 175, 80) 100%);
+  box-shadow: 0 0 4px rgba(38, 166, 154, 0.7), 0 0 10px rgba(76, 175, 80, 0.7);
+  transition: width 0.09s ease-in-out;
+  border-radius: 10px;
 }
 
 /* Dark Mode Progress Bar */
 .dark-mode #progress-bar {
-    background: linear-gradient(90deg, rgb(0, 204, 204) 0%, rgb(153, 255, 255) 50%, rgb(0, 150, 150) 100%); /* Dark mode */
-    box-shadow: 0 0 4px rgba(0, 204, 204, 0.7), 0 0 10px rgba(0, 150, 150, 0.7);
+  background: linear-gradient(90deg, rgb(0, 204, 204) 0%, rgb(153, 255, 255) 50%, rgb(0, 150, 150) 100%);
+  box-shadow: 0 0 4px rgba(0, 204, 204, 0.7), 0 0 10px rgba(0, 150, 150, 0.7);
 }
 
-
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e0f7fa; /* Light blue background */
-    transition: background-color 0.3s, color 0.3s;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f7fa;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .dark-mode {
-    background-color: #00796b; /* Dark background matching navbar */
-    color: #ffffff; /* Light text color */
+  background-color: #00796b;
+  color: #ffffff;
 }
+
 .theme-switch {
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-    border-radius: 30px;
-    background: linear-gradient(82deg, #ffffff, #00796b);
-    position: relative;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    vertical-align: middle;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background: linear-gradient(82deg, #ffffff, #00796b);
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  vertical-align: middle;
 }
 
 .theme-switch::before {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: left 0.3s ease-in-out, background-image 0.3s ease-in-out;
-    background-image: url('assets/moon.png'); 
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: left 0.3s ease-in-out, background-image 0.3s ease-in-out;
+  background-image: url('assets/moon.png');
 }
 
 .theme-switch.dark-theme {
-    background: linear-gradient(82deg, #ffffff, #1f1f1f);
+  background: linear-gradient(82deg, #ffffff, #1f1f1f);
 }
 
 .theme-switch.dark-theme::before {
-    left: 33px;
-    background-image: url('assets/sun.png');
+  left: 33px;
+  background-image: url('assets/sun.png');
 }
+
 header {
-    background-color: #00796b; /* Teal color */
-    color: white;
-    padding: 15px;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-
-    position: sticky;
-    top: 0;
-    z-index: 999;
-
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-
+  background-color: #00796b;
+  color: white;
+  padding: 15px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
 }
 
 nav {
-    margin: auto;
-    margin-right: 0;
+  margin: auto;
+  margin-right: 0;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+  display: inline;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #e0f7fa; /* Change text color on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Optional: add background on hover */
+  border-radius: 5px; /* Optional: round corners */
 }
 
 .hero {
-    background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 55vh;
+  background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('./assets/header.jpg') center/cover no-repeat;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 55vh;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 600px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
 }
 
 .hero-btn {
-    background-color: #26a69a;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #26a69a;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero-btn:hover {
-    background-color: #004d40;
+  background-color: #004d40;
 }
 
 @media (max-width: 768px) {
-    .hero h2 {
-        font-size: 2rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-    
-    .hero-btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .hero {
-        padding: 60px 15px;
-    }
+  .hero {
+    padding: 60px 15px;
+  }
 
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-    
-    .hero p {
-        font-size: 0.9rem;
-    }
+  .hero h2 {
+    font-size: 1.8rem;
+  }
 
-    .hero-btn {
-        padding: 8px 18px;
-        font-size: 0.9rem;
-    }
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
 }
 
 main {
-    padding: 20px;
+  padding: 20px;
 }
 
-.upload, .classification, .disposal, .feedback {
-    margin-bottom: 30px;
+.upload,
+.classification,
+.disposal,
+.feedback {
+  margin-bottom: 30px;
 }
-
 
 /* Styling for the upload section */
 .upload {
-    background-color: #f5f9ff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  background-color: #f5f9ff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* Container to hold the two rows */
 .upload-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center items horizontally */
+  gap: 15px;
 }
 
 /* Text section styling */
 .upload-text h2 {
-    font-size: 1.6em;
-    color: #333;
-    margin: 0;
+  font-size: 1.6em;
+  color: #333;
+  margin: 0;
 }
 
 /* Custom file input styling */
 .custom-file-upload {
-    background-color: #44bf49;
-    color: white;
-    padding: 9px; /* Adjusted for better height control */
-    height: 50px; /* Set specific height */
-    width: 95%; /* Set width to 60% */
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex; /* Allows centering of text */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    margin-top: 10px;
+  background-color: #44bf49;
+  color: white;
+  padding: 9px;
+  /* Adjusted for better height control */
+  height: 50px;
+  /* Set specific height */
+  width: 95%;
+  /* Set width to 60% */
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  /* Allows centering of text */
+  align-items: center;
+  /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  margin-top: 10px;
 }
 
 /* Hidden input field */
 .custom-file-upload input {
-    display: none;
+  display: none;
 }
 
 /* Hover effect for file upload button */
 .custom-file-upload:hover {
-    background-color: #3a873d;
+  background-color: #3a873d;
 }
 
 /* Submit button styling */
 .upload-submit #upload-button {
-    background-color: #007bff;
-    color: white;
-     height: 40px; /* Set specific height */
-    /*width: 95%; */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
+  background-color: #007bff;
+  color: white;
+  height: 40px;
+  /* Set specific height */
+  /*width: 95%; */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 /* Hover effect for submit button */
 .upload-submit #upload-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
-
 
 .features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5px;
 }
-.classification-info h2{
-    text-align: center;
+
+.classification-info h2 {
+  text-align: center;
 }
+
 .card-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
 }
 
 .card {
-    width: 45%;
-    height: 300px;
-    perspective: 1000px;
-    margin: 10px;
+  width: 45%;
+  height: 300px;
+  perspective: 1000px;
+  margin: 10px;
 }
 
 .card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2em;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    box-sizing: border-box;
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .card-front {
-    background-color: #a5d6a7;
-    color: black;
+  background-color: #a5d6a7;
+  color: black;
 }
 
 .card-back {
-    background-color: #f9f9f9;
-    color: #333;
-    transform: rotateY(180deg);
-    padding: 10px;
-    text-align: center;
-    justify-content: space-evenly;
-    flex-direction: column;
+  background-color: #f9f9f9;
+  color: #333;
+  transform: rotateY(180deg);
+  padding: 10px;
+  text-align: center;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .card:hover .card-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .features h2 {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .feature-card {
-    background-color: #a5d6a7; /* Light green */
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    transition: transform 0.2s;
-    display: inline-block;
-    width: calc(33% - 20px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #a5d6a7;
+  /* Light green */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  display: inline-block;
+  width: calc(33% - 20px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .feature-card:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 /*eco-tips-features*/
 /*button*/
-#eco-friendly{
+#eco-friendly {
   padding: 2rem;
   text-align: center;
   border-radius: 8px;
@@ -366,7 +380,8 @@ main {
   max-width: 800px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
- #eco-friendly #eco-tips{
+
+#eco-friendly #eco-tips {
   display: inline-block;
   padding: 10px 20px;
   font-size: 1.1rem;
@@ -377,16 +392,15 @@ main {
   transition: background-color 0.3s ease;
 }
 
- #eco-friendly #eco-tips:hover{
+#eco-friendly #eco-tips:hover {
   background: none;
-  background-image: linear-gradient(
-    to right,
-    #006D77,
-    #EDF6F9
-  );
+  background-image: linear-gradient(to right,
+      #006D77,
+      #EDF6F9);
   animation: pulsate 1s ease-in-out;
-  
+
 }
+
 .eco-friendly-content h3 {
   font-size: 2rem;
   color: #2e7d32;
@@ -423,56 +437,56 @@ blockquote {
 
 /*Ecoblog Page*/
 .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    background-color: #EDF6F9;
-    border-radius: 10px;
-    max-width: 1200px;
-    margin: 20px auto;
-  }
-  
-  .hero-text {
-    flex: 1;
-    margin-right: 20px;
-  }
-  
-  .hero-text h3 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #006D77;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-  
-  .hero-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-  }
-  
-  .hero-image {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #EDF6F9;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
 
-  #eco-tips-container {
-    /* position: relative; */
-    overflow: hidden;
-    padding: 2rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: 5.2rem auto;
-    border-top: 4px solid #006D77;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-  }
+.hero-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.hero-text h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #006D77;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#eco-tips-container {
+  /* position: relative; */
+  overflow: hidden;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 5.2rem auto;
+  border-top: 4px solid #006D77;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
 
 .eco-tips-header {
   background-color: #EDF6F9;
@@ -486,7 +500,7 @@ blockquote {
 }
 
 .eco-tips-header h3 {
-  color: #006D77; 
+  color: #006D77;
   font-size: 2.2rem;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -500,12 +514,12 @@ blockquote {
 }
 
 .eco-tips-header p span {
-  color: #83C5BE; 
+  color: #83C5BE;
   font-weight: bold;
 }
 
 .eco-tips-header em {
-  color: #E29578; 
+  color: #E29578;
   font-size: 1.1rem;
   font-style: normal;
   display: block;
@@ -519,7 +533,7 @@ blockquote {
 
 #eco-tips-container {
   padding: 2rem;
-  background-color: #EDF6F9;  
+  background-color: #EDF6F9;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
@@ -531,7 +545,7 @@ blockquote {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #006D77; 
+  color: #006D77;
   cursor: pointer;
   transition: color 0.3s ease;
   position: absolute;
@@ -553,12 +567,12 @@ blockquote {
   display: flex;
   align-items: center;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .eco-tips-content {
   display: flex;
-  transition: transform 0.5s ease-in-out; 
+  transition: transform 0.5s ease-in-out;
   width: 100%;
 }
 
@@ -573,7 +587,7 @@ blockquote {
 }
 
 .eco-tip h3 {
-  color: #006D77; 
+  color: #006D77;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
@@ -584,100 +598,106 @@ blockquote {
   margin-bottom: 1.5rem;
 }
 
-.eco-tip img, .eco-tip video {
+.eco-tip img,
+.eco-tip video {
   max-width: 90%;
   border-radius: 8px;
   margin-top: 1rem;
 }
 
-  .fa-chevron-left, .fa-chevron-right {
-    font-size: 2rem;
-    color: #E29578;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .fa-chevron-left:hover, .fa-chevron-right:hover {
-    color: #006D77;
-  }
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 2rem;
+  color: #E29578;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 
-  /*Eco-blog-cards*/
-  .eco-blogs{
-    margin: 5rem 2.4rem 2.4rem 5rem;
-    padding: 2.4rem;
+.fa-chevron-left:hover,
+.fa-chevron-right:hover {
+  color: #006D77;
+}
 
-  }
-  .blogs-section-title {
-    text-align: center;
-    font-size: 2.5rem;
-   
-    color: #006D77;
-    font-weight: 600;
-  }
-  
-  .eco-blogs-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding-top: 4.4rem;
-    margin: 3.1rem;
-    max-width: 1200px;
-    margin: 20px auto;
-    border-top: 4px solid #006D77;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-  }
-  
-  .eco-blogs-card {
-    border-radius: 10px;
-    border: 2px solid #83C5BE;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .eco-blogs-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 24px 15px #006D77;
-    cursor: pointer;
-    background-color: #006D77;
-  }
-  .card-header {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-  } 
-  .card-content {
-    padding: 20px;
-    text-align: left;
-  }
-  
-  .card-content h4 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  .card-content p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #666;
-    color: #83C5BE;
-    margin-bottom: 20px;
-  }
-  
-  .read-more {
-    text-decoration: none;
-    color: #28a745;
-    font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s ease;
-  }
-  
-  .read-more:hover {
-    border-bottom: 2px solid #28a745;
-  }
-  
+/*Eco-blog-cards*/
+.eco-blogs {
+  margin: 5rem 2.4rem 2.4rem 5rem;
+  padding: 2.4rem;
+
+}
+
+.blogs-section-title {
+  text-align: center;
+  font-size: 2.5rem;
+
+  color: #006D77;
+  font-weight: 600;
+}
+
+.eco-blogs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding-top: 4.4rem;
+  margin: 3.1rem;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-top: 4px solid #006D77;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.eco-blogs-card {
+  border-radius: 10px;
+  border: 2px solid #83C5BE;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eco-blogs-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 15px #006D77;
+  cursor: pointer;
+  background-color: #006D77;
+}
+
+.card-header {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+  color: #83C5BE;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #28a745;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+.read-more:hover {
+  border-bottom: 2px solid #28a745;
+}
+
 /* Responsive media query */
 @media (max-width: 768px) {
   .hero-container {
@@ -692,6 +712,7 @@ blockquote {
   .hero-image {
     margin-top: 20px;
   }
+
   .eco-friendly-tips {
     padding: 1.5rem;
   }
@@ -728,9 +749,11 @@ blockquote {
   .eco-tips-header em {
     font-size: 1rem;
   }
+
   .eco-tip h3 {
     font-size: 1.5rem;
   }
+
   .eco-tip p {
     font-size: 1rem;
   }
@@ -750,15 +773,17 @@ blockquote {
   .card-content p {
     font-size: 0.9rem;
   }
+
   .eco-tip h3 {
     font-size: 1.5rem;
   }
-  
+
   .eco-tip p {
     font-size: 0.9rem;
   }
 
-  .fa-chevron-left, .fa-chevron-right {
+  .fa-chevron-left,
+  .fa-chevron-right {
     font-size: 1.5rem;
   }
 
@@ -768,9 +793,11 @@ blockquote {
   .eco-tips-header {
     padding: 1rem;
   }
+
   .eco-tip h3 {
     font-size: 1.3rem;
   }
+
   .eco-tip p {
     font-size: 0.9rem;
   }
@@ -790,6 +817,7 @@ blockquote {
   .eco-tips-header em {
     font-size: 0.9rem;
   }
+
   .card-header {
     height: 120px;
   }
@@ -803,192 +831,205 @@ blockquote {
   }
 }
 
-
 /*End of ECO-FRIENDLY TIPS Styling*/
 
-
 .feedback {
-    margin-bottom: 30px;
-    background-color: #ffffff; /* White background for better contrast */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 0 auto;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  /* White background for better contrast */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .feedback h2 {
-    text-align: center;
-    color: #00796b; /* Consistent color with the theme */
-    margin-bottom: 20px;
+  text-align: center;
+  color: #00796b;
+  /* Consistent color with the theme */
+  margin-bottom: 20px;
 }
 
 .feedback form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.feedback input, .feedback textarea {
-    margin: 10px 0;
-    padding: 12px;
-    border: 1px solid #00796b;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #e0f7fa; /* Matches the background theme */
+.feedback input,
+.feedback textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #00796b;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #e0f7fa;
+  /* Matches the background theme */
 }
 
 .feedback textarea {
-    min-height: 100px; /* Larger space for feedback text */
+  min-height: 100px;
+  /* Larger space for feedback text */
 }
 
 .feedback button {
-    background-color: #00796b; /* Light mode button color (same as header) */
-    color: white; /* Text color for contrast */
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #00796b;
+  /* Light mode button color (same as header) */
+  color: white;
+  /* Text color for contrast */
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .feedback button:hover {
-    background-color: #004d40; /* Darker teal on hover */
+  background-color: #004d40;
+  /* Darker teal on hover */
 }
 
 #footer {
-    background-color: #00796b;
-    color: white;
-    text-align: center;
-    padding: 20px;
+  background-color: #00796b;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 #newsletter-form input {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #fff;
-    border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
 
 .social-media {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .social-media a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  color: #26a69a; /* Change to a teal color on hover */
 }
 
 .toggle-button {
-    background-color: #26a69a;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #26a69a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-
-
 .dark-mode header {
-    background-color: #1f1f1f; /* Darker header */
+  background-color: #1f1f1f;
+  /* Darker header */
 }
 
 .dark-mode .hero {
-    background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
 }
 
 .dark-mode .feature-card {
-    background-color: #00796b; /* Card color in dark mode */
+  background-color: #00796b;
+  /* Card color in dark mode */
 }
 
 .dark-mode .feedback {
-    background-color: #1f1f1f; /* Feedback section background */
+  background-color: #1f1f1f;
+  /* Feedback section background */
 }
 
 .dark-mode .feedback button {
-    background-color: #1c1c1c; /* Dark mode button color (matches dark header) */
-    color: #ffffff; /* Light text color for contrast */
+  background-color: #1c1c1c;
+  /* Dark mode button color (matches dark header) */
+  color: #ffffff;
+  /* Light text color for contrast */
 }
-
 
 .moon-icon {
-    font-size: 30px; /* Adjust size of the moon icon */
-    margin-right: 8px; 
-    /* Match the header color */
-    color: white; /* Set the icon color to white for contrast */
-    border-radius: 50%; /* Optional: add rounded corners */
-    padding: 5px; /* Optional: add some padding */
+  font-size: 30px;
+  /* Adjust size of the moon icon */
+  margin-right: 8px;
+  /* Match the header color */
+  color: white;
+  /* Set the icon color to white for contrast */
+  border-radius: 50%;
+  /* Optional: add rounded corners */
+  padding: 5px;
+  /* Optional: add some padding */
 }
 
-
 body.dark-mode {
-    background-color: black; /* Dark background matching navbar */
-    color: white; /* Light text color */
+  background-color: black;
+  /* Dark background matching navbar */
+  color: white;
+  /* Light text color */
 }
 
 #dark-mode-toggle {
-    background-color: #00796b; /* Match the navbar color */
-    color: white; /* White text for contrast */
-   
-    border: none;
-   
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #00796b;
+  /* Match the navbar color */
+  color: white;
+  /* White text for contrast */
+
+  border: none;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-
-
 
 body.dark-mode #dark-mode-toggle {
-    background-color: #1c1c1c; /* Dark mode button color */
-    color: white; /* Keep text white */
+  background-color: #1c1c1c;
+  /* Dark mode button color */
+  color: white;
+  /* Keep text white */
 }
-  
+
 
 header.dark-mode {
-    background-color: #1c1c1c; /* Dark header background */
+  background-color: #1c1c1c;
+  /* Dark header background */
 }
 
 footer.dark-mode {
-    background-color: #1c1c1c; /* Dark footer background */
+  background-color: #1c1c1c;
+  /* Dark footer background */
 }
 
 .feature-card.dark-mode {
-    background-color: #333; /* Dark feature cards */
+  background-color: #333;
+  /* Dark feature cards */
 }
 
 .feedback.dark-mode {
-    background-color: #444; /* Dark feedback section */
+  background-color: #444;
+  /* Dark feedback section */
 }
-
-
-
-#progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 5px;
-    background-color: #26a69a; 
-    z-index: 1001;
-}
-
 
 #newsletter-form button {
-    background-color: #00796b; /* Teal color to match the theme */
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #00796b;
+  /* Teal color to match the theme */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #newsletter-form button:hover {
-    background-color: #004d40; /* Darker teal on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+  background-color: #004d40;
+  /* Darker teal on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
 }
