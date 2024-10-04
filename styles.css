@@ -21,7 +21,7 @@
 /* Dark Mode Progress Bar */
 .dark-mode #progress-bar {
     background: linear-gradient(90deg, rgb(0, 204, 204) 0%, rgb(153, 255, 255) 50%, rgb(0, 150, 150) 100%); /* Dark mode */
-    box-shadow: 0 0 4px rgba(0, 204, 204, 0.7), 0 0 10px rgba(0, 150, 150, 0.7);
+    box-shadow: 0 0 4px rgba(0, 204, 204, 0.7), 0 0 10px #009696b3;
 }
 
 
@@ -991,4 +991,20 @@ footer.dark-mode {
 #newsletter-form button:hover {
     background-color: #004d40; /* Darker teal on hover */
     transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.logo{
+  position: absolute;
+  left: 83px;
+  font-size: 35px;
+  color: #ffffff;
+  font-weight: bold;
+  img{
+      position: absolute;
+   top: -15px;
+   left: -77px;
+   width: 80px; 
+   height: 80px; 
+  
+  }
 }
