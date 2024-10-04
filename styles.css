@@ -822,6 +822,49 @@ blockquote {
     text-decoration: none;
 }
 
+.signup {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.signup h2 {
+    color: #007b5f;
+    text-align: center;
+}
+
+.signup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.signup input:focus {
+    border-color: #007b5f;
+    outline: none;
+}
+
+.signup button {
+    background-color: #007b5f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signup button:hover {
+    background-color: #005f46;
 
 
 #newsletter-form button:hover {
