@@ -9,13 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div id="progress-container">
-        <div id="progress-bar"></div>
-    </div>
-
-    <div id="progress-bar"></div>
-
     <header>
         
         <a href="#" class="logo">
@@ -29,11 +22,10 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#feedback">Feedback</a></li>
                 <li><a href="#footer">Contact</a></li>
-                <li class="theme-switch" id="theme-switch"></li>
             </ul>
         </nav>
     </header>
-    
+   
     <section class="hero">
         <div class="hero-content">
             <h2>Manage Your Waste Effectively</h2>
@@ -41,6 +33,15 @@
             <a href="#features" class="hero-btn">Explore Features</a>
         </div>
     </section>
+
+
+    <main>
+        <section class="upload" id="upload">
+            <h2>Upload Image</h2>
+            <input type="file" id="image-input" accept="image/*">
+            <button id="upload-button">Upload</button>
+        </section>
+       
 
     <main><br>
       <section class="upload" id="upload">
@@ -58,43 +59,17 @@
     </div>
 </section>
         
+
         <section class="classification">
             <h2>Classification</h2>
             <p id="classification-result"></p>
         </section>
-        
+       
         <section class="disposal">
             <h2>Disposal Information</h2>
             <p id="disposal-information"></p>
         </section>
-<section class="classification-info" id="classification-info">
-            <h2> Waste Classification</h2>
-                       
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <span>Biodegradable Waste</span>
-                        </div>
-                        <div class="card-back">
-                            <h3>Biodegradable Waste</h3>
-                            <p>These wastes come from our kitchen and include food remains, garden waste, etc. They can be composted to obtain manure and decompose over time.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <span>Non-Biodegradable Waste</span>
-                        </div>
-                        <div class="card-back">
-                            <h3>Non-Biodegradable Waste</h3>
-                            <p>This type includes old newspapers, broken glass, plastics, etc. They do not decompose and are major pollutants but can be recycled and reused.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <section class="features" id="features">
             <h2>Our Features</h2>
@@ -124,16 +99,19 @@
             <h2>Your Feedback</h2>
             <form id="feedback-form">
                 <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
                 <textarea placeholder="Your Feedback" required></textarea>
                 <button type="submit">Submit</button>
             </form>
         </section>
     </main>
 
+
     <footer id="footer">
         <h2>Stay Connected</h2>
         <form id="newsletter-form">
             <input type="email" placeholder="Your Email" required>
+            <span id="newsletter-error-message" style="color: red;"></span> <!-- Error message for newsletter -->
             <button type="submit">Subscribe</button>
         </form>
         <div class="social-media">
@@ -141,17 +119,13 @@
             <a href="#">Twitter</a>
             <a href="#">Instagram</a>
         </div>
-        
-        <!-- Community and Sustainability Section -->
-        <div class="community-message">
-            <h3>Our Commitment to Sustainability</h3>
-            <p>At Waste Management, we are dedicated to building a greener future. Through our community recycling programs and sustainability initiatives, we strive to reduce waste and protect the environment for generations to come. Join us in our mission to create a cleaner, healthier planet.</p>
-        </div>
-    
         <p>&copy; 2024 Waste Management. All rights reserved.</p>
     </footer>
 
+ feature/your-new-feature
+
+
+ main
     <script src="script.js"></script>
-    
 </body>
 </html>
