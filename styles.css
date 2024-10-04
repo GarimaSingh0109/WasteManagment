@@ -402,7 +402,10 @@ blockquote {
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
   }
-
+.highlight {
+    font-weight: bold;
+    color:#004d40;
+}
 .eco-tips-header {
   background-color: #EDF6F9;
   padding: 2rem;
