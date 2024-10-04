@@ -992,3 +992,94 @@ footer.dark-mode {
     background-color: #004d40; /* Darker teal on hover */
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
+
+/*Styling for log in page*/
+.main-area{
+  margin:90px;
+  padding: 20px;
+}
+.main-contents{
+  margin:50px;
+  display: flex;
+  justify-content: space-between;
+}
+.section1{
+  width:90%;
+  margin-left: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.login-heading{
+  margin:20px;
+}
+.text{
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 100px;
+}
+.logo-group{
+  display: flex;
+  text-align: center;
+  padding-left: 40px;
+  justify-content: center;
+}
+.logo{
+  width:40px;
+  padding-right: 20px;
+  
+}
+.form-contents{
+  display: grid;
+}
+.indv-detail{
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  width:100%;
+}
+button{
+  padding: 20px;
+  padding-left: 23%;
+  align-items: center;
+  display:flex;
+  margin: 10px;
+  margin-left: 22%;
+  background-color: #03b6a1a2;
+  border-radius: 10px;
+  width: 60%;
+  text-align: center;
+}
+/* Hover effect for submit button */
+button:hover {
+  background-color: #0056b3;
+}
+.section2{
+  width:10%;
+  margin: 100px;
+ background: url('green-background.jpg') no-repeat center center;
+}
+/*sign up form*/
+.signUp-mainSec{
+  margin-top: 60px;
+  padding-top: 100px;
+  margin: 30px;
+}
+.signUp-formContents{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px;
+}
+.indv-signUp{
+  width: 40%;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px;
+}
+#signup-submitButton{
+  align-items: center;
+  padding-left: 0%;
+  justify-content: space-around;
+}
