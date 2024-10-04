@@ -992,3 +992,50 @@ footer.dark-mode {
     background-color: #004d40; /* Darker teal on hover */
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.values-container {
+  margin-top: 40px;
+}
+
+.values-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.value-card {
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px;
+  width: 220px;
+  text-align: center;
+}
+
+.value-card h4 {
+  color: #2a9d8f;
+  font-size: 20px;
+}
+
+.value-card p {
+  font-size: 16px;
+  color: #333;
+}
