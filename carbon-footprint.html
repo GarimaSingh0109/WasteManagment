@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Carbon Footprint Calculator</h1>
+        <form id="footprintForm">
+            <label for="wasteAmount">Waste Amount (kg per week):</label>
+            <input type="number" id="wasteAmount" required>
+            
+            <label for="recycledAmount">Recycled Waste (kg per week):</label>
+            <input type="number" id="recycledAmount" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result" class="result"></div>
+        <div id="tips" class="tips"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
