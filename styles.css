@@ -25,6 +25,24 @@
     box-shadow: 0 0 4px rgba(0, 204, 204, 0.7), 0 0 10px #009696b3;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;  
+  font-family: 'Poppins', sans-serif;
+  color:white;  
+  text-decoration: none; 
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px; 
+}
+
+.logo:hover {
+  color: #e76f51;  
+  transition: color 0.3s ease-in-out;
+}
 
 
 body {
@@ -36,13 +54,12 @@ body {
 
 
 header {
-    background-color: #00796b; /* Teal color */
+    background-color: #005f46; /* Teal color */
     color: white;
     padding: 15px;
     display: flex;
     text-align: center;
-    justify-content: space-between;
- feature/your-new-feature
+
 
 
     position: sticky;
@@ -54,7 +71,30 @@ header {
     width: 100%;
     z-index: 1000;
 
- main
+        height: 60px; 
+    padding: 10px 20px; 
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  
+  
+    nav ul li a {
+    font-size: 14px; 
+    padding: 8px 12px;
+    }
+  
+  
+  header .logo {
+      font-size: 18px; 
+  }
+  
+  
+  header .logo img {
+      width: 30px; 
+      margin-right: 8px; 
+  }
 }
 
 
