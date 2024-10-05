@@ -1,0 +1,58 @@
+name: Feature Request 💡
+description: Have any new idea or new feature for WasteManagement? Please suggest!
+title: "[Feature] <write a small description here>"
+labels: ["enhancement", "goal: addition", "priority: high"]
+assignees: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the feature or alternative solutions you've considered.
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Explain why this feature would be useful and how it benefits the project.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if applicable.
+    validations:
+      required: false
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add any other context or screenshots about the feature request here.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: "I have checked the existing [issues](https://github.com/GarimaSingh0109/WasteManagment/issues)."
+          required: true
+        - label: "I have read the [Code Of Conduct](https://github.com/GarimaSingh0109/WasteManagment?tab=coc-ov-file)."
+          required: true
+        - label: "The changes don't break the code."
+          required: true
+        - label: "I will attach screenshots and videos of the development work once it is done."
+          required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Select the priority level for this feature request.
+      options:
+        - "Low"
+        - "Medium"
+        - "High"
+    validations:
+      required: true
