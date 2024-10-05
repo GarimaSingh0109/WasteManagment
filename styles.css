@@ -50,6 +50,14 @@ body {
   vertical-align: middle;
 }
 
+header {
+    background-color: #00796b; /* Teal color */
+    color: white;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+
 .theme-switch::before {
   content: '';
   position: absolute;
@@ -370,7 +378,7 @@ main {
   cursor: pointer;
 }
 .faqs {
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   margin: 20px auto;
   max-width: 900px;
