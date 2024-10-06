@@ -10,14 +10,10 @@
 
 /* Progress Bar Styling */
 #progress-bar {
-  height: 53%;
+  height: 9px;
+  /* Changed from 53% to 9px */
   width: 0;
-  background: linear-gradient(
-    90deg,
-    rgb(38, 166, 154) 0%,
-    rgb(102, 187, 106) 50%,
-    rgb(76, 175, 80) 100%
-  ); /* Light theme with teal/green */
+  background: linear-gradient(90deg, rgb(38, 166, 154) 0%, rgb(102, 187, 106) 50%, rgb(76, 175, 80) 100%);
   box-shadow: 0 0 4px rgba(38, 166, 154, 0.7), 0 0 10px rgba(76, 175, 80, 0.7);
   transition: width 0.09s ease-in-out;
   border-radius: 10px;
@@ -25,67 +21,33 @@
 
 /* Dark Mode Progress Bar */
 .dark-mode #progress-bar {
-  background: linear-gradient(
-    90deg,
-    rgb(0, 204, 204) 0%,
-    rgb(153, 255, 255) 50%,
-    rgb(0, 150, 150) 100%
-  ); /* Dark mode */
-  box-shadow: 0 0 4px rgba(0, 204, 204, 0.7), 0 0 10px #009696b3;
+  background: linear-gradient(90deg, rgb(0, 204, 204) 0%, rgb(153, 255, 255) 50%, rgb(0, 150, 150) 100%);
+  box-shadow: 0 0 4px rgba(0, 204, 204, 0.7), 0 0 10px rgba(0, 150, 150, 0.7);
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #e0f7fa; /* Light blue background */
-}
-body::-webkit-scrollbar{
-  width:8px ;
+  background-color: #e0f7fa;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-
-body::-webkit-scrollbar-thumb{
-  border-radius: 10px;
-  background:rgb(34, 236, 135);
-}
 .dark-mode {
-    background-color: #00796b; /* Dark background matching navbar */
-    color: #ffffff; /* Light text color */
+  background-color: #00796b;
+  color: #ffffff;
 }
+
 .theme-switch {
-    display: inline-block;
-    width: 60px;
-    height: 30px;
-    border-radius: 30px;
-    background: linear-gradient(82deg, #ffffff, #00796b);
-    position: relative;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-    vertical-align: middle;
-}
-
-.theme-switch::before {
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: left 0.3s ease-in-out, background-image 0.3s ease-in-out;
-    background-image: url('assets/moon.png'); 
-}
-
-.theme-switch.dark-theme {
-    background: linear-gradient(82deg, #ffffff, #1f1f1f);
-}
-
-.theme-switch.dark-theme::before {
-    left: 33px;
-    background-image: url('assets/sun.png');
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background: linear-gradient(82deg, #ffffff, #00796b);
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  vertical-align: middle;
 }
 
 header {
@@ -96,25 +58,41 @@ header {
     display: flex;
     text-align: center;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 
-  background-color: #00796b; /* Teal color */
+.theme-switch::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: left 0.3s ease-in-out, background-image 0.3s ease-in-out;
+  background-image: url('assets/moon.png');
+}
+
+.theme-switch.dark-theme {
+  background: linear-gradient(82deg, #ffffff, #1f1f1f);
+}
+
+.theme-switch.dark-theme::before {
+  left: 33px;
+  background-image: url('assets/sun.png');
+}
+
+header {
+  background-color: #00796b;
   color: white;
-  padding: 20px;
+  padding: 15px;
   display: flex;
   text-align: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 999;
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 1000;
-
 }
 
 nav {
@@ -137,10 +115,14 @@ nav ul li a {
   text-decoration: none;
 }
 
+nav ul li a:hover {
+  color: #e0f7fa; /* Change text color on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Optional: add background on hover */
+  border-radius: 5px; /* Optional: round corners */
+}
+
 .hero {
-  background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)),
-    url("https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-      center/cover no-repeat;
+  background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('./assets/header.jpg') center/cover no-repeat;
   color: white;
   padding: 80px 20px;
   text-align: center;
@@ -152,18 +134,9 @@ nav ul li a {
 }
 
 .hero h2 {
-
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-
-/* Ecoblog Page */
-.hero-contain {
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-
 }
 
 .hero p {
@@ -171,7 +144,7 @@ nav ul li a {
   margin-bottom: 30px;
   max-width: 600px;
 }
-
+  
 .hero-btn {
   background-color: #26a69a;
   color: white;
@@ -188,39 +161,6 @@ nav ul li a {
 }
 
 @media (max-width: 768px) {
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .hero-btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 60px 15px;
-    }
-
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .hero-btn {
-        padding: 8px 18px;
-        font-size: 0.9rem;
-    }
-
   .hero h2 {
     font-size: 2rem;
   }
@@ -252,7 +192,6 @@ nav ul li a {
     padding: 8px 18px;
     font-size: 0.9rem;
   }
-
 }
 
 main {
@@ -263,46 +202,29 @@ main {
 .classification,
 .disposal,
 .feedback {
-
-    margin-bottom: 30px;
-
   margin-bottom: 30px;
-
 }
 
 /* Styling for the upload section */
 .upload {
-
-    background-color: #f5f9ff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
   background-color: #f5f9ff;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 400px;
-
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
-
 }
 
 /* Container to hold the two rows */
 .upload-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
+  align-items: center;
+  /* Center items horizontally */
   gap: 15px;
 }
 
@@ -317,16 +239,22 @@ main {
 .custom-file-upload {
   background-color: #44bf49;
   color: white;
-  padding: 9px; /* Adjusted for better height control */
-  height: 50px; /* Set specific height */
-  width: 95%; /* Set width to 60% */
+  padding: 9px;
+  /* Adjusted for better height control */
+  height: 50px;
+  /* Set specific height */
+  width: 95%;
+  /* Set width to 60% */
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  display: flex; /* Allows centering of text */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  display: flex;
+  /* Allows centering of text */
+  align-items: center;
+  /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
   margin-top: 10px;
 }
 
@@ -342,21 +270,10 @@ main {
 
 /* Submit button styling */
 .upload-submit #upload-button {
-
-    background-color: #007bff;
-    color: white;
-    height: 40px; /* Set specific height */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-
   background-color: #007bff;
   color: white;
-  height: 40px; /* Set specific height */
+  height: 40px;
+  /* Set specific height */
   /*width: 95%; */
   padding: 10px 20px;
   border: none;
@@ -365,7 +282,6 @@ main {
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
-
 }
 
 /* Hover effect for submit button */
@@ -380,13 +296,75 @@ main {
   margin-bottom: 5px;
 }
 
+.classification-info h2 {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.card {
+  width: 45%;
+  height: 300px;
+  perspective: 1000px;
+  margin: 10px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card-front {
+  background-color: #a5d6a7;
+  color: black;
+}
+
+.card-back {
+  background-color: #f9f9f9;
+  color: #333;
+  transform: rotateY(180deg);
+  padding: 10px;
+  text-align: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
 .features h2 {
   text-align: center;
   width: 100%;
 }
 
 .feature-card {
-  background-color: #a5d6a7; /* Light green */
+  background-color: #a5d6a7;
+  /* Light green */
   padding: 20px;
   margin: 10px;
   border-radius: 8px;
@@ -492,6 +470,7 @@ main {
   max-width: 800px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 #eco-friendly #eco-tips {
   display: inline-block;
   padding: 10px 20px;
@@ -505,17 +484,13 @@ main {
 
 #eco-friendly #eco-tips:hover {
   background: none;
-  background-image: linear-gradient(to right, #006d77, #edf6f9);
+  background-image: linear-gradient(to right,
+      #006D77,
+      #EDF6F9);
   animation: pulsate 1s ease-in-out;
 
 }
-
-#eco-friendly #eco-tips:hover {
-    background: none;
-    background-image: linear-gradient(to right, #006D77, #EDF6F9);
-    animation: pulsate 1s ease-in-out;
-}
-
+  
 .eco-friendly-content h3 {
     font-size: 2rem;
     color: #2e7d32;
@@ -550,56 +525,57 @@ blockquote {
     margin-bottom: 2rem;
 }
 
-
-.main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    background-color: #EDF6F9;
-    border-radius: 10px;
-    max-width: 1200px;
-    margin: 20px auto;
+/*Ecoblog Page*/
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #EDF6F9;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
 }
 
 .hero-text {
-    flex: 1;
-    margin-right: 20px;
+  flex: 1;
+  margin-right: 20px;
 }
 
 .hero-text h3 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #006D77;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #006D77;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .hero-image {
-    flex: 1;
-    text-align: right;
+  flex: 1;
+  text-align: right;
 }
 
 .hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 #eco-tips-container {
-    overflow: hidden;
-    padding: 2rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: 5.2rem auto;
-    border-top: 4px solid #006D77;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
+  /* position: relative; */
+  overflow: hidden;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 5.2rem auto;
+  border-top: 4px solid #006D77;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
 }
 
 .eco-tips-header {
@@ -691,7 +667,7 @@ blockquote {
 }
 
 .eco-tips-header h3 {
-  color: #006d77;
+  color: #006D77;
   font-size: 2.2rem;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -705,12 +681,12 @@ blockquote {
 }
 
 .eco-tips-header p span {
-  color: #83c5be;
+  color: #83C5BE;
   font-weight: bold;
 }
 
 .eco-tips-header em {
-  color: #e29578;
+  color: #E29578;
   font-size: 1.1rem;
   font-style: normal;
   display: block;
@@ -723,7 +699,7 @@ blockquote {
 
 #eco-tips-container {
   padding: 2rem;
-  background-color: #edf6f9;
+  background-color: #EDF6F9;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 1200px;
@@ -735,7 +711,7 @@ blockquote {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #006d77;
+  color: #006D77; 
   cursor: pointer;
   transition: color 0.3s ease;
   position: absolute;
@@ -777,7 +753,7 @@ blockquote {
 }
 
 .eco-tip h3 {
-  color: #006d77;
+  color: #006D77;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
@@ -788,7 +764,7 @@ blockquote {
   margin-bottom: 1.5rem;
 }
 
-feature/your-new-feature .eco-tip img,
+.eco-tip img,
 .eco-tip video {
   max-width: 90%;
   border-radius: 8px;
@@ -798,14 +774,14 @@ feature/your-new-feature .eco-tip img,
 .fa-chevron-left,
 .fa-chevron-right {
   font-size: 2rem;
-  color: #e29578;
+  color: #E29578;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .fa-chevron-left:hover,
 .fa-chevron-right:hover {
-  color: #006d77;
+  color: #006D77;
 }
 
 /*Eco-blog-cards*/
@@ -813,14 +789,15 @@ feature/your-new-feature .eco-tip img,
   margin: 5rem 2.4rem 2.4rem 5rem;
   padding: 2.4rem;
 }
-.blogs-section-title {
+  
+ .blogs-section-title {
   text-align: center;
   font-size: 2.5rem;
 
-  color: #006d77;
+  color: #006D77;
   font-weight: 600;
 }
-
+  
 .eco-blogs-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -829,14 +806,14 @@ feature/your-new-feature .eco-tip img,
   margin: 3.1rem;
   max-width: 1200px;
   margin: 20px auto;
-  border-top: 4px solid #006d77;
+  border-top: 4px solid #006D77;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
 }
 
 .eco-blogs-card {
   border-radius: 10px;
-  border: 2px solid #83c5be;
+  border: 2px solid #83C5BE;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -844,15 +821,17 @@ feature/your-new-feature .eco-tip img,
 
 .eco-blogs-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 24px 15px #006d77;
+  box-shadow: 0 24px 15px #006D77;
   cursor: pointer;
-  background-color: #006d77;
+  background-color: #006D;
 }
+  
 .card-header {
   height: 200px;
   background-size: cover;
   background-position: center;
 }
+
 .card-content {
   padding: 20px;
   text-align: left;
@@ -868,7 +847,7 @@ feature/your-new-feature .eco-tip img,
   font-size: 1rem;
   line-height: 1.5;
   color: #666;
-  color: #83c5be;
+  color: #83C5BE;
   margin-bottom: 20px;
 }
 
@@ -898,6 +877,7 @@ feature/your-new-feature .eco-tip img,
   .hero-image {
     margin-top: 20px;
   }
+
   .eco-friendly-tips {
     padding: 1.5rem;
   }
@@ -934,9 +914,11 @@ feature/your-new-feature .eco-tip img,
   .eco-tips-header em {
     font-size: 1rem;
   }
+
   .eco-tip h3 {
     font-size: 1.5rem;
   }
+
   .eco-tip p {
     font-size: 1rem;
   }
@@ -956,6 +938,7 @@ feature/your-new-feature .eco-tip img,
   .card-content p {
     font-size: 0.9rem;
   }
+
   .eco-tip h3 {
     font-size: 1.5rem;
   }
@@ -974,9 +957,11 @@ feature/your-new-feature .eco-tip img,
   .eco-tips-header {
     padding: 1rem;
   }
+
   .eco-tip h3 {
     font-size: 1.3rem;
   }
+
   .eco-tip p {
     font-size: 0.9rem;
   }
@@ -996,6 +981,7 @@ feature/your-new-feature .eco-tip img,
   .eco-tips-header em {
     font-size: 0.9rem;
   }
+
   .card-header {
     height: 120px;
   }
@@ -1011,9 +997,10 @@ feature/your-new-feature .eco-tip img,
 
 /*End of ECO-FRIENDLY TIPS Styling*/
 
-main .feedback {
+.feedback {
   margin-bottom: 30px;
-  background-color: #ffffff; /* White background for better contrast */
+  background-color: #ffffff;
+  /* White background for better contrast */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1023,7 +1010,8 @@ main .feedback {
 
 .feedback h2 {
   text-align: center;
-  color: #00796b; /* Consistent color with the theme */
+  color: #00796b;
+  /* Consistent color with the theme */
   margin-bottom: 20px;
 }
 
@@ -1039,16 +1027,20 @@ main .feedback {
   border: 1px solid #00796b;
   border-radius: 5px;
   font-size: 16px;
-  background-color: #e0f7fa; /* Matches the background theme */
+  background-color: #e0f7fa;
+  /* Matches the background theme */
 }
 
 .feedback textarea {
-  min-height: 100px; /* Larger space for feedback text */
+  min-height: 100px;
+  /* Larger space for feedback text */
 }
 
 .feedback button {
   background-color: #00796b;
+  /* Light mode button color (same as header) */
   color: white;
+  /* Text color for contrast */
   padding: 12px;
   border: none;
   border-radius: 5px;
@@ -1058,7 +1050,8 @@ main .feedback {
 }
 
 .feedback button:hover {
-  background-color: #004d40; /* Darker teal on hover */
+  background-color: #004d40;
+  /* Darker teal on hover */
 }
 
 #footer {
@@ -1066,70 +1059,108 @@ main .feedback {
   color: white;
   text-align: center;
   padding: 20px;
-  border-radius: 0.2rem;
 }
 
 #newsletter-form input {
-
-    margin: 10px 0;
-    
-    padding: 10px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-
   margin: 10px 0;
   padding: 10px;
   border: 1px solid #fff;
   border-radius: 5px;
-
 }
-#newsletter-form input:focus {
-   outline: none;
-} 
 
 .social-media {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; /* Align items in the center horizontally */
   margin: 10px 0;
 }
 
 .social-media a {
-  display: grid;
-  place-items: center;
-  position: relative; /* Positioning context for the pseudo-element */
-  margin: 0 10px; /* Spacing between icons */
-  fill: #fff;
+  color: white;
   margin: 0 10px;
   text-decoration: none;
-  padding: 10px 0px;
 }
 
-.social-media a box-icon {
-  height: 2rem;
-  width: 2rem;
-  position: relative; /* Allows stacking above the pseudo-element */
-  z-index: 1; /* Bring the icon above the background */
-  transition: color 0.3s ease-in-out;
+.social-media a:hover {
+  color: #26a69a; /* Change to a teal color on hover */
 }
 
-.social-media a::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 40px; 
-  height: 40px; 
-  background-color: transparent; 
-  border-radius: 50%; 
-  transform: translate(-50%, -50%); 
-  transition: background-color 0.3s ease-in-out;
-  z-index: 0;
+.toggle-button {
+  background-color: #26a69a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.social-media a:hover::after {
-  background-color: #004d40; 
+.dark-mode header {
+  background-color: #1f1f1f;
+  /* Darker header */
 }
+
+.dark-mode .hero {
+  background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+}
+
+.dark-mode .feature-card {
+  background-color: #00796b;
+  /* Card color in dark mode */
+}
+
+.dark-mode .feedback {
+  background-color: #1f1f1f;
+  /* Feedback section background */
+}
+
+.dark-mode .feedback button {
+  background-color: #1c1c1c;
+  /* Dark mode button color (matches dark header) */
+  color: #ffffff;
+  /* Light text color for contrast */ 
+}
+  
+#newsletter-form input:focus {
+   outline: none;
+} 
+
+.moon-icon {
+  font-size: 30px;
+  /* Adjust size of the moon icon */
+  margin-right: 8px;
+  /* Match the header color */
+  color: white;
+  /* Set the icon color to white for contrast */
+  border-radius: 50%;
+  /* Optional: add rounded corners */
+  padding: 5px;
+  /* Optional: add some padding */
+}
+
+body.dark-mode {
+  background-color: black;
+  /* Dark background matching navbar */
+  color: white;
+  /* Light text color */
+}
+
+#dark-mode-toggle {
+  background-color: #00796b;
+  /* Match the navbar color */
+  color: white;
+  /* White text for contrast */
+
+  border: none;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode #dark-mode-toggle {
+  background-color: #1c1c1c;
+  /* Dark mode button color */
+  color: white;
+  /* Keep text white */
+}
+  
 .social-media a:hover {
     scale: 1.01; 
     transition: all 0.3s ease-in-out;
@@ -1193,68 +1224,46 @@ main .feedback {
   border-radius: 5px;
 }
 
-#newsletter-form input:focus {
-  outline: none;
+header.dark-mode {
+  background-color: #1c1c1c;
+  /* Dark header background */
 }
 
-#newsletter-form button:hover {
-  background-color: #004d40; /* Darker teal on hover */
-  transform: scale(1.05); /* Slight zoom effect on hover */
-  cursor: pointer;
+footer.dark-mode {
+  background-color: #1c1c1c;
+  /* Dark footer background */
+}
+
+.feature-card.dark-mode {
+  background-color: #333;
+  /* Dark feature cards */
+}
+
+.feedback.dark-mode {
+  background-color: #444;
+  /* Dark feedback section */
 }
 
 #newsletter-form button {
-  border: 1px solid #005f46; /* Adjust border color */
-  border-radius: 0.3rem;
-  overflow: hidden;
-  position: relative;
-  background-color: #26a69a;
+  background-color: #00796b;
+  /* Teal color to match the theme */
   color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
   font-size: 16px;
-  letter-spacing: 1px;
-  transition: all 170ms linear;
-  height: 2.3rem;
-  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#newsletter-form button span {
-  z-index: 20;
-}
 
-#newsletter-form button:after {
-  background: #fff;
-  content: "";
-  height: 155px;
-  left: -75px;
-  opacity: 0.2;
-  position: absolute;
-  top: -50px;
-  transform: rotate(35deg);
-  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-  width: 50px;
-  z-index: -10;
+#newsletter-form button:hover {
+  background-color: #004d40;
+  /* Darker teal on hover */
+  transform: scale(1.05);
+  /* Slight zoom effect on hover */
 }
-
-#newsletter-form button:hover:after {
-  left: 120%;
-  transition: all 750ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.logo {
-  position: absolute;
-  left: 83px;
-  font-size: 35px;
-  color: #ffffff;
-  font-weight: bold;
-  img {
-    position: absolute;
-    top: -15px;
-    left: -77px;
-    width: 80px;
-    height: 80px;
-  }
-}
-
 
 .about-container {
   display: flex;
@@ -1302,4 +1311,5 @@ main .feedback {
   font-size: 16px;
   color: #333;
 }
+
 
