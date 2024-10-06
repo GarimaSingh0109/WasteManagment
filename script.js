@@ -80,7 +80,18 @@ feedbackForm.addEventListener('submit', (event) => {
         feedbackEmail.reportValidity();
     }
 });
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    const navLinks = document.querySelectorAll('nav ul li a');
 
+    if (window.scrollY > 50) {
+        header.style.backgroundColor = '#f8f8f8'; // Change color on scroll
+        navLinks.forEach(link => link.style.color = '#000'); // Darken links
+    } else {
+        header.style.backgroundColor = 'transparent'; // Original color
+        navLinks.forEach(link => link.style.color = '#fff'); // Lighten links
+    }
+});
 // Newsletter form validation
 const newsletterForm = document.getElementById('newsletter-form');
 const newsletterEmail = newsletterForm.querySelector('input[type="email"]');
