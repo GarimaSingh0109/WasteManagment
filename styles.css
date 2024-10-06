@@ -46,7 +46,7 @@ body {
   background: linear-gradient(82deg, #ffffff, #00796b);
   position: relative;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  transition: background(0.3s, ease-in-out);
   vertical-align: middle;
 }
 
@@ -58,7 +58,7 @@ header {
     display: flex;
     text-align: center;
     justify-content: space-between;
-
+}
 .theme-switch::before {
   content: '';
   position: absolute;
@@ -97,7 +97,7 @@ header {
 
 nav {
   margin: auto;
-  margin-right: 0;
+  margin-right: 5%;
 }
 
 nav ul {
