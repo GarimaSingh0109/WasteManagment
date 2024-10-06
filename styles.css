@@ -41,54 +41,57 @@ body {
   background-color: #e0f7fa; /* Light blue background */
 }
 
-header {
-
-    background-color: #00796b; /* Teal color */
-    color: white;
-    padding: 20px;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-
-  background-color: #00796b; /* Teal color */
-  color: white;
-  padding: 20px;
-  display: flex;
-  text-align: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-
+/* Basic reset for padding and margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Styling the nav and its contents */
 nav {
-  margin: auto;
-  margin-right: 0;
+  background-color: #333; /* Dark background for the nav */
+  padding: 10px 0;
+  text-align: center; /* Centers the navigation items */
 }
 
 nav ul {
-  list-style-type: none;
+  list-style-type: none; /* Removes bullets from the list */
+  margin: 0;
   padding: 0;
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 15px;
+  display: inline-block; /* Makes the list horizontal */
+  margin-right: 20px; /* Adds space between items */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Removes margin on the last item */
 }
 
 nav ul li a {
-  color: white;
-  text-decoration: none;
+  color: white; /* White text */
+  text-decoration: none; /* Removes the underline */
+  font-size: 16px; /* Sets font size */
+  font-family: Arial, sans-serif; /* Sets a clean font */
+  padding: 10px 20px; /* Adds padding inside links */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
 }
+
+nav ul li a:hover {
+  background-color: #575757; /* Darker background on hover */
+  border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  nav ul li {
+      display: block; /* Makes the list vertical on small screens */
+      margin: 10px 0;
+  }
+}
+
 
 .hero {
   background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)),
