@@ -7,28 +7,27 @@
     <link rel="icon" href="./assets/logo.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
-
-    <div id="progress-container">
-        <div id="progress-bar"></div>
-    </div>
-
-    <div id="progress-bar"></div>
-
     <header>
-        <h1>Waste Management</h1>
+        
+        <a href="#" class="logo">
+            <img src="logo.png" >
+            Waste Management
+          </a>
+
         <nav>
             <ul>
                 <li><a href="#upload">Upload</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#signup">Signup</a></li>
                 <li><a href="#footer">Contact</a></li>
-                <li class="theme-switch" id="theme-switch"></li>
             </ul>
         </nav>
     </header>
-    
+   
     <section class="hero">
         <div class="hero-content">
             <h2>Manage Your Waste Effectively</h2>
@@ -36,6 +35,15 @@
             <a href="#features" class="hero-btn">Explore Features</a>
         </div>
     </section>
+
+
+    <main>
+        <section class="upload" id="upload">
+            <h2>Upload Image</h2>
+            <input type="file" id="image-input" accept="image/*">
+            <button id="upload-button">Upload</button>
+        </section>
+       
 
     <main><br>
       <section class="upload" id="upload">
@@ -53,43 +61,17 @@
     </div>
 </section>
         
+
         <section class="classification">
             <h2>Classification</h2>
             <p id="classification-result"></p>
         </section>
-        
+       
         <section class="disposal">
             <h2>Disposal Information</h2>
             <p id="disposal-information"></p>
         </section>
-<section class="classification-info" id="classification-info">
-            <h2> Waste Classification</h2>
-                       
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <span>Biodegradable Waste</span>
-                        </div>
-                        <div class="card-back">
-                            <h3>Biodegradable Waste</h3>
-                            <p>These wastes come from our kitchen and include food remains, garden waste, etc. They can be composted to obtain manure and decompose over time.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front">
-                            <span>Non-Biodegradable Waste</span>
-                        </div>
-                        <div class="card-back">
-                            <h3>Non-Biodegradable Waste</h3>
-                            <p>This type includes old newspapers, broken glass, plastics, etc. They do not decompose and are major pollutants but can be recycled and reused.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <section class="features" id="features">
             <h2>Our Features</h2>
@@ -113,40 +95,89 @@
                 <p>Join community efforts to promote waste management.</p>
             </div>
         </section>
-
+<section class="faqs" id="faqs">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+        
+            <div class="faq-item">
+                <h3>What is the difference between biodegradable and non-biodegradable waste?</h3>
+                <p>Biodegradable waste refers to organic materials such as food scraps and garden waste that decompose naturally over time. Non-biodegradable waste includes plastics, metals, and other materials that do not decompose easily and require recycling or special disposal methods.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>How can I reduce household waste?</h3>
+                <p>You can reduce waste by buying reusable products, composting organic waste, recycling materials like plastic and paper, and avoiding single-use items. Participating in community waste reduction programs is also helpful.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>What should I do with hazardous waste?</h3>
+                <p>Hazardous waste, such as batteries, chemicals, and electronic waste, should be taken to designated disposal sites or collection events. Do not dispose of them in regular household trash as they can be harmful to the environment.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Can all plastics be recycled?</h3>
+                <p>No, not all plastics are recyclable. Look for recycling symbols with numbers on plastic products. Most recycling centers accept plastics marked with numbers 1 and 2, but it's important to check with your local center for specific guidelines.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>How do I start composting at home?</h3>
+                <p>To start composting, collect food scraps like fruit peels, vegetable leftovers, and coffee grounds. Combine them with yard waste like leaves and grass clippings in a compost bin. Turn the compost regularly to ensure proper aeration and decomposition.</p>
+            </div>
+        
+            <div class="faq-item">
+                <h3>Why is it important to sort waste?</h3>
+                <p>Sorting waste ensures that recyclable materials like paper, glass, and plastics are properly processed, reducing the amount of waste sent to landfills. Proper sorting helps reduce pollution, conserve resources, and protect the environment.</p>
+            </div>
+        </section>
+        
 
         <section class="feedback" id="feedback">
             <h2>Your Feedback</h2>
             <form id="feedback-form">
                 <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
                 <textarea placeholder="Your Feedback" required></textarea>
                 <button type="submit">Submit</button>
             </form>
         </section>
-    </main>
 
-    <footer id="footer">
-        <h2>Stay Connected</h2>
-        <form id="newsletter-form">
-            <input type="email" placeholder="Your Email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-        <div class="social-media">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-        </div>
-        
-        <!-- Community and Sustainability Section -->
+        <section class="signup" id="signup">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="text" placeholder="Full Name" required aria-label="Full Name">
+                <input type="email" placeholder="Email Address" required aria-label="Email Address">
+                <input type="password" placeholder="Password" required aria-label="Password">
+                <input type="password" placeholder="Confirm Password" required aria-label="Confirm Password">
+                <button type="submit">Create Account</button>
+            </form>
+        </section>
+    </main>
+<!-- Community and Sustainability Section -->
         <div class="community-message">
             <h3>Our Commitment to Sustainability</h3>
             <p>At Waste Management, we are dedicated to building a greener future. Through our community recycling programs and sustainability initiatives, we strive to reduce waste and protect the environment for generations to come. Join us in our mission to create a cleaner, healthier planet.</p>
         </div>
-    
+
+    <footer id="footer">
+        <h2>Stay Connected</h2>
+        <form id="newsletter-form">
+            <input type="email" placeholder="email@example.com" required>
+            <span id="newsletter-error-message" style="color: red;"></span> <!-- Error message for newsletter -->
+            <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-media">
+            <a href="#">
+                <box-icon type="logo" name="facebook"></box-icon>
+            </a>
+            <a href="#">
+                <box-icon type="logo" name="twitter"></box-icon>
+            </a>
+            <a href="#">
+                <box-icon type="logo" name="instagram"></box-icon>
+            </a>
+        </div>
+
         <p>&copy; 2024 Waste Management. All rights reserved.</p>
     </footer>
-
     <script src="script.js"></script>
-    
 </body>
 </html>
