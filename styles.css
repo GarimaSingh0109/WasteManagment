@@ -51,6 +51,7 @@ body {
 }
 
 header {
+
     background-color: #00796b; /* Teal color */
     color: white;
     padding: 20px;
@@ -143,7 +144,7 @@ nav ul li a:hover {
   margin-bottom: 30px;
   max-width: 600px;
 }
-
+  
 .hero-btn {
   background-color: #26a69a;
   color: white;
@@ -377,47 +378,85 @@ main {
   transform: scale(1.05);
   cursor: pointer;
 }
+
 .faqs {
-  padding: 25px;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 900px;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
 }
 
 .faqs h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: black;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: black;
 }
 
 .faq-item {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .faq-item h3 {
+
+    font-size: 1.4em;
+    color: #000000;
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    background-color: #a5d6a7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: rgb(53, 53, 53);
+    border-radius: 5px;
+
   font-size: 1.4em;
   color: #000000;
   cursor: pointer;
   margin: 0;
   padding: 10px;
-  background-color:  #a5d6a7;
+  background-color: #a5d6a7;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: rgb(53, 53, 53);
   border-radius: 5px;
+
 }
 
 .faq-item p {
-  font-size: 1em;
-  color: #555;
-  padding: 10px;
-  background-color: white;
-  border: 1px solid #a5d6a7;
-  border-radius: 5px;
-  display: none; /* Hide the answer initially */
+    font-size: 1em;
+    color: #555;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+    display: none; /* Hide the answer initially */
 }
 
 .faq-item.active p {
+
+    display: block; /* Show the answer when the question is clicked */
+}
+
+/* Eco-tips-features */
+/* Button */
+#eco-friendly {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#eco-friendly #eco-tips {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
   display: block; /* Show the answer when the question is clicked */
 }
 
@@ -451,39 +490,39 @@ main {
   animation: pulsate 1s ease-in-out;
 
 }
-
+  
 .eco-friendly-content h3 {
-  font-size: 2rem;
-  color: #2e7d32;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
 }
 
 blockquote {
-  font-size: 1.25rem;
-  font-style: italic;
-  color: #333;
-  background-color: #c8e6c9;
-  padding: 1rem;
-  border-left: 4px solid #43a047;
-  margin-bottom: 1.5rem;
-  border-radius: 5px;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #333;
+    background-color: #c8e6c9;
+    padding: 1rem;
+    border-left: 4px solid #43a047;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
 }
 
 #fact-highlight {
-  font-weight: bold;
-  color: #e53935;
+    font-weight: bold;
+    color: #e53935;
 }
 
 .highlight {
-  font-weight: bold;
-  color: #2e7d32;
+    font-weight: bold;
+    color: #2e7d32;
 }
 
 .eco-friendly-content p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
 }
 
 /*Ecoblog Page*/
@@ -540,14 +579,91 @@ blockquote {
 }
 
 .eco-tips-header {
-  background-color: #EDF6F9;
+    background-color: #EDF6F9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+    font-family: 'Arial', sans-serif;
+}
+
+.eco-tips-header h3 {
+    color: #006D77;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.eco-tips-header p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/*Ecoblog Page*/
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #edf6f9;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.hero-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.hero-text h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #006d77;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+#eco-tips-container {
+  /* position: relative; */
+  overflow: hidden;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 5.2rem auto;
+  border-top: 4px solid #006d77;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.eco-tips-header {
+  background-color: #edf6f9;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin: 2rem auto;
   max-width: 800px;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .eco-tips-header h3 {
@@ -575,12 +691,11 @@ blockquote {
   font-style: normal;
   display: block;
   margin-top: 1.5rem;
-  background-color: #006D77;
+  background-color: #006d77;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-weight: 600;
 }
-
 
 #eco-tips-container {
   padding: 2rem;
@@ -596,7 +711,7 @@ blockquote {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #006D77;
+  color: #006D77; 
   cursor: pointer;
   transition: color 0.3s ease;
   position: absolute;
@@ -673,17 +788,16 @@ blockquote {
 .eco-blogs {
   margin: 5rem 2.4rem 2.4rem 5rem;
   padding: 2.4rem;
-
 }
-
-.blogs-section-title {
+  
+ .blogs-section-title {
   text-align: center;
   font-size: 2.5rem;
 
   color: #006D77;
   font-weight: 600;
 }
-
+  
 .eco-blogs-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -709,9 +823,9 @@ blockquote {
   transform: translateY(-10px);
   box-shadow: 0 24px 15px #006D77;
   cursor: pointer;
-  background-color: #006D77;
+  background-color: #006D;
 }
-
+  
 .card-header {
   height: 200px;
   background-size: cover;
@@ -837,7 +951,6 @@ blockquote {
   .fa-chevron-right {
     font-size: 1.5rem;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -1002,8 +1115,12 @@ blockquote {
   background-color: #1c1c1c;
   /* Dark mode button color (matches dark header) */
   color: #ffffff;
-  /* Light text color for contrast */
+  /* Light text color for contrast */ 
 }
+  
+#newsletter-form input:focus {
+   outline: none;
+} 
 
 .moon-icon {
   font-size: 30px;
@@ -1043,50 +1160,69 @@ body.dark-mode #dark-mode-toggle {
   color: white;
   /* Keep text white */
 }
+  
+.social-media a:hover {
+    scale: 1.01; 
+    transition: all 0.3s ease-in-out;
+}
+
 
 .signup {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
 }
 
 .signup h2 {
-    color: #007b5f;
-    text-align: center;
+  color: #007b5f;
+  text-align: center;
 }
 
 .signup form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .signup input {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 .signup input:focus {
-    border-color: #007b5f;
-    outline: none;
+  border-color: #007b5f;
+  outline: none;
 }
 
 .signup button {
-    background-color: #007b5f;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: #007b5f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .signup button:hover {
-    background-color: #005f46;
+  background-color: #005f46;
+  transition: background-color 0.3s ease;
+}
+
+#newsletter-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+#newsletter-form input{
+  border: 1.2px solid #e0f7fa;
+  border-radius: 5px;
+}
 
 header.dark-mode {
   background-color: #1c1c1c;
