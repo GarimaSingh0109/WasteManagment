@@ -42,6 +42,18 @@ body {
 }
 
 header {
+
+    background-color: #00796b; /* Teal color */
+    color: white;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
   background-color: #00796b; /* Teal color */
   color: white;
   padding: 20px;
@@ -55,6 +67,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+
 }
 
 nav {
@@ -92,9 +105,18 @@ nav ul li a {
 }
 
 .hero h2 {
+
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+
+/* Ecoblog Page */
+.hero-contain {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+
 }
 
 .hero p {
@@ -119,6 +141,39 @@ nav ul li a {
 }
 
 @media (max-width: 768px) {
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-btn {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+
   .hero h2 {
     font-size: 2rem;
   }
@@ -150,6 +205,7 @@ nav ul li a {
     padding: 8px 18px;
     font-size: 0.9rem;
   }
+
 }
 
 main {
@@ -160,11 +216,27 @@ main {
 .classification,
 .disposal,
 .feedback {
+
+    margin-bottom: 30px;
+
   margin-bottom: 30px;
+
 }
 
 /* Styling for the upload section */
 .upload {
+
+    background-color: #f5f9ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
   background-color: #f5f9ff;
   padding: 20px;
   border-radius: 10px;
@@ -176,6 +248,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
 }
 
 /* Container to hold the two rows */
@@ -222,6 +295,18 @@ main {
 
 /* Submit button styling */
 .upload-submit #upload-button {
+
+    background-color: #007bff;
+    color: white;
+    height: 40px; /* Set specific height */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+
   background-color: #007bff;
   color: white;
   height: 40px; /* Set specific height */
@@ -233,6 +318,7 @@ main {
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
+
 }
 
 /* Hover effect for submit button */
@@ -267,25 +353,37 @@ main {
   transform: scale(1.05);
   cursor: pointer;
 }
+
 .faqs {
-  padding: 25px;
-  border-radius: 10px;
-  margin: 20px auto;
-  max-width: 900px;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
 }
 
 .faqs h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: black;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: black;
 }
 
 .faq-item {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .faq-item h3 {
+
+    font-size: 1.4em;
+    color: #000000;
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    background-color: #a5d6a7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: rgb(53, 53, 53);
+    border-radius: 5px;
+
   font-size: 1.4em;
   color: #000000;
   cursor: pointer;
@@ -295,19 +393,45 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: rgb(53, 53, 53);
   border-radius: 5px;
+
 }
 
 .faq-item p {
-  font-size: 1em;
-  color: #555;
-  padding: 10px;
-  background-color: white;
-  border: 1px solid #a5d6a7;
-  border-radius: 5px;
-  display: none; /* Hide the answer initially */
+    font-size: 1em;
+    color: #555;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #a5d6a7;
+    border-radius: 5px;
+    display: none; /* Hide the answer initially */
 }
 
 .faq-item.active p {
+
+    display: block; /* Show the answer when the question is clicked */
+}
+
+/* Eco-tips-features */
+/* Button */
+#eco-friendly {
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#eco-friendly #eco-tips {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
   display: block; /* Show the answer when the question is clicked */
 }
 
@@ -336,39 +460,123 @@ main {
   background: none;
   background-image: linear-gradient(to right, #006d77, #edf6f9);
   animation: pulsate 1s ease-in-out;
+
 }
+
+#eco-friendly #eco-tips:hover {
+    background: none;
+    background-image: linear-gradient(to right, #006D77, #EDF6F9);
+    animation: pulsate 1s ease-in-out;
+}
+
 .eco-friendly-content h3 {
-  font-size: 2rem;
-  color: #2e7d32;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 1rem;
 }
 
 blockquote {
-  font-size: 1.25rem;
-  font-style: italic;
-  color: #333;
-  background-color: #c8e6c9;
-  padding: 1rem;
-  border-left: 4px solid #43a047;
-  margin-bottom: 1.5rem;
-  border-radius: 5px;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #333;
+    background-color: #c8e6c9;
+    padding: 1rem;
+    border-left: 4px solid #43a047;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
 }
 
 #fact-highlight {
-  font-weight: bold;
-  color: #e53935;
+    font-weight: bold;
+    color: #e53935;
 }
 
 .highlight {
-  font-weight: bold;
-  color: #2e7d32;
+    font-weight: bold;
+    color: #2e7d32;
 }
 
 .eco-friendly-content p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #EDF6F9;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.hero-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.hero-text h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #006D77;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#eco-tips-container {
+    overflow: hidden;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 5.2rem auto;
+    border-top: 4px solid #006D77;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+.eco-tips-header {
+    background-color: #EDF6F9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+    font-family: 'Arial', sans-serif;
+}
+
+.eco-tips-header h3 {
+    color: #006D77;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.eco-tips-header p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
 }
 
 /*Ecoblog Page*/
@@ -988,3 +1196,4 @@ main .feedback {
     height: 80px;
   }
 }
+
