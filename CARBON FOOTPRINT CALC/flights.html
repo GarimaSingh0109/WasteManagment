@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Carbon Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <link rel="stylesheet" href="flight.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">CARBON CALCULATOR</div> 
+    <div class="back-to-home">
+        <a href="/WasteManagment/index.html" class="home-icon">
+            <i class="fa-solid fa-house"></i> 
+          </a>
+       </div>
+    <div class="sub-header">This carbon calculator is provided free to use</div>
+   
+    <div class="content">
+        <p>Show you care for the environment and communities across the World by Carbon Offsetting.</p>
+        <p>You can support <a href="#">Carbon Offsetting Projects</a> that both tackle climate change and support impoverished communities across the world. Just click the 'Offset' button after you have finished your calculation. It takes only a few easy clicks and costs only a few Pounds/Dollars/Euros per tonne CO<sub>2</sub>. <strong>You also get a personalised Certificate recognising your offsetting - makes an ideal gift too!</strong></p>
+        <div class="info-icons">
+            <i class="fas fa-info-circle"></i>
+            <i class="fas fa-bolt"></i>
+            <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="language-select">
+            <label for="language">Language:</label>
+            <select id="language">
+                <option>English (United Kingdom)</option>
+            </select>
+        </div>
+        <div class="like-button">
+            <a href="#" class="fb-like" data-href="#" data-layout="button_count" data-action="like" data-size="small" data-share="false">Like</a>
+            <span>10K people like this. Be the first of your friends.</span>
+        </div>
+        <div class="tabs">
+            <div class="tab active"><a href="../CARBON FOOTPRINT CALC/welcome.html">Welcome</a></div>
+            <div class="tab"><a href="../CARBON FOOTPRINT CALC/house.html">House</a></div>
+            <div class="tab"><a href="#">Flights</a></div>
+            <div class="tab"><a href="../CARBON FOOTPRINT CALC/car.html">Car</a></div>
+            <div class="tab"><a href="../CARBON FOOTPRINT CALC/motorbike.html">Motorbike</a></div>
+            <div class="tab"><a href="../CARBON FOOTPRINT CALC/transport.html">Bus & Rail</a></div>
+            <div class="tab"><a href="../CARBON FOOTPRINT CALC/secondary.html">Secondary</a></div>
+            <div class="tab"><a href="../CARBON FOOTPRINT CALC/results.html">Results</a></div>
+        </div>
+        
+        <div class="calculator">
+            <h2>Flight carbon footprint calculator</h2>
+            <p>You can enter details for up to 3 flight itineraries</p>
+            <form>
+                <div class="radio-group">
+                    <input type="radio" id="return-trip" name="trip-type" checked>
+                    <label for="return-trip">Return trip</label>
+                    <input type="radio" id="one-way" name="trip-type">
+                    <label for="one-way">One-way flight</label>
+                </div>
+                <label for="from">From:</label>
+                <select id="from">
+                    <option></option>
+                </select>
+                <label for="to">To:</label>
+                <select id="to">
+                    <option></option>
+                </select>
+                <label for="via">Via (optional):</label>
+                <select id="via">
+                    <option></option>
+                </select>
+                <label for="class">Class:</label>
+                <select id="class">
+                    <option>Economy class</option>
+                </select>
+                <label for="trips">Trips:</label>
+                <input type="number" id="trips" value="1">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="radiative-forcing" checked>
+                    <label for="radiative-forcing">Tick to include radiative forcing <a href="#">what's this?</a></label>
+                </div>
+                <div class="buttons">
+                    <button type="button">Calculate & Add To Footprint</button>
+                    <button type="button" disabled>Offset Now</button>
+                </div>
+                <div class="result">Total Flights Footprint = 0.00 tonnes of CO<sub>2</sub>e</div>
+            </form>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <p>
+         powered by Carbon Footprint
+        </p>
+        <p>
+         developed by RADsite
+        </p>
+       </div>
+</body>
+</html>
