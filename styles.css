@@ -224,7 +224,7 @@ nav ul li a {
     padding: 10px 20px;
     font-size: 1rem;
   }
-}
+
 
 @media (max-width: 480px) {
   .hero {
@@ -1063,12 +1063,14 @@ blockquote {
   text-align: center;
   color: #00796b;
   /* Consistent color with the theme */
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 2em; /* Increase header size */
 }
 
 .feedback form {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Center form elements */
 }
 
 .feedback input,
@@ -1109,16 +1111,45 @@ blockquote {
   background-color: #00796b;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 10px 20px;
+}
+
+.feedback input:focus,
+.feedback textarea:focus {
+  border-color: #004d40; /* Darker teal on focus */
 }
 
 #newsletter-form input {
+  width: 80%; /* Adjust width for better responsiveness */
+  padding: 12px;
   margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #fff;
+  border: none; /* Remove border */
   border-radius: 5px;
+  font-size: 16px;
+  background-color: #e0f7fa; /* Lighter background */
+  transition: border-color 0.3s ease;
 }
 
+#newsletter-form input:focus {
+  outline: none;
+  border: 2px solid #004d40; /* Darker teal on focus */
+}
+
+#newsletter-form button {
+  background-color: #00796b; /* Match the footer */
+  color: white;
+  padding: 12px 20px; /* Add more padding */
+  border: 2px solid #004d40; /* Darker teal border for contrast */
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for background and border */
+}
+
+#newsletter-form button:hover {
+  background-color: #004d40; /* Darker teal on hover */
+  border-color: #003d33; /* Darker border on hover for added effect */
+}
 .social-media {
   margin: 10px 0;
 }
@@ -1169,9 +1200,6 @@ blockquote {
   /* Light text color for contrast */ 
 }
   
-#newsletter-form input:focus {
-   outline: none;
-} 
 
 .moon-icon {
   font-size: 30px;
@@ -1215,6 +1243,7 @@ body.dark-mode #dark-mode-toggle {
 .social-media a:hover {
     scale: 1.01; 
     transition: all 0.3s ease-in-out;
+    color: #0048ff; /* Change to a lighter teal on hover */
 }
 
 
@@ -1270,10 +1299,6 @@ body.dark-mode #dark-mode-toggle {
   justify-content: center;
   gap: 6px;
 }
-#newsletter-form input{
-  border: 1.2px solid #e0f7fa;
-  border-radius: 5px;
-}
 
 header.dark-mode {
   background-color: #1c1c1c;
@@ -1294,20 +1319,6 @@ footer.dark-mode {
   background-color: #444;
   /* Dark feedback section */
 }
-
-#newsletter-form button {
-  background-color: #00796b;
-  /* Teal color to match the theme */
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 
 #newsletter-form button:hover {
   background-color: #004d40;
