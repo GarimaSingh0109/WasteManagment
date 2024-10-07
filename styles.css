@@ -104,19 +104,22 @@ header {
   background-image: url('assets/sun.png');
 }
 
+/* Header Styling */
 header {
-  background-color: #00796b;
+  background-color: #00796b; /* Maintained the green shade */
   color: white;
-  padding: 15px;
+  padding: 15px 30px; /* Added padding for spacing */
   display: flex;
-  text-align: center;
+  align-items: center; /* Vertically center the content */
   justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 999;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
 }
 
+/* Navigation Styling */
 nav {
   margin: auto;
   margin-right: 0;
@@ -125,22 +128,30 @@ nav {
 nav ul {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  align-items: center;
 }
 
+/* Navigation Links */
 nav ul li {
-  display: inline;
+  display: inline-block; /* Ensure each link takes up its own space */
   margin: 0 15px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  border-bottom: 3px solid transparent; /* Underline effect */
 }
 
+/* Hover Effect */
 nav ul li a:hover {
-  color: #e0f7fa; /* Change text color on hover */
-  background-color: rgba(255, 255, 255, 0.2); /* Optional: add background on hover */
-  border-radius: 5px; /* Optional: round corners */
+  color: #ffeb3b; /* Highlight color on hover */
+  border-bottom: 3px solid #ffeb3b; /* Add a yellow underline on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
 }
 
 .hero {
