@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Sign Up | Waste Management</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EDF6F9; /* Light Blue */
+            color: #006D77; /* Teal */
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #83C5BE; /* Light Teal */
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #006D77; /* Teal */
+            text-decoration: none;
+        }
+        form {
+            background-color: #FFDDD2; /* Peach */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #E29578; /* Coral */
+            border-radius: 4px;
+        }
+        button {
+            background-color: #006D77; /* Teal */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #004B5A; /* Darker Teal */
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #strengthIndicator {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Waste Management Sign Up</h1>
+        <nav>
+            <a href="login.html">Log In</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="signupForm">
+            <h2>Create Account</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="role">Are you a:</label>
+            <select id="role" name="role" required>
+                <option value="student">Student</option>
+                <option value="professional">Professional</option>
+            </select>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <p id="strengthIndicator">Enter a password</p> <!-- Password strength indicator -->
+
+            <label for="interests">Interests in Disposal:</label>
+            <textarea id="interests" name="interests" placeholder="E.g., recycling, composting" required></textarea>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Waste Management Project. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+    <script>
+        // Function to validate email format
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Function to check password strength
+        function checkPasswordStrength(password) {
+            const strengthIndicator = document.getElementById('strengthIndicator');
+            const strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/; // At least 8 characters, one uppercase, one lowercase, one number
+
+            if (strongPassword.test(password)) {
+                strengthIndicator.textContent = 'Strong Password';
+                strengthIndicator.style.color = 'green';
+            } else if (password.length >= 6) {
+                strengthIndicator.textContent = 'Moderate Password';
+                strengthIndicator.style.color = 'orange';
+            } else {
+                strengthIndicator.textContent = 'Weak Password';
+                strengthIndicator.style.color = 'red';
+            }
+        }
+
+        // Event listener for form submission
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const contact = document.getElementById('contact').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const interests = document.getElementById('interests').value.trim();
+
+            // Validate form inputs
+            if (!name || !email || !contact || !password || !interests) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            if (contact.length < 10) {
+                alert('Please enter a valid contact number.');
+                return;
+            }
+
+            // Here you can add code to send data to your server (e.g., using fetch or axios)
+            alert('Sign-up form submitted successfully!'); // Placeholder alert
+        });
+
+        // Event listener for password input to check strength
+        document.getElementById('password').addEventListener('input', function() {
+            checkPasswordStrength(this.value);
+        });
+    </script>
+</body>
+</html>
