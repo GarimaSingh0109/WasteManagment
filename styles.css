@@ -32,6 +32,23 @@ body {
   background-color: #e0f7fa;
   transition: background-color 0.3s, color 0.3s;
 }
+:root {
+    --primary-color: #00796b;
+    --secondary-color: #26a69a;
+    --accent-color: #e0f7fa;
+    --dark-bg: #1f1f1f;
+    --light-bg: #ffffff;
+}
+
+body {
+    background-color: var(--accent-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--light-bg);
+}
 
 .dark-mode {
   background-color: #00796b;
@@ -51,13 +68,18 @@ body {
 }
 
 header {
-
     background-color: #00796b; /* Teal color */
     color: white;
     padding: 20px;
     display: flex;
     text-align: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
 
 .theme-switch::before {
   content: '';
@@ -168,7 +190,25 @@ nav ul li a:hover {
   .hero p {
     font-size: 1rem;
   }
+   margin-top: 100px; /* Create space for fixed header */
+}
 
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Text color */
+}
   .hero-btn {
     padding: 10px 20px;
     font-size: 1rem;
