@@ -6,10 +6,108 @@
     <title>Sign Up</title>
     <link rel="icon" href="./assets/logo.png">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+        header {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s;
+        }
+        header nav ul li a:hover {
+            color: #ffeb3b;
+        }
+        .signUp-mainSec {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            width: 400px;
+        }
+        .signUp-container h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .signUp-formContents {
+            display: flex;
+            flex-direction: column;
+        }
+        .indv-signUp {
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1.5px solid #ccc;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .indv-signUp:focus {
+            border-color: #2193b0;
+            outline: none;
+        }
+        .password-container {
+            position: relative;
+        }
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #2193b0;
+        }
+        button {
+            background-color: #2193b0;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
-<div id="progress-bar"></div>
-
+<body>
     <header>
         <h1>Waste Management</h1>
         <nav>
@@ -19,41 +117,65 @@
                 <li><a href="#feedback">Feedback</a></li>
                 <li><a href="#footer">Contact</a></li>
                 <li><a href="login.html">Log In</a></li>
-                <li class="theme-switch" id="theme-switch"></li>
             </ul>
         </nav>
     </header>
-<body>
-    <div class="signUp-mainSec">
 
+    <div class="signUp-mainSec">
         <div class="signUp-container">
-            <h1 style="text-align: center; font-size: 40px; font-weight: 500px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sign Up</h1>
-            
+            <h1>Sign Up</h1>
             <div class="signUp-formContents">
-              <input type="text" placeholder="Name" class="indv-signUp" required>
-              <select name="job" id="job" placeholder="Select Occupation" class="indv-signUp" style="width: 44%;border: 1.8px solid black;">
-                <option value="Student" aria-placeholder="select">Select Occupation</option>
-                <option value="Student">Student</option>
-                <option value="Working Professional">Working Professional</option>
-                <option value="Environmentalist">Environmentalist</option>
-                <option value="Curious Explorer">Curious Explorer</option>
-              </select>
-              <select name="intrest" id="intrest" class="indv-signUp" style="width: 44%; border: 1.8px solid black;">
-                <option value="Intrest">Intrest</option>
-                <option value="Waste Disposal">Waste Disposal</option>
-                <option value="Material Classification">Material Classification</option>
-                <option value="Recycling">Recycling</option>
-                <option value="Advanced AI Waste Detection">Advanced AI Waste Detection</option>
-                
-              </select>
-              <input type="text" placeholder="User Name" class="indv-signUp" required>
-              <input type="email" placeholder="Email" class="indv-signUp" required>
-              <input type="tel" placeholder="Telephone No." class="indv-signUp" required>
-              <input type="password" placeholder="Password" class="indv-signUp" required>
-              <input type="password" placeholder="Confirm Password" class="indv-signUp" required>
+                <input type="text" placeholder="Name" class="indv-signUp" required>
+                <select name="job" id="job" class="indv-signUp" required>
+                    <option value="" disabled selected>Select Occupation</option>
+                    <option value="Student">Student</option>
+                    <option value="Working Professional">Working Professional</option>
+                    <option value="Environmentalist">Environmentalist</option>
+                    <option value="Curious Explorer">Curious Explorer</option>
+                </select>
+                <select name="interest" id="interest" class="indv-signUp" required>
+                    <option value="" disabled selected>Select Interest</option>
+                    <option value="Waste Disposal">Waste Disposal</option>
+                    <option value="Material Classification">Material Classification</option>
+                    <option value="Recycling">Recycling</option>
+                    <option value="Advanced AI Waste Detection">Advanced AI Waste Detection</option>
+                </select>
+                <input type="text" placeholder="User Name" class="indv-signUp" required>
+                <input type="email" placeholder="Email" class="indv-signUp" required>
+                <input type="tel" placeholder="Telephone No." class="indv-signUp" required>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Password" class="indv-signUp" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('password')">👁️</span>
+                </div>
+                <div class="password-container">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" class="indv-signUp" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('confirm-password')">👁️</span>
+                </div>
+                <div class="error-message" id="error-message"></div>
             </div>
-            <button id="signup-submitButton" style="width:fit-100%;"> Sign Up</button>
+            <button id="signup-submitButton" onclick="validateForm()">Sign Up</button>
         </div>
     </div>
+
+    <script>
+        function togglePasswordVisibility(id) {
+            const passwordField = document.getElementById(id);
+            passwordField.type = passwordField.type === "password" ? "text" : "password";
+        }
+
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.textContent = '';
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = 'Passwords do not match!';
+                return false;
+            }
+            alert('Sign Up Successful!');
+            
+        }
+    </script>
 </body>
 </html>
