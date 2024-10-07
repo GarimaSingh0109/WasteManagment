@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+h2 {
+    font-size: 18px;
+    color: #666;
+}
+p {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+}
+.info-icons {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.info-icons i {
+    margin: 0 5px;
+}
+.language-select {
+    margin: 20px 0;
+}
+.like-button {
+    margin: 10px 0;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.tab {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+.tab.active {
+    background-color: #fff;
+    border-top: 2px solid #4CAF50;
+}
+.content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+.content h3 {
+    font-size: 18px;
+    color: #4CAF50;
+}
+.content p {
+    font-size: 14px;
+    color: #333;
+}
+.content .footprint {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.content .footprint img {
+    width: 100px;
+    height: 200px;
+}
+.content .footprint div {
+    text-align: center;
+}
+.content .footprint div p {
+    margin: 5px 0;
+}
+.content .footprint div p:first-child {
+    font-weight: bold;
+}
+.content .footprint div p:last-child {
+    font-size: 12px;
+    color: #666;
+}
+.content .offset {
+    text-align: center;
+    margin: 20px 0;
+}
+.content .offset button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}.tabs a {
+    text-decoration: none;
+}
+.content .offset button:disabled {
+    background-color: #ccc;
+}
+.footer {
+    margin: 20px 0;
+    font-size: 12px;
+    color: #666;
+}
+.footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+
+.back-to-home {
+    margin: 20px 0; /* Adjust margin to control spacing */
+    padding: 10px; /* Padding for internal spacing */
+    display: flex; /* Ensure it's inline with other elements */
+    width: auto; /* Remove fixed width and height to allow flexibility */
+    height: auto;
+}
+.back-to-home a {
+    text-decoration: none; /* Remove underline from link */
+}
+.back-to-home i {
+    font-size: 24px; /* Adjust icon size */
+    color: #000; /* Icon color */
+}

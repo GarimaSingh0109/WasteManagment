@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+h2 {
+    font-size: 18px;
+    color: #666;
+}
+.info-text {
+    font-size: 16px;
+    color: #666;
+    margin: 20px 0;
+}
+.info-text a {
+    color: #00f;
+    text-decoration: none;
+}
+.info-text a:hover {
+    text-decoration: underline;
+}
+.icons {
+    font-size: 24px;
+    margin: 20px 0;
+}
+.icons i {
+    margin: 0 10px;
+}
+.language-select {
+    margin: 20px 0;
+}
+.language-select select {
+    padding: 5px;
+    font-size: 16px;
+}
+.like-button {
+    margin: 20px 0;
+}
+.calculator {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+}
+.calculator h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.calculator p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.calculator label {
+    display: block;
+    margin: 10px 0 5px;
+}
+.calculator input, .calculator select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.calculator button {
+    background-color: #00b300;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.calculator button:hover {
+    background-color: #009900;
+}
+.result {
+    font-size: 16px;
+    margin: 20px 0;
+}
+.result span {
+    font-weight: bold;
+}
+.tabs a {
+    text-decoration: none;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.tabs div {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.tabs div.active {
+    background-color: #ccc;
+}
+.footer {
+    font-size: 12px;
+    color: #666;
+    margin: 20px 0;
+}
+.footer a {
+    color: #00f;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.back-to-home {
+    margin: 20px 0; /* Adjust margin to control spacing */
+    padding: 10px; /* Padding for internal spacing */
+    display: flex; /* Ensure it's inline with other elements */
+    width: auto; /* Remove fixed width and height to allow flexibility */
+    height: auto;
+}
+.back-to-home a {
+    text-decoration: none; /* Remove underline from link */
+}
+.back-to-home i {
+    font-size: 24px; /* Adjust icon size */
+    color: #000; /* Icon color */
+}
