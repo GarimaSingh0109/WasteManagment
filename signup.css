@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="singUp.css"> 
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <title>Sign Up | Waste Management</title>
     <style>
         /* Basic styling for the page */
@@ -109,7 +109,7 @@
         <p>&copy; 2024 Waste Management Project. All rights reserved.</p>
     </footer>
 
-    <script src="signUp.js"></script> 
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
     <script>
         // Function to validate email format
         function validateEmail(email) {
