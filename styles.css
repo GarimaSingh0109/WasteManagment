@@ -8,6 +8,61 @@
   z-index: 99990;
 }
 
+
+.contact-us {
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin: 20px 0;
+}
+
+.contact-us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-us p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #45a049;
+}
+
+
 /* Progress Bar Styling */
 #progress-bar {
   height: 9px;
