@@ -490,6 +490,7 @@ main {
   transition: background-color 0.3s, color 0.3s; 
   cursor: pointer; 
   display: block;
+  margin: auto;
 }
 
 /* Hover effect */
