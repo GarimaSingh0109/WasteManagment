@@ -478,6 +478,26 @@ main {
 
 /* Eco-tips-features */
 /* Button */
+
+
+.hero-btn {
+  background-color: #e0f7fa; 
+  color: black; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 5px; 
+  text-decoration: none; 
+  transition: background-color 0.3s, color 0.3s; 
+  cursor: pointer; 
+}
+
+/* Hover effect */
+.hero-btn:hover {
+  background-color: darkgreen; /* Change to dark green */
+  color: white; /* Change text color to white */
+  cursor: pointer; /* Pointer on hover */
+}
+
 #eco-friendly {
     padding: 2rem;
     text-align: center;
