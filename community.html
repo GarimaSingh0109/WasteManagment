@@ -17,7 +17,7 @@
         }
 
         header {
-            background: #4CAF50;
+            background: #00796b;
             color: white;
             padding: 1rem 0;
             text-align: center;
@@ -47,105 +47,133 @@
         }
 
         .team-member {
-            position: relative;
+            perspective: 1000px;
             margin: 15px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
+            width: 250px;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .team-member img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
+        .card-front {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
         }
 
-        .team-member:hover img {
-            transform: scale(1.1);
-        }
-
-        .hover-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.7);
+        .card-back {
+            background-color: #4CAF50;
             color: white;
-            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            transform: rotateY(180deg);
             text-align: center;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
+            padding: 10px;
         }
 
-        .team-member:hover .hover-info {
-            transform: translateY(0);
+        .social-media a {
+            color: white;
+            margin: 5px 10px;
+            text-decoration: none;
         }
 
         footer {
-            background: #4CAF50;
+            background: #00796b;
             color: white;
             text-align: center;
             padding: 1rem 0;
             position: relative;
         }
-
-        .social-media a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Meet Our Team</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="register.html">Sign Up</a></li>
-            <li><a href="#footer">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <h1>Waste Management</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="../WasteManagment/CARBON FOOTPRINT CALC/welcome.html">Carbon footprint</a></li>
+                <li><a href="register.html">Sign up</a></li>
+
+                <li><a href="#footer">Contact</a></li>
+                <li class="theme-switch" id="theme-switch"></li>
+            </ul>
+        </nav>
+    </header>
+    
 
 <main>
+    
     <section class="team">
-        <h2>Our Dedicated Team</h2>
+        
+        <h2 style="text-align: center;">Our Dedicated Team</h2>
         <div class="team-container">
             <div class="team-member">
-                <img src="https://avatars.githubusercontent.com/u/130893914?v=4" alt="Team Member 1">
-                <div class="hover-info">
-                    <h3>Garishma Sing</h3>
-                    <p>Project Manager</p>
-                    <a href="#"><box-icon type="logo" name="facebook"></box-icon></a>
-                    <a href="#"><box-icon type="logo" name="twitter"></box-icon></a>
-                    <a href="#"><box-icon type="logo" name="linkedin"></box-icon></a>
+                <div class="card">
+                    <div class="card-front">
+                        <img src="https://avatars.githubusercontent.com/u/130893914?v=4" alt="Team Member 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="card-back">
+                        <h3>Garima Singh</h3>
+                        <p>Project Manager</p>
+                        <div class="social-media">
+                            <a href="https://www.linkedin.com/in/garima-singh-279014264" target="_blank">LinkedIn</a>
+                            <a href="https://github.com/GarimaSingh0109" target="_blank">GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="team-member">
-                <img src="./assets/member2.jpg" alt="Team Member 2">
-                <div class="hover-info">
-                    <h3>Jane Smith</h3>
-                    <p>Environmental Specialist</p>
-                    <a href="#"><box-icon type="logo" name="facebook"></box-icon></a>
-                    <a href="#"><box-icon type="logo" name="twitter"></box-icon></a>
-                    <a href="#"><box-icon type="logo" name="linkedin"></box-icon></a>
+                <div class="card">
+                    <div class="card-front">
+                        <img src="./assets/member2.jpg" alt="Team Member 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="card-back">
+                        <h3>Jane Smith</h3>
+                        <p>Environmental Specialist</p>
+                        <div class="social-media">
+                            <a href="https://www.linkedin.com/in/janesmith" target="_blank">LinkedIn</a>
+                            <a href="https://github.com/janesmith" target="_blank">GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="team-member">
-                <img src="./assets/member3.jpg" alt="Team Member 3">
-                <div class="hover-info">
-                    <h3>Alex Johnson</h3>
-                    <p>Community Outreach</p>
-                    <a href="#"><box-icon type="logo" name="facebook"></box-icon></a>
-                    <a href="#"><box-icon type="logo" name="twitter"></box-icon></a>
-                    <a href="#"><box-icon type="logo" name="linkedin"></box-icon></a>
+                <div class="card">
+                    <div class="card-front">
+                        <img src="./assets/member3.jpg" alt="Team Member 3" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="card-back">
+                        <h3>Alex Johnson</h3>
+                        <p>Community Outreach</p>
+                        <div class="social-media">
+                            <a href="https://www.linkedin.com/in/alexjohnson" target="_blank">LinkedIn</a>
+                            <a href="https://github.com/alexjohnson" target="_blank">GitHub</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Add more team members as needed -->
