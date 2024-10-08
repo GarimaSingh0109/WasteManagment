@@ -189,8 +189,8 @@ nav ul li a:hover {
 
   .hero p {
     font-size: 1rem;
+    margin-top: 100px; /* Create space for fixed header */
   }
- 
 }
 
   nav ul {
@@ -1305,52 +1305,6 @@ footer.dark-mode {
   /* Slight zoom effect on hover */
 }
 
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px 0;
-}
-
-.about-text {
-  flex: 1;
-  padding-right: 20px;
-}
-
-.about-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.values-container {
-  margin-top: 40px;
-}
-
-.values-cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.value-card {
-  background-color: #f3f3f3;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 10px;
-  width: 220px;
-  text-align: center;
-}
-
-.value-card h4 {
-  color: #2a9d8f;
-  font-size: 20px;
-}
-
-.value-card p {
-  font-size: 16px;
-  color: #333;
-}
 
 
 /* signup page styles */
@@ -1416,8 +1370,78 @@ footer.dark-mode {
 .button_2[type="submit"]:hover{
   background-color: #83C5BE;
 }
-@media screen and (max-width: 480px) {
-  .buttons-register button {
-      font-size: 14px;
+.indv-signUp{
+  width: 40%;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px;
+}
+#signup-submitButton{
+  align-items: center;
+  padding-left: 0%;
+  justify-content: space-around;
+}
+
+
+.values-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+
+.values-container h3 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.values-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+.value-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.value-card h4 {
+  font-size: 1.5rem;
+  color: #3b82f6;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.value-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .values-cards {
+      grid-template-columns: 1fr;
+  }
+
+  .values-container h3 {
+      font-size: 2rem;
   }
 }
