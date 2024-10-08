@@ -2,10 +2,10 @@
   <h1> Waste Management</h1>
 </div>
 
-![image](https://github.com/user-attachments/assets/29e2fcdd-dbe3-4618-a100-f0a2d0b8dc70)
 
+This platform is designed to empower users in managing waste efficiently and contributing to a cleaner, greener planet. It offers features such as image uploads for waste classification, disposal guidelines, real-time monitoring, eco-friendly tips, and opportunities for community engagement
 
-This website is a platform designed to help users manage the waste effectively and contribute to a cleaner, greener planet. It offers features such as image upload for waste classification, disposal information, real-time monitoring, eco-friendly tips, and community engagement opportunities.
+**Discord Link:-** https://discord.gg/JP43BDWP
 
 ## Technologies used:
 
@@ -36,46 +36,7 @@ If you would like to contribute to the project, please follow our contribution g
 Here’s a more detailed version of the "Steps for Contributing" section:
 
 ### Steps for Contributing
-We welcome contributions to the Waste Management project! To contribute:
-
-1. **Fork the Repository** 🍴  
-   Click the "Fork" button at the top right of the repository page to create your own copy of the repository.
-
-2. **Clone Your Fork**  
-   Open your terminal and run the following command to clone your forked repository to your local machine:
-   ```bash
-   git clone https://github.com/GarimaSingh0109/WasteManagment.git
-   ```
-
-3. **Create a New Branch** 🌱  
-   Navigate into your project directory and create a new branch for your feature or fix:
-   ```bash
-   git checkout -b feature/your-feature
-   ```
-
-4. **Make Your Changes** ✨  
-   Implement your changes, ensuring that you follow the project's coding style and guidelines.
-
-5. **Commit Your Changes** 🚀  
-   Add your changes to the staging area and commit them with a descriptive message:
-   ```bash
-   git add .
-   git commit -m "Add feature/describe your changes"
-   ```
-
-6. **Push Your Changes**  
-   Push your branch to your forked repository:
-   ```bash
-   git push origin feature/your-feature
-   ```
-
-7. **Create a Pull Request** 🔄  
-   Go to the original repository where you want to propose your changes. Click on the "Pull Requests" tab and then click "New Pull Request." Select your branch and submit the pull request with a detailed description of your changes.
-
-8. **Celebrate!** 🎉  
-   Once your pull request is merged, celebrate your contribution to the project!
-
-
+**For steps on how to contribute refer to CONTRIBUTING.md**
 <hr>
 <!-- Open Source Programs -->
   <div>
