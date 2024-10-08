@@ -1,3 +1,4 @@
+// Image Upload and Classification
 const imageInput = document.getElementById('image-input');  
 const uploadButton = document.getElementById('upload-button');  
 const classificationResult = document.getElementById('classification-result');  
@@ -17,10 +18,10 @@ uploadButton.addEventListener('click', () => {
         classificationResult.textContent = data.classification;  
         disposalInformation.textContent = data.disposalInformation;  
     })  
-    .catch(error => console.error(error));  
+    .catch(error => console.error('Error:', error));  
 });
 
-// FAQ functionality
+// FAQ Functionality
 const faqItems = document.querySelectorAll('.faq-item h3');
 
 faqItems.forEach(item => {
@@ -30,12 +31,12 @@ faqItems.forEach(item => {
     });
 });
 
-// Optional: Check the initial mode on page load
+// Dark Mode Toggle
 if (localStorage.getItem('dark-mode') === 'enabled') {
-    enableDarkMode();
+    enableDarkMode(); // Assuming enableDarkMode is a function you've defined elsewhere
 }
 
-// Feedback form validation
+// Feedback Form Validation
 const feedbackForm = document.getElementById('feedback-form');
 const feedbackName = feedbackForm.querySelector('input[type="text"]');
 const feedbackEmail = feedbackForm.querySelector('input[type="email"]');
@@ -81,7 +82,7 @@ feedbackForm.addEventListener('submit', (event) => {
     }
 });
 
-// Newsletter form validation
+// Newsletter Form Validation
 const newsletterForm = document.getElementById('newsletter-form');
 const newsletterEmail = newsletterForm.querySelector('input[type="email"]');
 const newsletterErrorMessage = document.getElementById('newsletter-error-message');
@@ -96,4 +97,9 @@ newsletterForm.addEventListener('submit', (event) => {
     newsletterErrorMessage.textContent = '';
 
     if (!emailPattern.test(email)) {
-        newsletterErrorMessage.textContent = 'Please enter
+        newsletterErrorMessage.textContent = 'Please enter a valid email address.';
+    } else {
+        alert('Successfully subscribed to the newsletter!');
+        newsletterForm.reset(); // Reset the form after successful subscription
+    }
+});
