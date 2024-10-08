@@ -35,7 +35,7 @@ body {
 :root {
     --primary-color: #00796b;
     --secondary-color: #26a69a;
-    --accent-color: #e0f7fa;
+    --accent-color: #e6f4f1;
     --dark-bg: #1f1f1f;
     --light-bg: #ffffff;
 }
@@ -190,30 +190,30 @@ nav ul li a:hover {
   .hero p {
     font-size: 1rem;
   }
-   margin-top: 100px; /* Create space for fixed header */
+ 
 }
 
-nav ul {
+  nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-}
+  }
 
-nav ul li {
+  nav ul li {
     margin: 0 15px;
-}
+  }
 
-nav ul li a {
+  nav ul li a {
     text-decoration: none;
     color: #333; /* Text color */
-}
+  }
   .hero-btn {
     padding: 10px 20px;
     font-size: 1rem;
   }
-}
+
 
 @media (max-width: 480px) {
   .hero {
@@ -1353,7 +1353,7 @@ footer.dark-mode {
 }
 
 /*Styling for log in page*/
-.main-area{
+/* .main-area{
   margin:90px;
   padding: 20px;
 }
@@ -1408,7 +1408,6 @@ button{
   width: 60%;
   text-align: center;
 }
-/* Hover effect for submit button */
 button:hover {
   background-color: #0056b3;
 }
@@ -1417,7 +1416,6 @@ button:hover {
   margin: 100px;
  background: url('green-background.jpg') no-repeat center center;
 }
-/*sign up form*/
 .signUp-mainSec{
   margin-top: 60px;
   padding-top: 100px;
@@ -1441,5 +1439,74 @@ button:hover {
   align-items: center;
   padding-left: 0%;
   justify-content: space-around;
-}
+} */
 
+
+/* signup page styles */
+.container-register {
+  width: 90%;
+  max-width: 400px;
+  margin: 7% auto 5%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.buttons-register {
+  display: flex;
+}
+.button_1 {
+  font-size: 1rem;
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.buttons-register .button_1.button-active {
+  background-color: #008c85;
+  color: #fff;
+}
+.button_1.button-active:hover{
+  background-color: #006d77;
+}
+.form-register {
+  display: none;
+  padding: 20px;
+}
+.form-register.button-active {
+  display: block;
+}
+.label_1 {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.input_1 {
+  width: calc(100% - 12px);
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.button_2[type="submit"] {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  margin-top: 1.2rem;
+  padding: 10px;
+  border: none;
+  background-color: #008c85;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+.button_2[type="submit"]:hover{
+  background-color: #83C5BE;
+}
+@media screen and (max-width: 480px) {
+  .buttons-register button {
+      font-size: 14px;
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management</title>
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="styles.js"></script>
+</head>
+<body class="register-body">
+    
+    <header>
+        <h1>Waste Management</h1>
+        <nav>
+            <ul>
+                <li><a href="#upload">Upload</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="../WasteManagment/CARBON FOOTPRINT CALC/welcome.html">Carbon footprint</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+
+                <li><a href="#about">About Me</a></li> <!-- New About Me link -->
+
+                <li><a href="register.html">Sign up</a></li>
+
+                <li><a href="#footer">Contact</a></li>
+                <li class="theme-switch" id="theme-switch"></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="container-register">
+      <div class="buttons-register">
+          <button onclick="showForm(1)" class="button-active button_1">Sign up</button>
+          <button onclick="showForm(2)" class="button_1">Login</button>
+      </div>
+      <form id="form1" class="form-register button-active" >
+          <label class = "label_1">Full Name:</label>
+          <input type="text"  name="fullName" class="input_1">
+          <label class = "label_1">Email:</label>
+          <input type="email"  name="email" class="input_1">
+          <label class = "label_1">Enter Password:</label>
+          <input type="password"  name="password1" class="input_1">
+          <label class = "label_1">Confirm Password:</label>
+          <input type="password"  name="password2" class="input_1">
+          <button type="submit" class = "button_2">Create Account</button>
+      </form>
+      <form id="form2" class="form-register">
+            <label class = "label_1">Email:</label>
+            <input type="email"  name="email" class="input_1">
+            <label class = "label_1">Enter Password:</label>
+            <input type="password"  name="password1" class="input_1">
+            <!-- <div class="alert alert-warning">
+              <strong>Warning!</strong> <%= buyerErrorMessage %>
+            </div> -->
+          <button type="submit" class = "button_2">Submit</button>
+          <!-- <div class = "text-center mt-3">
+            <p class = "already-user">Already have a account?</p>
+            <a href="/login" class = "already-user">Login Here</a>
+          </div>  -->
+      </form>
+     </div>
+    
+</body>
+</html>
