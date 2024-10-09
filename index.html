@@ -7,26 +7,28 @@
     <link rel="icon" href="./assets/logo.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <header>
-        
-        <a href="#" class="logo">
-            <img src="logo.png" >
-            Waste Management
-          </a>
-
-        <nav>
-            <ul>
-                <li><a href="#upload">Upload</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#feedback">Feedback</a></li>
-                <li><a href="#signup">Signup</a></li>
-                <li><a href="#footer">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navbar-container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Waste Management Logo">
+                Waste Management
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#upload">Upload</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#signup">Signup</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-   
+
     <section class="hero">
         <div class="hero-content">
             <h2>Manage Your Waste Effectively</h2>
@@ -35,42 +37,22 @@
         </div>
     </section>
 
-
     <main>
         <section class="upload" id="upload">
             <h2>Upload Image</h2>
             <input type="file" id="image-input" accept="image/*">
-            <button id="upload-button">Upload</button>
+            <button id="upload-button" class="mui-btn">Upload</button>
         </section>
-       
-
-    <main><br>
-      <section class="upload" id="upload">
-    <div class="upload-container">
-        <div class="upload-text">
-            <h2> Upload Your Files Here </h2><br>
-            <label for="image-input" class="custom-file-upload">
-                <input type="file" id="image-input" accept="image/*" hidden>
-                <span> Select Image </span>
-            </label>
-        </div>
-        <div class="upload-submit">
-            <button id="upload-button"> Submit </button>
-        </div>
-    </div>
-</section>
-        
 
         <section class="classification">
             <h2>Classification</h2>
             <p id="classification-result"></p>
         </section>
-       
+
         <section class="disposal">
             <h2>Disposal Information</h2>
             <p id="disposal-information"></p>
         </section>
-
 
         <section class="features" id="features">
             <h2>Our Features</h2>
@@ -80,84 +62,706 @@
             </div>
             <div class="feature-card" id="eco-friendly">
                 <h3>Eco-Friendly Tips</h3>
-    <blockquote id="eco-fact">Do you know <span id="fact-highlight">only 9% of plastic ever produced has been recycled?</span></blockquote>
-    <p>
-      Be <span class="highlight">Eco-savvy</span> by embracing simple, comprehensive, and quick solutions from the comfort of your home. 
-      Contribute in managing the overwhelming burden of waste generation. Get personalized tips to manage waste sustainably and 
-      <strong>be the change you want to see in the world!</strong>.
-    </p>
-    <a href="ecotips.html" id="eco-tips" class="cta-button">I'm in!</a>
-                
+                <blockquote id="eco-fact">Do you know <span id="fact-highlight">only 9% of plastic ever produced has been recycled?</span></blockquote>
+                <p>Be <span class="highlight">Eco-savvy</span> by embracing simple, comprehensive, and quick solutions from home.</p>
+                <a href="ecotips.html" id="eco-tips" class="cta-button">I'm in!</a>
             </div>
             <div class="feature-card">
                 <h3>Community Engagement</h3>
                 <p>Join community efforts to promote waste management.</p>
             </div>
         </section>
-<section class="faqs" id="faqs">
-            <h2>Frequently Asked Questions (FAQs)</h2>
+
+       
+      
+
+
+        <section class="faqs" id="faqs">
+            <div class="faq-container">
+                <!-- Top: Image -->
+                <div class="faq-image">
+                    <img src="assets/faq-w.jpg" alt="FAQs Image">
+                </div>
         
-            <div class="faq-item">
-                <h3>What is the difference between biodegradable and non-biodegradable waste?</h3>
-                <p>Biodegradable waste refers to organic materials such as food scraps and garden waste that decompose naturally over time. Non-biodegradable waste includes plastics, metals, and other materials that do not decompose easily and require recycling or special disposal methods.</p>
+                <!-- Below: FAQ Content -->
+                <div class="faq-content">
+                    <h2>Frequently Asked Questions (FAQs)</h2>
+                    
+                    <div class="faq-item">
+                        <h3 class="faq-question">What is the difference between biodegradable and non-biodegradable waste?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">Biodegradable waste refers to organic materials such as food scraps and garden waste that decompose naturally. Non-biodegradable waste includes plastics and metals that require special disposal.</p>
+                    </div>
+        
+                    <div class="faq-item">
+                        <h3 class="faq-question">How can I reduce household waste?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">You can reduce household waste by recycling, composting organic waste, and avoiding single-use plastics.</p>
+                    </div>
+        
+                    <div class="faq-item">
+                        <h3 class="faq-question">What items can be recycled at home?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">Common recyclable items include paper, cardboard, glass, plastic bottles, and aluminum cans. Check with your local recycling center for more details.</p>
+                    </div>
+        
+                    <div class="faq-item">
+                        <h3 class="faq-question">What is composting and how can I do it?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">Composting is the process of turning organic waste into nutrient-rich soil. You can compost food scraps, leaves, and other biodegradable materials in a bin or pile in your backyard.</p>
+                    </div>
+        
+                    <div class="faq-item">
+                        <h3 class="faq-question">Why is plastic waste harmful to the environment?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">Plastic waste takes hundreds of years to decompose and can harm wildlife, pollute oceans, and contribute to climate change.</p>
+                    </div>
+        
+                    <div class="faq-item">
+                        <h3 class="faq-question">How can I safely dispose of hazardous waste?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">Hazardous waste, such as batteries, chemicals, and electronics, should be taken to specialized disposal centers. Do not throw them in regular trash.</p>
+                    </div>
+                </div>
             </div>
         
-            <div class="faq-item">
-                <h3>How can I reduce household waste?</h3>
-                <p>You can reduce waste by buying reusable products, composting organic waste, recycling materials like plastic and paper, and avoiding single-use items. Participating in community waste reduction programs is also helpful.</p>
-            </div>
+            <style>
+                /* FAQ section container layout */
+                .faq-container {
+                    max-width: 1200px;
+                    margin: 20px auto;
+                    padding: 20px;
+                    font-family: Arial, sans-serif;
+                    text-align: center; /* Center align for a neat look */
+                }
         
-            <div class="faq-item">
-                <h3>What should I do with hazardous waste?</h3>
-                <p>Hazardous waste, such as batteries, chemicals, and electronic waste, should be taken to designated disposal sites or collection events. Do not dispose of them in regular household trash as they can be harmful to the environment.</p>
-            </div>
+                /* Top: FAQ image */
+                .faq-image img {
+                    width: 250px; /* Set the image width */
+                    height: auto; /* Maintain aspect ratio */
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 20px; /* Space between image and content */
+                }
         
-            <div class="faq-item">
-                <h3>Can all plastics be recycled?</h3>
-                <p>No, not all plastics are recyclable. Look for recycling symbols with numbers on plastic products. Most recycling centers accept plastics marked with numbers 1 and 2, but it's important to check with your local center for specific guidelines.</p>
-            </div>
+                /* FAQ content */
+                .faq-content {
+                    padding: 20px;
+                }
         
-            <div class="faq-item">
-                <h3>How do I start composting at home?</h3>
-                <p>To start composting, collect food scraps like fruit peels, vegetable leftovers, and coffee grounds. Combine them with yard waste like leaves and grass clippings in a compost bin. Turn the compost regularly to ensure proper aeration and decomposition.</p>
-            </div>
+                .faq-content h2 {
+                    margin-bottom: 20px;
+                    font-size: 28px;
+                    color: #333;
+                }
         
-            <div class="faq-item">
-                <h3>Why is it important to sort waste?</h3>
-                <p>Sorting waste ensures that recyclable materials like paper, glass, and plastics are properly processed, reducing the amount of waste sent to landfills. Proper sorting helps reduce pollution, conserve resources, and protect the environment.</p>
-            </div>
+                /* FAQ item styling */
+                .faq-item {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    margin-bottom: 10px;
+                    padding: 15px;
+                    background-color: #f9f9f9;
+                    text-align: left; /* Align text to the left for better readability */
+                }
+        
+                .faq-question {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 18px;
+                    margin: 0;
+                    padding: 0;
+                    color: #333;
+                }
+        
+                .faq-answer {
+                    display: none;
+                    margin-top: 10px;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: #555;
+                }
+        
+                /* Arrow styling and transition */
+                .faq-question .arrow {
+                    font-size: 18px;
+                    transition: transform 0.3s ease;
+                }
+        
+                .faq-question.active .arrow {
+                    transform: rotate(90deg);
+                }
+        
+                /* Responsive design for mobile */
+                @media (max-width: 768px) {
+                    .faq-container {
+                        padding: 10px; /* Adjust padding for smaller screens */
+                    }
+                    .faq-content h2 {
+                        font-size: 24px;
+                    }
+                    .faq-question {
+                        font-size: 16px;
+                    }
+                    .faq-answer {
+                        font-size: 14px;
+                    }
+                }
+            </style>
+        
+            <script>
+                const faqQuestions = document.querySelectorAll('.faq-question');
+        
+                faqQuestions.forEach((question) => {
+                    question.addEventListener('click', () => {
+                        question.classList.toggle('active');
+                        const answer = question.nextElementSibling;
+                        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                    });
+                });
+            </script>
         </section>
         
+        
+
+        
+
+
+
+
+
+
+        
+
 
         <section class="feedback" id="feedback">
+            <!-- Above: Image -->
+            <div class="feedback-image">
+                <img src="assets/feed-w.avif" alt="Feedback Image">
+            </div>
+        
             <h2>Your Feedback</h2>
+            <p>We value your feedback. Please let us know your thoughts on how we can improve our services.</p>
+            
             <form id="feedback-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Feedback" required></textarea>
-                <button type="submit">Submit</button>
+                <div class="form-group">
+                    <input type="text" class="mui-input" id="feedback-name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="mui-input" id="feedback-email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="mui-input" id="feedback-message" placeholder="Your Feedback" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">Submit</button>
+                </div>
+                <div class="form-error" id="form-error-message"></div>
+                <div class="form-success" id="form-success-message"></div>
             </form>
         </section>
+        
+        <style>
+            /* Feedback section styling */
+            .feedback {
+                max-width: 600px;
+                margin: 20px auto;
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                color: #333; /* Change text color to dark for better visibility */
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center; /* Center align for a neat look */
+            }
+        
+            .feedback h2, .feedback p {
+                color: #333; /* Change text color to dark for better visibility */
+            }
+        
+            .form-group {
+                margin-bottom: 15px;
+            }
+        
+            .mui-input {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                box-sizing: border-box;
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+        
+            .mui-input:focus {
+                border-color: #0077cc;
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+            }
+        
+            .mui-btn {
+                width: 100%;
+                padding: 12px;
+                background-color: #0077cc;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+        
+            .mui-btn:hover {
+                background-color: #005fa3;
+            }
+        
+            /* Feedback image styling */
+            .feedback-image img {
+                max-width: 100%;
+                height: auto; /* Maintain aspect ratio */
+                border-radius: 8px; /* Rounded corners */
+                margin-bottom: 20px; /* Space between the image and the content below */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        
+            /* Error and success messages */
+            .form-error, .form-success {
+                text-align: center;
+                font-size: 14px;
+                margin-top: 10px;
+                display: none;
+            }
+        
+            .form-error {
+                color: #ff3333;
+            }
+        
+            .form-success {
+                color: #28a745;
+            }
+        
+            /* Responsive design */
+            @media (max-width: 768px) {
+                .feedback h2 {
+                    font-size: 22px;
+                }
+        
+                .feedback p {
+                    font-size: 14px;
+                }
+        
+                .mui-input {
+                    font-size: 14px;
+                }
+        
+                .mui-btn {
+                    font-size: 16px;
+                }
+            }
+        </style>
+        
 
+
+
+
+
+        
         <section class="signup" id="signup">
             <h2>Sign Up</h2>
+            <p>Join our community for updates on waste management tips, events, and more. Sign up below!</p>
             <form id="signup-form">
-                <input type="text" placeholder="Full Name" required aria-label="Full Name">
-                <input type="email" placeholder="Email Address" required aria-label="Email Address">
-                <input type="password" placeholder="Password" required aria-label="Password">
-                <input type="password" placeholder="Confirm Password" required aria-label="Confirm Password">
-                <button type="submit">Create Account</button>
+                <div class="form-group">
+                    <input type="text" class="mui-input" placeholder="Full Name" required aria-label="Full Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="mui-input" placeholder="Email Address" required aria-label="Email Address">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="mui-input" placeholder="Password" required aria-label="Password">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="mui-input" placeholder="Confirm Password" required aria-label="Confirm Password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">Create Account</button>
+                </div>
+                <div class="form-error" id="signup-error-message"></div>
+                <div class="form-success" id="signup-success-message"></div>
             </form>
         </section>
-    </main>
+        
+        <style>
+            /* Feedback and Sign Up form styling */
+            .feedback, .signup {
+                max-width: 600px;
+                margin: 20px auto;
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+            }
+        
+            .feedback h2, .signup h2 {
+                font-size: 26px;
+                text-align: center;
+                margin-bottom: 10px;
+                color: #333;
+            }
+        
+            .feedback p, .signup p {
+                font-size: 16px;
+                text-align: center;
+                color: #555;
+                margin-bottom: 20px;
+            }
+        
+            .form-group {
+                margin-bottom: 15px;
+            }
+        
+            .mui-input {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                box-sizing: border-box;
+            }
+        
+            .mui-input:focus {
+                border-color: #0077cc;
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+            }
+        
+            .mui-btn {
+                width: 100%;
+                padding: 12px;
+                background-color: #0077cc;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+        
+            .mui-btn:hover {
+                background-color: #005fa3;
+            }
+        
+            /* Error and success messages */
+            .form-error, .form-success {
+                text-align: center;
+                font-size: 14px;
+                margin-top: 10px;
+                display: none;
+            }
+        
+            .form-error {
+                color: #ff3333;
+            }
+        
+            .form-success {
+                color: #28a745;
+            }
+        
+            /* Responsive design for mobile */
+            @media (max-width: 768px) {
+                .feedback h2, .signup h2 {
+                    font-size: 22px;
+                }
+        
+                .feedback p, .signup p {
+                    font-size: 14px;
+                }
+        
+                .mui-input {
+                    font-size: 14px;
+                }
+        
+                .mui-btn {
+                    font-size: 16px;
+                }
+            }
+        </style>
+        
+        <script>
+            // Feedback form validation and submission
+            document.getElementById('feedback-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = document.getElementById('feedback-name').value.trim();
+                const email = document.getElementById('feedback-email').value.trim();
+                const message = document.getElementById('feedback-message').value.trim();
+                const errorMessage = document.getElementById('form-error-message');
+                const successMessage = document.getElementById('form-success-message');
+        
+                if (!name || !email || !message) {
+                    errorMessage.textContent = 'Please fill in all fields.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                } else if (!validateEmail(email)) {
+                    errorMessage.textContent = 'Please enter a valid email address.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                } else {
+                    errorMessage.style.display = 'none';
+                    successMessage.textContent = 'Thank you for your feedback!';
+                    successMessage.style.display = 'block';
+                }
+            });
+        
+            // Signup form validation and submission
+            document.getElementById('signup-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const fullName = document.querySelector('#signup-form input[aria-label="Full Name"]').value.trim();
+                const email = document.querySelector('#signup-form input[aria-label="Email Address"]').value.trim();
+                const password = document.querySelector('#signup-form input[aria-label="Password"]').value.trim();
+                const confirmPassword = document.querySelector('#signup-form input[aria-label="Confirm Password"]').value.trim();
+                const errorMessage = document.getElementById('signup-error-message');
+                const successMessage = document.getElementById('signup-success-message');
+        
+                if (!fullName || !email || !password || !confirmPassword) {
+                    errorMessage.textContent = 'Please fill in all fields.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                } else if (password !== confirmPassword) {
+                    errorMessage.textContent = 'Passwords do not match.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                } else if (!validateEmail(email)) {
+                    errorMessage.textContent = 'Please enter a valid email address.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                } else {
+                    errorMessage.style.display = 'none';
+                    successMessage.textContent = 'Account created successfully!';
+                    successMessage.style.display = 'block';
+                }
+            });
+        
+            // Email validation function
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+        </script>
 
+
+
+
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <div class="contact-image">
+            <img src="assets/contact-w.avif" alt="Contact Us">
+        </div>
+        <div class="contact-form-container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, concerns, or feedback, feel free to reach out to us using the form below. We would love to hear from you!</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" class="mui-input" id="contact-name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="mui-input" id="contact-email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="mui-input" id="contact-message" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">Send Message</button>
+                </div>
+                <div class="form-error" id="contact-error-message"></div>
+                <div class="form-success" id="contact-success-message"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Contact section styling */
+    .contact {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .contact-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-form-container {
+        max-width: 600px;
+    }
+
+    .contact h2 {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .contact p {
+        font-size: 16px;
+        text-align: center;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .mui-input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    .mui-input:focus {
+        border-color: #0077cc;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+    }
+
+    .mui-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #0077cc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .mui-btn:hover {
+        background-color: #005fa3;
+    }
+
+    /* Error and success messages */
+    .form-error, .form-success {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .form-error {
+        color: #ff3333;
+    }
+
+    .form-success {
+        color: #28a745;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact h2 {
+            font-size: 22px;
+        }
+
+        .contact p {
+            font-size: 14px;
+        }
+
+        .mui-input {
+            font-size: 14px;
+        }
+
+        .mui-btn {
+            font-size: 16px;
+        }
+
+        .contact-image {
+            width: 100%;
+        }
+
+        .contact-form-container {
+            width: 100%;
+        }
+    }
+</style>
+
+<script>
+    // Contact form validation and submission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('contact-name').value.trim();
+        const email = document.getElementById('contact-email').value.trim();
+        const message = document.getElementById('contact-message').value.trim();
+        const errorMessage = document.getElementById('contact-error-message');
+        const successMessage = document.getElementById('contact-success-message');
+
+        if (!name || !email || !message) {
+            errorMessage.textContent = 'Please fill in all fields.';
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+        } else if (!validateEmail(email)) {
+            errorMessage.textContent = 'Please enter a valid email address.';
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+        } else {
+            errorMessage.style.display = 'none';
+            successMessage.textContent = 'Your message has been sent!';
+            successMessage.style.display = 'block';
+        }
+    });
+
+    // Email validation function
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+</script>
+
+
+
+
+
+
+    </main>
 
     <footer id="footer">
         <h2>Stay Connected</h2>
         <form id="newsletter-form">
             <input type="email" placeholder="Your Email" required>
-            <span id="newsletter-error-message" style="color: red;"></span> <!-- Error message for newsletter -->
-            <button type="submit">Subscribe</button>
+            <span id="newsletter-error-message" style="color: red;"></span>
+            <button type="submit" class="mui-btn">Subscribe</button>
         </form>
         <div class="social-media">
             <a href="#">Facebook</a>
@@ -167,11 +771,6 @@
         <p>&copy; 2024 Waste Management. All rights reserved.</p>
     </footer>
 
- feature/your-new-feature
-
-
- main
     <script src="script.js"></script>
 </body>
-</html>
 </html>
