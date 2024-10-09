@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+h2 {
+    font-size: 18px;
+    color: #666;
+}
+.intro-text {
+    font-size: 24px;
+    margin: 20px 0;
+}
+.description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.description strong {
+    color: #000;
+}
+.icons {
+    margin: 20px 0;
+}
+.icons i {
+    font-size: 24px;
+    margin: 0 10px;
+}
+.language-select {
+    margin: 20px 0;
+}
+.language-select select {
+    padding: 5px;
+    font-size: 16px;
+}
+.why-create-account {
+    color: #00f;
+    margin: 10px 0;
+}
+.like-button {
+    margin: 10px 0;
+}
+.tabs {
+    
+
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.tabs a {
+    text-decoration: none;
+}
+
+.tab {
+   
+    background-color: #ccc;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+}
+.tab.active {
+    text-decoration: none;
+
+    background-color: #666;
+    color: #fff;
+}
+.content {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: left;
+    border-top: none;
+}
+.content h3 {
+    color: #008000;
+    font-size: 18px;
+}
+.content p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+.content select, .content input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+    margin: 5px 0;
+}
+.content .save-button {
+    background-color: #008000;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+.next-button {
+    background-color: #008000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+}
+
+.footer {
+    font-size: 12px;
+    color: #666;
+    margin: 20px 0;
+}
+.footer a {
+    color: #00f;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.back-to-home {
+    margin: 20px 0; /* Adjust margin to control spacing */
+    padding: 10px; /* Padding for internal spacing */
+    display: flex; /* Ensure it's inline with other elements */
+    width: auto; /* Remove fixed width and height to allow flexibility */
+    height: auto;
+}
+.back-to-home a {
+    text-decoration: none; /* Remove underline from link */
+}
+.back-to-home i {
+    font-size: 24px; /* Adjust icon size */
+    color: #000; /* Icon color */
+}
