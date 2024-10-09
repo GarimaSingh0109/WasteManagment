@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waste Management</title>
-    <link rel="icon" href="./assets/logo.png">
+    <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         
         <a href="#" class="logo">
-            <img src="logo.png" >
-            Waste Management
+            <img src="logo.png" height="80px" >
           </a>
 
         <nav>
@@ -35,15 +35,13 @@
         </div>
     </section>
 
-
     <main>
         <section class="upload" id="upload">
             <h2>Upload Image</h2>
             <input type="file" id="image-input" accept="image/*">
             <button id="upload-button">Upload</button>
         </section>
-       
-
+    
     <main><br>
       <section class="upload" id="upload">
     <div class="upload-container">
@@ -74,26 +72,46 @@
 
         <section class="features" id="features">
             <h2>Our Features</h2>
-            <div class="feature-card">
-                <h3>Real-time Monitoring</h3>
-                <p>Track your waste management activities in real-time.</p>
+            <div class="feature-slider">
+                <div class="slider-wrapper">
+                    
+                    <div class="feature-card">
+                        <h3>Real-time Monitoring</h3>
+                        <blockquote id="eco-fact">
+                            Did you know that <span id="fact-highlight">over 2 billion tons of waste are generated 
+                            globally every year, but only 16% is recycled?</span>
+                        </blockquote>
+                    
+                        <p><span class="highlight">Track, Reduce, and Make a Difference</span> With real-time waste monitoring, you can be part of the solution by tracking 
+                            your waste habits, identifying areas for improvement, and contributing to a greener planet. 
+                            Take control of your impact – start monitoring your waste today and help reduce the overwhelming waste burden
+                             on our environment. <strong>Every action counts.</strong></p>
+                        <a href="realtime-monitoring.html" class="cta-button">Let's be on right track</a>
+                    </div>
+                    <div class="feature-card" id="eco-friendly">
+                        <h3>Eco-Friendly Tips</h3>
+                        <blockquote id="eco-fact">
+                            Do you know <span id="fact-highlight">only 9% of plastic ever produced has been recycled?</span>
+                        </blockquote>
+                        <p>
+                            Be <span class="highlight">Eco-savvy</span> by embracing simple, comprehensive, and quick solutions from the comfort of your home.
+                            Contribute in managing the overwhelming burden of waste generation. Get personalized tips to manage waste sustainably and
+                            <strong>be the change you want to see in the world!</strong>.
+                        </p>
+                        <a href="ecotips.html" id="eco-tips" class="cta-button">I'm in!</a>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Community Engagement</h3>
+                        <p>Join community efforts to promote waste management.</p>
+                    </div>
+
+                </div>
+                <button class="slider-btn left" id="prev">&#10094;</button>
+                <button class="slider-btn right" id="next">&#10095;</button>
             </div>
-            <div class="feature-card" id="eco-friendly">
-                <h3>Eco-Friendly Tips</h3>
-    <blockquote id="eco-fact">Do you know <span id="fact-highlight">only 9% of plastic ever produced has been recycled?</span></blockquote>
-    <p>
-      Be <span class="highlight">Eco-savvy</span> by embracing simple, comprehensive, and quick solutions from the comfort of your home. 
-      Contribute in managing the overwhelming burden of waste generation. Get personalized tips to manage waste sustainably and 
-      <strong>be the change you want to see in the world!</strong>.
-    </p>
-    <a href="ecotips.html" id="eco-tips" class="cta-button">I'm in!</a>
-                
-            </div>
-            <div class="feature-card">
-                <h3>Community Engagement</h3>
-                <p>Join community efforts to promote waste management.</p>
-            </div>
+            
         </section>
+
 <section class="faqs" id="faqs">
             <h2>Frequently Asked Questions (FAQs)</h2>
         
@@ -165,12 +183,14 @@
             <a href="#">Instagram</a>
         </div>
         <p>&copy; 2024 Waste Management. All rights reserved.</p>
+        <button id="BacktoTop">
+            <div class="circle1">
+                <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                </svg>
+            </div>
+    </button>
     </footer>
-
- feature/your-new-feature
-
-
- main
     <script src="script.js"></script>
 </body>
 </html>

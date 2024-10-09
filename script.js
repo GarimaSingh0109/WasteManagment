@@ -35,7 +35,6 @@ uploadButton.addEventListener('click', () => {
 if (localStorage.getItem('dark-mode') === 'enabled') {
     enableDarkMode();
 }
- main
 
 // Feedback form validation
 const feedbackForm = document.getElementById('feedback-form');
@@ -111,7 +110,7 @@ newsletterForm.addEventListener('submit', (event) => {
     newsletterErrorMessage.textContent = '';
 
 
- feature/your-new-feature
+//  feature/your-new-feature
     if (!emailPattern.test(email)) {
         newsletterErrorMessage.textContent = 'Please enter a valid email address.';
     } else {
@@ -121,5 +120,85 @@ newsletterForm.addEventListener('submit', (event) => {
     }
 });
 
+/*FEATURES CARD SLIDER */
+let currentSlide = 0;
 
- main
+    function moveSlider(direction) {
+        const sliderWrapper = document.querySelector('.slider-wrapper');
+        const totalSlides = document.querySelectorAll('.feature-card').length;
+        currentSlide += direction;
+
+        // Loop the slider
+        if (currentSlide >= totalSlides) {
+            currentSlide = 0;
+        } else if (currentSlide < 0) {
+            currentSlide = totalSlides - 1;
+        }
+
+        // Move the slider
+        sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    const tipsSlider = document.querySelector(".slider-wrapper");
+      const slides = document.querySelectorAll(".feature-card");
+      const prevSlide = document.getElementById("prev");
+      const nextSlide = document.getElementById("next");
+      let currentIndex = 0;
+
+      const updateSlider = () => {
+        const slideWidth = slides[0].clientWidth;
+        tipsSlider.style.transform = `translateX(-${
+          currentIndex * slideWidth
+        }px)`;
+      };
+
+      tipsSlider.style.transition = "transform 0.3s ease-in-out";
+
+      nextSlide.addEventListener("click", () => {
+        if (currentIndex < slides.length - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateSlider();
+      });
+
+      prevSlide.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = slides.length - 1;
+        }
+        updateSlider();
+      });
+
+      window.addEventListener("resize", updateSlider);
+
+      window.addEventListener("load", updateSlider);
+
+
+
+
+
+/* Scroll to Top Function */
+const scrollToTopBtn = document.getElementById("BacktoTop");
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        scrollToTopBtn.style.visibility = 'visible';
+        scrollToTopBtn.style.opacity = '1';
+    } else {
+        scrollToTopBtn.style.visibility = 'hidden';
+        scrollToTopBtn.style.opacity = '0';
+    }
+}
+
+scrollToTopBtn.addEventListener("click", function() {
+    // Smooth scroll back to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
