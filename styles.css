@@ -46,6 +46,18 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333; 
+  margin: 0;
+  padding: 0;
+}
+
 .dark-mode {
   background-color: var(--dark-bg);
   color: var(--light-bg);
