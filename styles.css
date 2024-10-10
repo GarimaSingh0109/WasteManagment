@@ -1663,3 +1663,116 @@ footer.dark-mode {
 .feature-card1:hover .icon {
   color: #28a428;
 }
+
+   /* Slider container */
+   .feature-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Feature Cards Wrapper */
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300%;
+}
+
+/* Individual Feature Card */
+.feature-card {
+    flex: 1 0 100%;
+    padding: 2rem;
+    text-align: center;
+    background-color: #EDF6F9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Feature card specific styles */
+.feature-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #006D77;
+}
+
+.feature-card p, blockquote {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+blockquote {
+    background-color: #C8E6C9;
+    padding: 1rem;
+    border-left: 4px solid #43A047;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+}
+
+#fact-highlight {
+    font-weight: bold;
+    color: #E53935;
+}
+
+.highlight {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Call-to-action button */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-image: linear-gradient(to right, #006D77, #EDF6F9);
+}
+
+/* Slider navigation buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem;
+}
+
+.slider-btn.left {
+    left: 10px;
+}
+
+.slider-btn.right {
+    right: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .feature-card {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
