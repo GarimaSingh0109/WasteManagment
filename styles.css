@@ -119,9 +119,16 @@ header {
   width: 100%;
 }
 
+header #heading:hover{
+  color: #014941;
+  cursor: pointer;
+  transition: 0.7s ease-in;
+}
+
 nav {
   margin: auto;
   margin-right: 0;
+  flex-wrap: wrap;
 }
 
 nav ul {
@@ -130,21 +137,38 @@ nav ul {
 }
 
 nav ul li {
-  display: inline;
+  display: inline-block;
+  list-style: none;
   margin: 0 15px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  position: relative;
+}
+
+nav ul li a::after{
+	content: '';
+	width: 0%;
+	height: 3px;
+	background: #00796b;
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	transition: 0.5s;
+}
+nav ul li a:hover::after{
+	width: 100%;
 }
 
 nav ul li a:hover {
   color: #e0f7fa;
+  font-size: 20px;
   /* Change text color on hover */
-  background-color: rgba(255, 255, 255, 0.2);
+  /* background-color: rgba(255, 255, 255, 0.2); */
   /* Optional: add background on hover */
-  border-radius: 5px;
+  /* border-radius: 5px; */
   /* Optional: round corners */
 }
 
@@ -209,11 +233,14 @@ nav ul {
 
 nav ul li {
   margin: 0 15px;
+  display: inline-block;
+  list-style: none;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #333;
+  position: relative;
   /* Text color */
 }
 
@@ -1570,7 +1597,6 @@ footer.dark-mode {
   font-family: 'Poppins', sans-serif;
 }
 
-
 .value-card p {
   font-size: 1rem;
   color: #555;
@@ -1632,4 +1658,39 @@ footer.dark-mode {
 
 .feature-card1:hover .icon {
   color: #28a428;
+}
+
+nav .fas{
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+	nav .fas{
+		display: block;
+		font-size: 25px;
+    margin-right: 35px;
+	}
+  
+	nav ul{
+		background: #007968;
+		position: fixed;
+		top: 0;
+		right: -200px;
+		width: 200px;
+		height: 100vh;
+		padding-top: 50px;
+		z-index: 2;
+		transition: right 0.5s;
+	}
+	nav ul li{
+		display: none;
+		margin: 25px;
+	}
+ 
+	nav ul .fas{
+		position: absolute;
+		top: 25px;
+		left: 25px;
+		cursor: pointer;
+	}
 }
