@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waste Management</title>
     <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
@@ -18,9 +21,9 @@
     </div>
 
     <header>
-        <h1>Waste Management</h1>
+        <h1 id="heading">Waste Management</h1>
         <nav>
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#upload">Upload</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#feedback">Feedback</a></li>
@@ -31,7 +34,9 @@
 
                 <li><a href="#footer">Contact</a></li>
                 <li class="theme-switch" id="theme-switch"></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
     </header>
 
@@ -77,13 +82,55 @@
                 </div>
             </section>
 
-            <section class="classification">
+            <section class="classification-info">
                 <h2>Waste Classification</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span>Organic Waste</span>
+                            </div>
+                            <div class="card-back">
+                                <h3>Organic Waste</h3>
+                                <p>Examples: Food scraps, garden waste, and other biodegradable materials. <br>
+                                   Management: Often composted or processed to create biogas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span>Recyclable Waste</span>
+                            </div>
+                            <div class="card-back">
+                                <h3>Recyclable Waste</h3>
+                                <p>Examples: Paper, cardboard, glass, metals, and certain plastics. <br>
+                                   Management: Collected separately and sent to recycling facilities to be processed into new materials.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <p id="classification-result"></p>
             </section>
 
-            <section class="disposal">
+            <section class="classification-info">
                 <h2>Disposal Information</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span>Methods of Waste Disposal</span>
+                            </div>
+                            <div class="card-back">
+                                <h3>Methods of Waste Disposal</h3>
+                                <p>1] Recycling and Reusing: Although not typically classified as disposal, these methods aim to process waste materials into new products, reducing the need for disposal and conserving resources. <br>
+                                2] Landfills: The most common method, where waste is buried in designated areas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <p id="disposal-information"></p>
             </section>
 

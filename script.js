@@ -96,4 +96,15 @@ newsletterForm.addEventListener('submit', (event) => {
     newsletterErrorMessage.textContent = '';
 
     if (!emailPattern.test(email)) {
-        newsletterErrorMessage.textContent = 'Please enter
+        newsletterErrorMessage.textContent = 'Please enter';
+    }
+});
+
+let sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+	sidemenu.style.right = "0";
+}
+function closemenu(){
+	sidemenu.style.right = "-200px";
+}
