@@ -530,6 +530,27 @@ body {
 
 /* Eco-tips-features */
 /* Button */
+
+
+.hero-btn {
+  background-color: #e0f7fa; 
+  color: black; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 5px; 
+  text-decoration: none; 
+  transition: background-color 0.3s, color 0.3s; 
+  cursor: pointer; 
+  
+}
+
+/* Hover effect */
+.hero-btn:hover {
+  background-color: darkgreen; /* Change to dark green */
+  color: white; /* Change text color to white */
+  cursor: pointer; /* Pointer on hover */
+}
+
 #eco-friendly {
   padding: 2rem;
   text-align: center;
@@ -1261,51 +1282,12 @@ body.dark-mode #dark-mode-toggle {
 }
 
 
-.signup {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
-}
 
-.signup h2 {
-  color: #007b5f;
-  text-align: center;
-}
 
-.signup form {
-  display: flex;
-  flex-direction: column;
-}
 
-.signup input {
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
 
-.signup input:focus {
-  border-color: #007b5f;
-  outline: none;
-}
 
-.signup button {
-  background-color: #007b5f;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
 
-.signup button:hover {
-  background-color: #005f46;
-  transition: background-color 0.3s ease;
-}
 
 #newsletter-form {
   display: flex;
