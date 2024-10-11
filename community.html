@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Waste Management</title>
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #00796b;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .team-member {
+            perspective: 1000px;
+            margin: 15px;
+            width: 250px;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-front {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+        }
+
+        .card-back {
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            transform: rotateY(180deg);
+            text-align: center;
+            padding: 10px;
+        }
+
+        .social-media a {
+            color: white;
+            margin: 5px 10px;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #00796b;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Waste Management</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="../WasteManagment/CARBON FOOTPRINT CALC/welcome.html">Carbon footprint</a></li>
+                <li><a href="register.html">Sign up</a></li>
+
+                <li><a href="#footer">Contact</a></li>
+                <li class="theme-switch" id="theme-switch"></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+<main>
+    
+    <section class="team">
+        
+        <h2 style="text-align: center;">Our Dedicated Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="https://avatars.githubusercontent.com/u/130893914?v=4" alt="Team Member 1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="card-back">
+                        <h3>Garima Singh</h3>
+                        <p>Project Manager</p>
+                        <div class="social-media">
+                            <a href="https://www.linkedin.com/in/garima-singh-279014264" target="_blank">LinkedIn</a>
+                            <a href="https://github.com/GarimaSingh0109" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="./assets/member2.jpg" alt="Team Member 2" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="card-back">
+                        <h3>Jane Smith</h3>
+                        <p>Environmental Specialist</p>
+                        <div class="social-media">
+                            <a href="https://www.linkedin.com/in/janesmith" target="_blank">LinkedIn</a>
+                            <a href="https://github.com/janesmith" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="card">
+                    <div class="card-front">
+                        <img src="./assets/member3.jpg" alt="Team Member 3" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    </div>
+                    <div class="card-back">
+                        <h3>Alex Johnson</h3>
+                        <p>Community Outreach</p>
+                        <div class="social-media">
+                            <a href="https://www.linkedin.com/in/alexjohnson" target="_blank">LinkedIn</a>
+                            <a href="https://github.com/alexjohnson" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more team members as needed -->
+        </div>
+    </section>
+</main>
+
+<footer id="footer">
+    <h2>Stay Connected</h2>
+    <form id="newsletter-form">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+    <div class="social-media">
+        <a href="#"><box-icon type="logo" name="facebook"></box-icon> Facebook</a>
+        <a href="#"><box-icon type="logo" name="twitter"></box-icon> Twitter</a>
+        <a href="#"><box-icon type="logo" name="instagram"></box-icon> Instagram</a>
+    </div>
+    <p>&copy; 2024 Waste Management. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

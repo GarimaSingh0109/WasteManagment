@@ -46,6 +46,18 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333; 
+  margin: 0;
+  padding: 0;
+}
+
 .dark-mode {
   background-color: var(--dark-bg);
   color: var(--light-bg);
@@ -213,8 +225,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  /* Text color */
+  color: #c8e6c9;
 }
 
 .hero-btn {
@@ -343,12 +354,7 @@ main {
   justify-content: center;
   margin-bottom: 5px;
 }
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 20px;
-}
+
 
 .classification-info {
   max-width: 1200px;
@@ -518,6 +524,27 @@ body {
 
 /* Eco-tips-features */
 /* Button */
+
+
+.hero-btn {
+  background-color: #e0f7fa; 
+  color: black; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 5px; 
+  text-decoration: none; 
+  transition: background-color 0.3s, color 0.3s; 
+  cursor: pointer; 
+  
+}
+
+/* Hover effect */
+.hero-btn:hover {
+  background-color: darkgreen; /* Change to dark green */
+  color: white; /* Change text color to white */
+  cursor: pointer; /* Pointer on hover */
+}
+
 #eco-friendly {
   padding: 2rem;
   text-align: center;
@@ -1249,51 +1276,12 @@ body.dark-mode #dark-mode-toggle {
 }
 
 
-.signup {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
-}
 
-.signup h2 {
-  color: #007b5f;
-  text-align: center;
-}
 
-.signup form {
-  display: flex;
-  flex-direction: column;
-}
 
-.signup input {
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
 
-.signup input:focus {
-  border-color: #007b5f;
-  outline: none;
-}
 
-.signup button {
-  background-color: #007b5f;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
 
-.signup button:hover {
-  background-color: #005f46;
-  transition: background-color 0.3s ease;
-}
 
 #newsletter-form {
   display: flex;
@@ -1775,4 +1763,142 @@ blockquote {
     h3 {
         font-size: 1.5rem;
     }
+}
+
+#BacktoTop {
+  display: block;
+  /* Ensure the button is part of the layout */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: #004d40;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s, visibility 1.5s, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 2px #FFF, 0 0 0 3px #262626, 0 0 6px 2px rgba(255, 255, 255, 0.2);
+  /* Adjusted outer rings */
+  overflow: hidden;
+}
+
+.circle1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#BacktoTop:hover {
+  background-color: #008c85;
+  /* Darker shade on hover */
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+}
+
+#BacktoTop svg {
+  fill: #b4a933;
+  transition: fill 0.3s ease-in-out;
+}
+
+#BacktoTop:hover svg {
+  fill: #ffd700;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.toggle-button {
+  background-color: #26a69a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode header {
+  background-color: #1f1f1f;
+  /* Darker header */
+}
+
+.dark-mode .hero {
+  background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+}
+
+.dark-mode .feature-card {
+  background-color: #00796b;
+  /* Card color in dark mode */
+}
+
+.dark-mode .feedback {
+  background-color: #1f1f1f;
+  /* Feedback section background */
+}
+
+.dark-mode .feedback button {
+  background-color: #1c1c1c;
+  /* Dark mode button color (matches dark header) */
+  color: #ffffff;
+  /* Light text color for contrast */
+}
+
+#newsletter-form input:focus {
+  outline: none;
+}
+
+.moon-icon {
+  font-size: 30px;
+  /* Adjust size of the moon icon */
+  margin-right: 8px;
+  /* Match the header color */
+  color: white;
+  /* Set the icon color to white for contrast */
+  border-radius: 50%;
+  /* Optional: add rounded corners */
+  padding: 5px;
+  /* Optional: add some padding */
+}
+
+body.dark-mode {
+  background-color: black;
+  /* Dark background matching navbar */
+  color: white;
+  /* Light text color */
+}
+
+#dark-mode-toggle {
+  background-color: #00796b;
+  /* Match the navbar color */
+  color: white;
+  /* White text for contrast */
+
+  border: none;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode #dark-mode-toggle {
+  background-color: #1c1c1c;
+  /* Dark mode button color */
+  color: white;
+  /* Keep text white */
+}
+
+.social-media a:hover {
+  scale: 1.01;
+  transition: all 0.3s ease-in-out;
 }

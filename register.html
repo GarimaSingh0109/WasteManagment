@@ -11,60 +11,241 @@
 
     <script src="styles.js"></script>
 </head>
+<style>
+/* Container and Layout */
+.container-register {
+  max-width: 400px;
+  margin: auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-register {
+  margin-top: 20px;
+}
+
+.buttons-register {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.button_1 {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+  color: rgb(7, 7, 7);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.label_1 {
+  display: block;
+  margin: 10px 0 5px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.input_1 {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button_2 {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button_2:hover {
+  background-color: #218838;
+}
+
+/* Google Button */
+.google-button {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.button-google {
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s;
+}
+
+.button-google img {
+  height: 20px;  /* Adjusted image size */
+  width: auto;   /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.button-google:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some hover effects to buttons */
+.button_1:hover, .button_2:hover, .button-google:hover {
+  transform: translateY(-2px);
+}
+
+
+</style>
+
 <body class="register-body">
     
     <header>
-        <h1>Waste Management</h1>
+        <a href="index.html"><h1>Waste Management</h1></a>
+        
         <nav>
-            <ul>
-                <li><a href="#upload">Upload</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="../WasteManagment/CARBON FOOTPRINT CALC/welcome.html">Carbon footprint</a></li>
-                <li><a href="#feedback">Feedback</a></li>
-
-                <li><a href="#about">About Me</a></li> 
-
+             <ul>
+                <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href ="../WasteManagment/CARBON FOOTPRINT CALC/welcome.html">Carbon footprint</a></li>
                 <li><a href="register.html">Sign up</a></li>
-
-                <li><a href="#footer">Contact</a></li>
+                 <li><a href="#footer">Contact</a></li>
                 <li class="theme-switch" id="theme-switch"></li>
+            </ul>
             </ul>
         </nav>
     </header>
-
-
-
-    <div class="container-register">
-      <div class="buttons-register">
-          <button onclick="showForm(1)" class="button-active button_1">Sign up</button>
-          <button onclick="showForm(2)" class="button_1">Login</button>
-      </div>
-      <form id="form1" class="form-register button-active" >
-          <label class = "label_1">Full Name:</label>
-          <input type="text"  name="fullName" class="input_1">
-          <label class = "label_1">Email:</label>
-          <input type="email"  name="email" class="input_1">
-          <label class = "label_1">Enter Password:</label>
-          <input type="password"  name="password1" class="input_1">
-          <label class = "label_1">Confirm Password:</label>
-          <input type="password"  name="password2" class="input_1">
-          <button type="submit" class = "button_2">Create Account</button>
-      </form>
-      <form id="form2" class="form-register">
-            <label class = "label_1">Email:</label>
-            <input type="email"  name="email" class="input_1">
-            <label class = "label_1">Enter Password:</label>
-            <input type="password"  name="password1" class="input_1">
-            <!-- <div class="alert alert-warning">
-              <strong>Warning!</strong> <%= buyerErrorMessage %>
-            </div> -->
-          <button type="submit" class = "button_2">Submit</button>
-          <!-- <div class = "text-center mt-3">
-            <p class = "already-user">Already have a account?</p>
-            <a href="/login" class = "already-user">Login Here</a>
-          </div>  -->
-      </form>
-     </div>
+    <main>
+        <div class="container-register">
+            <div class="buttons-register">
+                <button onclick="showForm(1)" class="button-active button_1">Sign up</button>
+                <button onclick="showForm(2)" class="button_1">Login</button>
+            </div>
+            <form id="form1" class="form-register button-active" onsubmit="return validateSignup()">
+                <label class="label_1">Full Name:</label>
+                <input type="text" name="fullName" class="input_1">
+                <label class="label_1">Email:</label>
+                <input type="email" name="email" class="input_1">
+                <label class="label_1">Enter Password:</label>
+                <input type="password" name="password1" class="input_1">
+                <label class="label_1">Confirm Password:</label>
+                <input type="password" name="password2" class="input_1">
+                <button type="submit" class="button_2">Create Account</button>
+                <div id="error-message" style="color: red; margin-top: 10px;"></div> <!-- Error message -->
+            </form>
+            <form id="form2" class="form-register" onsubmit="return validateLogin()">
+                <label class="label_1">Email:</label>
+                <input type="email" name="email" class="input_1">
+                <label class="label_1">Enter Password:</label>
+                <input type="password" name="password1" class="input_1">
+                <button type="submit" class="button_2">Submit</button>
+            </form>
+            <div class="google-button">
+                <button class="button-google">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.ozaj5qvqQWzitrBQt0xp-QHaHa?rs=1&pid=ImgDetMain" alt="Google"> Continue with Google
+                </button>
+            </div>
+        </div>
+    </main>
     
+      
+
+  
+    <footer id="footer">
+        <h2>Stay Connected</h2>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-media">
+
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+
+        </div>
+        
+        <div>
+            <a href="#">
+                <box-icon type="logo" name="facebook"></box-icon>
+            </a>
+            <a href="#">
+                <box-icon type="logo" name="twitter"></box-icon>
+            </a>
+            <a href="#">
+                <box-icon type="logo" name="instagram"></box-icon>
+            </a>
+
+        </div>
+        <p>&copy; 2024 Waste Management. All rights reserved.</p>
+    </footer>
+      
+    <script src="script.js"></script>
+    <script>
+        function validateSignup() {
+    const fullName = document.querySelector('input[name="fullName"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const password1 = document.querySelector('input[name="password1"]').value;
+    const password2 = document.querySelector('input[name="password2"]').value;
+    const errorMessage = document.getElementById('error-message');
+
+    // Clear previous error message
+    errorMessage.innerText = '';
+
+    // Check if fields are empty
+    if (!fullName || !email || !password1 || !password2) {
+        errorMessage.innerText = 'Please fill all the details.';
+        return false; // Prevent form submission
+    }
+
+    // Password validation: at least 8 characters, one uppercase, one lowercase, and one special character
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
+    if (!passwordRegex.test(password1)) {
+        errorMessage.innerText = 'Password must be at least 8 characters long, including uppercase, lowercase, and special characters.';
+        return false; // Prevent form submission
+    }
+
+    // Check if passwords match
+    if (password1 !== password2) {
+        errorMessage.innerText = 'Passwords do not match.';
+        return false; // Prevent form submission
+    }
+
+    return true; // Allow form submission
+}
+
+function validateLogin() {
+    const email = document.querySelector('input[name="email"]').value;
+    const password1 = document.querySelector('input[name="password1"]').value;
+    const errorMessage = document.getElementById('error-message');
+
+    // Clear previous error message
+    errorMessage.innerText = '';
+
+    // Check if fields are empty
+    if (!email || !password1) {
+        errorMessage.innerText = 'Please fill all the details.';
+        return false; // Prevent form submission
+    }
+
+    return true; // Allow form submission
+}
+
+    </script>
+    
+
 </body>
 </html>
