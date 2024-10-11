@@ -32,22 +32,35 @@ body {
   background-color: #e0f7fa;
   transition: background-color 0.3s, color 0.3s;
 }
+
 :root {
-    --primary-color: #00796b;
-    --secondary-color: #26a69a;
-    --accent-color: #e6f4f1;
-    --dark-bg: #1f1f1f;
-    --light-bg: #ffffff;
+  --primary-color: #00796b;
+  --secondary-color: #26a69a;
+  --accent-color: #e6f4f1;
+  --dark-bg: #1f1f1f;
+  --light-bg: #ffffff;
 }
 
 body {
-    background-color: var(--accent-color);
-    transition: background-color 0.3s, color 0.3s;
+  background-color: var(--accent-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333; 
+  margin: 0;
+  padding: 0;
 }
 
 .dark-mode {
-    background-color: var(--dark-bg);
-    color: var(--light-bg);
+  background-color: var(--dark-bg);
+  color: var(--light-bg);
 }
 
 .dark-mode {
@@ -68,16 +81,17 @@ body {
 }
 
 header {
-    background-color: #00796b; /* Teal color */
-    color: white;
-    padding: 20px;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    width: 100%;
+  background-color: #00796b;
+  /* Teal color */
+  color: white;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
 }
 
 
@@ -138,9 +152,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #e0f7fa; /* Change text color on hover */
-  background-color: rgba(255, 255, 255, 0.2); /* Optional: add background on hover */
-  border-radius: 5px; /* Optional: round corners */
+  color: #e0f7fa;
+  /* Change text color on hover */
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Optional: add background on hover */
+  border-radius: 5px;
+  /* Optional: round corners */
 }
 
 .hero {
@@ -166,7 +183,7 @@ nav ul li a:hover {
   margin-bottom: 30px;
   max-width: 600px;
 }
-  
+
 .hero-btn {
   background-color: #26a69a;
   color: white;
@@ -189,30 +206,33 @@ nav ul li a:hover {
 
   .hero p {
     font-size: 1rem;
-    margin-top: 100px; /* Create space for fixed header */
+    margin-top: 100px;
+    /* Create space for fixed header */
   }
 }
 
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-  }
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
 
-  nav ul li {
-    margin: 0 15px;
-  }
+nav ul li {
+  margin: 0 15px;
+}
 
-  nav ul li a {
-    text-decoration: none;
-    color: #333; /* Text color */
-  }
-  .hero-btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  /* Text color */
+}
+
+.hero-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
 
 
 @media (max-width: 480px) {
@@ -335,30 +355,52 @@ main {
   justify-content: center;
   margin-bottom: 5px;
 }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+}
+
+.classification-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  /* background-color: #58e178; */
+  border-radius: 10px;
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+}
 
 .classification-info h2 {
   text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .card-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px 0;
+  gap: 20px; 
 }
 
 .card {
-  width: 45%;
+  position: relative;
+  width: 400px; 
   height: 300px;
-  perspective: 1000px;
-  margin: 10px;
+  perspective: 1000px; 
 }
 
 .card-inner {
   position: relative;
   width: 100%;
   height: 100%;
+  transform-style: preserve-3d; 
   transition: transform 0.6s;
-  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg); 
 }
 
 .card-front,
@@ -366,36 +408,44 @@ main {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  backface-visibility: hidden; 
+  display: flex;
   align-items: center;
-  font-size: 1.2em;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  box-sizing: border-box;
+  justify-content: center;
+  border: 2px solid #ddd; 
+  border-radius: 10px;
+  background-color: #99e4ab; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .card-front {
-  background-color: #a5d6a7;
-  color: black;
+  color: #333;
+  font-size: 30px;
+}
+@media (max-width:500px) {
+  .card-front {
+    color: #333;
+    font-size: 20px;
+  }
+
 }
 
 .card-back {
-  background-color: #f9f9f9;
-  color: #333;
-  transform: rotateY(180deg);
-  padding: 10px;
-  text-align: center;
-  justify-content: space-evenly;
-  flex-direction: column;
+  transform: rotateY(180deg); 
+  padding: 10px; 
+  color: #444;
 }
 
-.card:hover .card-inner {
-  transform: rotateY(180deg);
+.card-back h3 {
+  margin: 10px 0;
 }
+
+.card-back p {
+  text-align: justify; 
+}
+
 
 .features h2 {
   text-align: center;
@@ -420,34 +470,34 @@ main {
 }
 
 .faqs {
-    padding: 25px;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 900px;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 900px;
 }
 
 .faqs h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: black;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: black;
 }
 
 .faq-item {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .faq-item h3 {
 
-    font-size: 1.4em;
-    color: #000000;
-    cursor: pointer;
-    margin: 0;
-    padding: 10px;
-    background-color: #a5d6a7;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: rgb(53, 53, 53);
-    border-radius: 5px;
+  font-size: 1.4em;
+  color: #000000;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+  background-color: #a5d6a7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: rgb(53, 53, 53);
+  border-radius: 5px;
 
   font-size: 1.4em;
   color: #000000;
@@ -462,18 +512,20 @@ main {
 }
 
 .faq-item p {
-    font-size: 1em;
-    color: #555;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #a5d6a7;
-    border-radius: 5px;
-    display: none; /* Hide the answer initially */
+  font-size: 1em;
+  color: #555;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #a5d6a7;
+  border-radius: 5px;
+  display: none;
+  /* Hide the answer initially */
 }
 
 .faq-item.active p {
 
-    display: block; /* Show the answer when the question is clicked */
+  display: block;
+  /* Show the answer when the question is clicked */
 }
 
 /* Eco-tips-features */
@@ -500,25 +552,26 @@ main {
 }
 
 #eco-friendly {
-    padding: 2rem;
-    text-align: center;
-    border-radius: 8px;
-    margin: 2rem auto;
-    max-width: 800px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #eco-friendly #eco-tips {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    background-color: #4caf50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 
-  display: block; /* Show the answer when the question is clicked */
+  display: block;
+  /* Show the answer when the question is clicked */
 }
 
 /*eco-tips-features*/
@@ -551,39 +604,39 @@ main {
   animation: pulsate 1s ease-in-out;
 
 }
-  
+
 .eco-friendly-content h3 {
-    font-size: 2rem;
-    color: #2e7d32;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
 }
 
 blockquote {
-    font-size: 1.25rem;
-    font-style: italic;
-    color: #333;
-    background-color: #c8e6c9;
-    padding: 1rem;
-    border-left: 4px solid #43a047;
-    margin-bottom: 1.5rem;
-    border-radius: 5px;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #333;
+  background-color: #c8e6c9;
+  padding: 1rem;
+  border-left: 4px solid #43a047;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
 }
 
 #fact-highlight {
-    font-weight: bold;
-    color: #e53935;
+  font-weight: bold;
+  color: #e53935;
 }
 
 .highlight {
-    font-weight: bold;
-    color: #2e7d32;
+  font-weight: bold;
+  color: #2e7d32;
 }
 
 .eco-friendly-content p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 /*Ecoblog Page*/
@@ -640,27 +693,27 @@ blockquote {
 }
 
 .eco-tips-header {
-    background-color: #EDF6F9;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin: 2rem auto;
-    max-width: 800px;
-    font-family: 'Arial', sans-serif;
+  background-color: #EDF6F9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  font-family: 'Arial', sans-serif;
 }
 
 .eco-tips-header h3 {
-    color: #006D77;
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
+  color: #006D77;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .eco-tips-header p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.5;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.5;
 }
 
 /*Ecoblog Page*/
@@ -772,7 +825,7 @@ blockquote {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #006D77; 
+  color: #006D77;
   cursor: pointer;
   transition: color 0.3s ease;
   position: absolute;
@@ -850,15 +903,15 @@ blockquote {
   margin: 5rem 2.4rem 2.4rem 5rem;
   padding: 2.4rem;
 }
-  
- .blogs-section-title {
+
+.blogs-section-title {
   text-align: center;
   font-size: 2.5rem;
 
   color: #006D77;
   font-weight: 600;
 }
-  
+
 .eco-blogs-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -886,7 +939,7 @@ blockquote {
   cursor: pointer;
   background-color: #006D;
 }
-  
+
 .card-header {
   height: 200px;
   background-size: cover;
@@ -1140,7 +1193,8 @@ blockquote {
 }
 
 .social-media a:hover {
-  color: #26a69a; /* Change to a teal color on hover */
+  color: #26a69a;
+  /* Change to a teal color on hover */
 }
 
 .toggle-button {
@@ -1176,12 +1230,12 @@ blockquote {
   background-color: #1c1c1c;
   /* Dark mode button color (matches dark header) */
   color: #ffffff;
-  /* Light text color for contrast */ 
+  /* Light text color for contrast */
 }
-  
+
 #newsletter-form input:focus {
-   outline: none;
-} 
+  outline: none;
+}
 
 .moon-icon {
   font-size: 30px;
@@ -1221,10 +1275,10 @@ body.dark-mode #dark-mode-toggle {
   color: white;
   /* Keep text white */
 }
-  
+
 .social-media a:hover {
-    scale: 1.01; 
-    transition: all 0.3s ease-in-out;
+  scale: 1.01;
+  transition: all 0.3s ease-in-out;
 }
 
 
@@ -1241,7 +1295,8 @@ body.dark-mode #dark-mode-toggle {
   justify-content: center;
   gap: 6px;
 }
-#newsletter-form input{
+
+#newsletter-form input {
   border: 1.2px solid #e0f7fa;
   border-radius: 5px;
 }
@@ -1297,9 +1352,11 @@ footer.dark-mode {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .buttons-register {
   display: flex;
 }
+
 .button_1 {
   font-size: 1rem;
   flex-grow: 1;
@@ -1310,25 +1367,31 @@ footer.dark-mode {
   text-align: center;
   transition: background-color 0.3s ease;
 }
+
 .buttons-register .button_1.button-active {
   background-color: #008c85;
   color: #fff;
 }
-.button_1.button-active:hover{
+
+.button_1.button-active:hover {
   background-color: #006d77;
 }
+
 .form-register {
   display: none;
   padding: 20px;
 }
+
 .form-register.button-active {
   display: block;
 }
+
 .label_1 {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
+
 .input_1 {
   width: calc(100% - 12px);
   padding: 6px;
@@ -1336,6 +1399,7 @@ footer.dark-mode {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 .button_2[type="submit"] {
   font-family: 'Poppins', sans-serif;
   width: 100%;
@@ -1349,22 +1413,25 @@ footer.dark-mode {
   text-align: center;
   transition: background-color 0.2s ease;
 }
-.button_2[type="submit"]:hover{
+
+.button_2[type="submit"]:hover {
   background-color: #83C5BE;
 }
-.indv-signUp{
+
+.indv-signUp {
   width: 40%;
   padding: 20px;
   border-radius: 4px;
   margin: 20px;
 }
-#signup-submitButton{
+
+#signup-submitButton {
   align-items: center;
   padding-left: 0%;
   justify-content: space-around;
 }
 
-
+/* Container Styling */
 .values-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1372,7 +1439,7 @@ footer.dark-mode {
   text-align: center;
 }
 
-
+/* Section Heading */
 .values-container h3 {
   font-size: 2.5rem;
   color: #333;
@@ -1380,13 +1447,130 @@ footer.dark-mode {
   font-family: 'Poppins', sans-serif;
 }
 
-
+/* Values Cards Container */
 .values-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
+/* General Section Styling */
+.features {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+/* Features Container */
+.features-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Feature Card Styling */
+.feature-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 30%;
+  min-width: 280px;
+  max-width: 30%;
+}
+
+/* Card Hover Effect */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Icon */
+.feature-card .icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Feature Title */
+.feature-card h3 {
+  font-size: 1.7rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Feature Description */
+.feature-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Special Styling for Eco-Friendly Section */
+#eco-friendly {
+  background-color: #eaf9e7;
+  border: 2px solid #28a745;
+}
+
+#eco-friendly h3 {
+  color: #28a745;
+}
+
+/* Blockquote Styling */
+#eco-fact {
+  background-color: #f9f9f9;
+  border-left: 5px solid #007bff;
+  padding: 15px;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* Highlighted Fact */
+#fact-highlight {
+  color: #ff6347;
+  font-weight: bold;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .feature-card {
+    max-width: 100%;
+  }
+}
 
 .value-card {
   background-color: #fff;
@@ -1420,10 +1604,56 @@ footer.dark-mode {
 
 @media (max-width: 768px) {
   .values-cards {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .values-container h3 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
+}
+
+.feature-card1 {
+  background-color: #f7faf7;
+  border: 2px solid #e2e8e2;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+
+.feature-card1 .icon {
+  font-size: 3rem;
+  color: #32cd32;
+  margin-bottom: 1rem;
+}
+
+.feature-card1 .icon i {
+  transition: color 0.3s ease-in-out;
+}
+
+
+.feature-card1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card1 h3 {
+  font-size: 1.8rem;
+  color: #2a662e;
+  margin-bottom: 1rem;
+}
+
+
+.feature-card1 p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+.feature-card1:hover .icon {
+  color: #28a428;
 }
