@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    font-size: 36px;
+    margin-top: 20px;
+}
+.subheader {
+    font-size: 18px;
+    color: #666;
+}
+.description {
+    margin: 20px 0;
+    font-size: 16px;
+}
+.description a {
+    color: #009900;
+    text-decoration: none;
+}
+.icons {
+    margin: 20px 0;
+}
+.icons i {
+    font-size: 24px;
+    margin: 0 10px;
+}
+.language-select {
+    margin: 20px 0;
+}
+.language-select select {
+    padding: 5px;
+    font-size: 16px;
+}
+.account-link {
+    margin: 20px 0;
+    color: #009900;
+    text-decoration: none;
+}
+.like-button {
+    margin: 20px 0;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.tab {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+.tab.active {
+    background-color: #ddd;
+}
+.calculator {
+    border: 1px solid #009900;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+}
+.calculator h2 {
+    color: #009900;
+    font-size: 20px;
+}
+.calculator p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+.calculator label {
+    display: block;
+    margin: 10px 0 5px;
+}
+.calculator input, .calculator select {
+    width: calc(50% - 10px);
+    padding: 5px;
+    margin: 5px 0;
+}
+.calculator button {
+    background-color: #009900;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.calculator .result {
+    margin: 20px 0;
+    font-size: 16px;
+}
+.calculator .result span {
+    color: #009900;
+}
+.calculator .navigation {
+    display: flex;
+    justify-content: space-between;
+}
+.calculator .navigation button {
+    background-color: #009900;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.font-size-controls {
+    margin: 20px 0;
+}
+.font-size-controls span {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.tabs a {
+    text-decoration: none;
+}
+.footer {
+    font-size: 12px;
+    color: #666;
+    margin: 20px 0;
+}
+.footer a {
+    color: #00f;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+.back-to-home {
+    margin: 20px 0; /* Adjust margin to control spacing */
+    padding: 10px; /* Padding for internal spacing */
+    display: flex; /* Ensure it's inline with other elements */
+    width: auto; /* Remove fixed width and height to allow flexibility */
+    height: auto;
+}
+.back-to-home a {
+    text-decoration: none; /* Remove underline from link */
+}
+.back-to-home i {
+    font-size: 24px; /* Adjust icon size */
+    color: #000; /* Icon color */
+}

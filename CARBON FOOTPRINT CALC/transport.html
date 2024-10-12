@@ -1,0 +1,220 @@
+<html>
+ <head>
+  <title>
+   Carbon Calculator
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ <link rel="stylesheet" href="transport.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ </head>
+ <body>
+  <div class="container">
+    <div class="back-to-home">
+        <a href="/WasteManagment/index.html" class="home-icon">
+            <i class="fa-solid fa-house"></i> 
+          </a>
+       </div>
+   <h1>
+    CARBON CALCULATOR
+   </h1>
+   <h2>
+    Carbon Footprint Calculator For Individuals And Households
+   </h2>
+   <p class="description">
+    This carbon calculator is provided free to use
+    <br/>
+    Show you care for the environment and communities across the World by Carbon Offsetting.
+    <br/>
+    You can support
+    <a href="#">
+     Carbon Offsetting Projects
+    </a>
+    that both tackle climate change and support impoverished communities across the world. Just click the ‘Offset’ button after you have finished your calculation. It takes only a few easy clicks and costs only a few Pounds/Dollars/Euros per tonne CO
+    <sub>
+     2
+    </sub>
+    . You also get a personalised Certificate recognising your offsetting - makes an ideal gift too!
+   </p>
+   <div class="icons">
+    <i class="fas fa-info-circle">
+    </i>
+    <i class="fas fa-bolt">
+    </i>
+    <i class="fas fa-user-circle">
+    </i>
+   </div>
+   <div class="language-select">
+    <label for="language">
+     Language:
+    </label>
+    <select id="language">
+     <option>
+      English (United Kingdom)
+     </option>
+    </select>
+   </div>
+   <div class="like-button">
+    <iframe allow="encrypted-media" allowtransparency="true" frameborder="0" height="35" scrolling="no" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.example.com&amp;width=450&amp;layout=standard&amp;action=like&amp;size=small&amp;share=true&amp;height=35&amp;appId" style="border:none;overflow:hidden" width="450">
+    </iframe>
+   </div>
+   <div class="tabs">
+    <div class="tab active"><a href="../CARBON FOOTPRINT CALC/welcome.html">Welcome</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/house.html">House</a></div>
+    <div class="tab"><a href="#">Flights</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/car.html">Car</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/motorbike.html">Motorbike</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/transport.html">Bus & Rail</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/secondary.html">Secondary</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/results.html">Results</a></div>
+</div>
+   <div class="calculator">
+    <h3>
+     <img alt="Bus icon" height="30" src="https://storage.googleapis.com/a1aa/image/iAJAl0SGvfShe06B8hdcKiycmgmQu5JxiZJW3OBIJjCpj2jTA.jpg" width="30"/>
+     Public transport carbon footprint calculator
+    </h3>
+    <p>
+     Enter mileage for each type of public transport, and press the Calculate button
+    </p>
+    <table>
+     <tr>
+      <td>
+       Bus:
+      </td>
+      <td>
+       <input type="text"/>
+      </td>
+      <td>
+       <select>
+        <option>
+         miles
+        </option>
+       </select>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       Coach:
+      </td>
+      <td>
+       <input type="text"/>
+      </td>
+      <td>
+       <select>
+        <option>
+         miles
+        </option>
+       </select>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       National rail:
+      </td>
+      <td>
+       <input type="text"/>
+      </td>
+      <td>
+       <select>
+        <option>
+         miles
+        </option>
+       </select>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       International rail:
+      </td>
+      <td>
+       <input type="text"/>
+      </td>
+      <td>
+       <select>
+        <option>
+         miles
+        </option>
+       </select>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       Tram:
+      </td>
+      <td>
+       <input type="text"/>
+      </td>
+      <td>
+       <select>
+        <option>
+         miles
+        </option>
+       </select>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       Tube / Subway:
+      </td>
+      <td>
+       <input type="text"/>
+      </td>
+      <td>
+       <select>
+        <option>
+         miles
+        </option>
+       </select>
+      </td>
+     </tr>
+     <tr>
+      <td>
+       Taxi:
+      </td>
+      <td>
+       <input type="text"/>
+      </td>
+      <td>
+       <select>
+        <option>
+         miles
+        </option>
+       </select>
+      </td>
+     </tr>
+    </table>
+    <button class="calculate-button">
+     Calculate Bus &amp; Rail Footprint
+    </button>
+    <div class="result">
+     Total Bus &amp; Rail Footprint =
+     <span>
+      0.00 tonnes of CO
+      <sub>
+       2
+      </sub>
+      e
+     </span>
+     <button class="calculate-button" disabled="">
+      Offset Now
+     </button>
+    </div>
+    <div class="navigation-buttons">
+     <button>
+      &lt; Motorbike
+     </button>
+     <button>
+      Secondary &gt;
+     </button>
+    </div>
+   </div>
+  </div>
+  <div class="footer">
+    <p>
+     powered by Carbon Footprint
+    </p>
+    <p>
+     developed by RADsite
+    </p>
+   </div>
+ </body>
+</html>

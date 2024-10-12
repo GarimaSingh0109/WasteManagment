@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    font-size: 36px;
+    margin-top: 20px;
+}
+.sub-header {
+    font-size: 18px;
+    margin-top: 10px;
+}
+.content {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+}
+.info-icons {
+    margin: 20px 0;
+}
+.info-icons i {
+    font-size: 24px;
+    margin: 0 10px;
+}
+.language-select {
+    margin: 20px 0;
+}
+.like-button {
+    margin: 20px 0;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.tab {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+.tab.active {
+    background-color: #ddd;
+    font-weight: bold;
+}
+.calculator {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: left;
+}
+.calculator h2 {
+    font-size: 24px;
+    color: green;
+}
+.calculator form {
+    margin-top: 20px;
+}
+.calculator label {
+    display: block;
+    margin: 10px 0 5px;
+}
+.calculator input, .calculator select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.calculator .radio-group {
+    display: flex;
+    align-items: center;
+}
+.calculator .radio-group input {
+    margin-right: 10px;
+}
+.calculator .checkbox-group {
+    display: flex;
+    align-items: center;
+}
+.calculator .checkbox-group input {
+    margin-right: 10px;
+}
+.calculator .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.calculator .buttons button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.calculator .buttons button:disabled {
+    background-color: #ccc;
+}
+.calculator .result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+.tabs a {
+    text-decoration: none;
+}
+.footer {
+    font-size: 12px;
+    color: #666;
+    margin: 20px 0;
+}
+.footer a {
+    color: #00f;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+.back-to-home {
+    margin: 20px 0px 0px 40px; /* Adjust margin to control spacing */
+    padding: 10px; /* Padding for internal spacing */
+    display: flex; /* Ensure it's inline with other elements */
+    width: auto; /* Remove fixed width and height to allow flexibility */
+    height: auto;
+
+}
+.back-to-home a {
+    text-decoration: none; /* Remove underline from link */
+}
+.back-to-home i {
+    font-size: 24px; /* Adjust icon size */
+    color: #000; /* Icon color */
+}
