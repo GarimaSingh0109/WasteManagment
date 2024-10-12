@@ -1612,6 +1612,18 @@ footer.dark-mode {
   .values-container h3 {
     font-size: 2rem;
   }
+
+  main section .card-container span,p,h3{
+    font-size: 15px;
+  }
+
+  nav ul li a{
+    font-size: small;
+  }
+
+  nav ul li a:hover{
+    font-size: 15px;
+  }
 }
 
 .feature-card1 {
@@ -1681,6 +1693,7 @@ nav .fas{
 		padding-top: 50px;
 		z-index: 2;
 		transition: right 0.5s;
+    text-align: center;
 	}
 	nav ul li{
 		display: none;
@@ -1693,4 +1706,8 @@ nav .fas{
 		left: 25px;
 		cursor: pointer;
 	}
+
+  main section .card-container span,p,h3{
+    font-size: 15px;
+  }
 }
