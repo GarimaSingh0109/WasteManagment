@@ -76,7 +76,7 @@ h1 {
   background: linear-gradient(82deg, #ffffff, #00796b);
   position: relative;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  transition: background(0.3s, ease-in-out);
   vertical-align: middle;
 }
 
@@ -95,6 +95,13 @@ header {
 }
 
 
+    background-color: #00796b; /* Teal color */
+    color: white;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
 .theme-switch::before {
   content: '';
   position: absolute;
@@ -133,7 +140,7 @@ header {
 
 nav {
   margin: auto;
-  margin-right: 0;
+  margin-right: 5%;
 }
 
 nav ul {
