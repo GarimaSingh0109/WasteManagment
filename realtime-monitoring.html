@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waste Management</title>
+    <link rel="icon" href="logo.png" />
+    <link rel="stylesheet" href="realtime-monitoring.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="logo.png" alt="logo" height="55px" />
+      </a>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html"><i class="fa-solid fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="ecotips.html"
+              ><i class="fa-brands fa-pagelines"></i>Tips</a
+            >
+          </li>
+          <li>
+            <a href="#dashboard"
+              ><i class="fa-solid fa-bookmark"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="#segregate"
+              ><i class="fa-solid fa-envelopes-bulk"></i> Segregation</a
+            >
+          </li>
+          <li class="theme-switch" id="theme-switch"></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2 class="text-green-500 text-center">
+        Real-Time Waste Management Tracker
+      </h2>
+    </div>
+
+    <div class="card-data-area">
+      <div class="card-input p-4">
+        <h4 class="text-center mb-3">Input Your Waste Data</h4>
+        <form id="wasteForm">
+          <div class="mb-3">
+            <label for="wasteType" class="form-label">Waste Type</label>
+            <select id="wasteType" class="form-select" required>
+              <option value="plastic">Plastic</option>
+              <option value="organic">Organic</option>
+              <option value="paper">Paper</option>
+              <option value="glass">Glass</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="wasteAmount" class="form-label">Amount (in kg)</label>
+            <input
+              type="number"
+              id="wasteAmount"
+              class="form-control"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-submit w-100">Submit</button>
+        </form>
+        <div>
+          <label for="chartType" class="form-label">Select Chart Type:</label>
+          <select
+            id="chartType"
+            class="form-select"
+            onchange="changeChartType()"
+          >
+            <option value="pie">Pie Chart</option>
+            <option value="bar">Bar Chart</option>
+            <option value="line">Line Chart</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="card-chart p-4 mt-3">
+        <h4 class="text-center mb-3">Waste Management Analysis</h4>
+        <div class="card-chart-btn">
+          <button id="fetch">Fetch History</button>
+
+          <button id="clear">Clear History</button>
+        </div>
+        <br />
+        <b id="error"></b><br />
+
+        <div class="chart-container border-red">
+          <canvas id="wasteChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+
+    <section id="dashboard" class="monitor-dashboard">
+      <h2 class="mt-4 text-center">Real-Time Waste Monitoring Dashboard</h2>
+    </section>
+    <div class="dashboard mb-5">
+      <div class="dashboard-card">
+        <h3>Waste Generated</h3>
+        <div class="value" id="wasteGenerated">45%</div>
+        <div class="progress-bar">
+          <div class="progress" id="wasteProgress" style="width: 45%">45%</div>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <h3>Waste Recycled</h3>
+        <div class="value" id="wasteRecycled">20%</div>
+        <div class="progress-bar">
+          <div class="progress" id="recycleProgress" style="width: 20%">
+            20%
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-card">
+        <h3>Bin Capacity</h3>
+        <div class="value" id="binCapacity">75%</div>
+        <div class="progress-bar">
+          <div class="progress" id="capacityProgress" style="width: 75%">
+            75%
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="segregate" class="segregate">
+      <h2 class="text-center mt-4">Interactive Waste Segregation Guide</h2>
+    </section>
+
+    <div class="segregation-guide">
+      <div
+        class="bin"
+        id="recycle-bin"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+      <img src="./assets/rbin.jpg" alt="Recycle Bin" />
+        <p>Recyclable</p>
+      </div>
+      <div
+        class="bin"
+        id="organic-bin"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        <img src="./assets/organic.jpg" alt="Organic Bin" />
+        <p>Organic</p>
+      </div>
+      <div
+        class="bin"
+        id="landfill-bin"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      >
+        <img src="./assets/landfill.avif" alt="Landfill Bin" />
+        <p>Landfill</p>
+      </div>
+    </div>
+
+    <div class="waste-container mb-4">
+      <div
+        class="waste-item"
+        draggable="true"
+        ondragstart="drag(event)"
+        id="item1"
+      >
+      <img src="./assets/pbottle.avif" alt="Plastic Bottle" />
+      </div>
+      <div
+        class="waste-item"
+        draggable="true"
+        ondragstart="drag(event)"
+        id="item2"
+      >
+        <img src="./assets/peel.jpg" alt="Banana Peel" />
+      </div>
+      <div
+        class="waste-item"
+        draggable="true"
+        ondragstart="drag(event)"
+        id="item3"
+      >
+        <img src="./assets/papercup.avif" alt="Paper Cup" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <h2>Stay Connected</h2>
+      <form id="newsletter-form">
+        <input type="email" placeholder="Your Email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-media">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+
+      <!-- Community and Sustainability Section -->
+      <div class="community-message">
+        <h3>Our Commitment to Sustainability</h3>
+        <p>
+          At Waste Management, we are dedicated to building a greener future.
+          Through our community recycling programs and sustainability
+          initiatives, we strive to reduce waste and protect the environment for
+          generations to come. Join us in our mission to create a cleaner,
+          healthier planet.
+        </p>
+      </div>
+
+      <p>&copy; 2024 Waste Management. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      let wasteData = {
+        plastic: 0,
+        organic: 0,
+        paper: 0,
+        glass: 0,
+      };
+
+      let wasteChart;
+
+      const wasteForm = document.getElementById("wasteForm");
+      const wasteChartCtx = document
+        .getElementById("wasteChart")
+        .getContext("2d");
+
+      function createChart(chartType) {
+        return new Chart(wasteChartCtx, {
+          type: chartType,
+          data: {
+            labels: ["Plastic", "Organic", "Paper", "Glass"],
+            datasets: [
+              {
+                label: "Waste Distribution (kg)",
+                data: [
+                  wasteData.plastic,
+                  wasteData.organic,
+                  wasteData.paper,
+                  wasteData.glass,
+                ],
+                backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0"],
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                position: "top",
+              },
+            },
+          },
+        });
+      }
+
+      wasteChart = createChart("pie");
+
+      wasteForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const wasteType = document.getElementById("wasteType").value;
+        const wasteAmount = parseFloat(
+          document.getElementById("wasteAmount").value
+        );
+
+        if (wasteType && !isNaN(wasteAmount)) {
+          wasteData[wasteType] += wasteAmount;
+
+          wasteChart.data.datasets[0].data = [
+            wasteData.plastic,
+            wasteData.organic,
+            wasteData.paper,
+            wasteData.glass,
+          ];
+          wasteChart.update();
+
+          localStorage.setItem("userData", JSON.stringify(wasteData));
+        }
+
+        wasteForm.reset();
+      });
+
+      // Function to change the chart type dynamically
+      function changeChartType() {
+        const selectedType = document.getElementById("chartType").value;
+
+        // Destroy the previous chart
+        if (wasteChart) {
+          wasteChart.destroy();
+        }
+
+        wasteChart = createChart(selectedType);
+      }
+
+      // Fetch user wasteData from localStorage
+      const fetchBtn = document.getElementById("fetch");
+      fetchBtn.addEventListener("click", async () => {
+        await fetchFromLocalStorage();
+      });
+
+      function fetchFromLocalStorage() {
+        const retrieveData =
+          JSON.parse(localStorage.getItem("userData")) || null;
+        if (retrieveData) {
+          wasteData = retrieveData;
+
+          wasteChart.data.datasets[0].data = [
+            wasteData.plastic,
+            wasteData.organic,
+            wasteData.paper,
+            wasteData.glass,
+          ];
+          wasteChart.update();
+        } else {
+          document.getElementById(
+            "error"
+          ).innerHTML = `No Data Found! Kindly input your data`;
+        }
+      }
+
+      // Clear history
+      const clearBtn = document.getElementById("clear");
+      clearBtn.addEventListener("click", () => {
+        localStorage.removeItem("userData");
+        location.reload();
+      });
+    </script>
+
+    <script>
+      //dashboard
+      function updateDashboard() {
+        const wasteGenerated = Math.floor(Math.random() * 100);
+        const wasteRecycled = Math.floor(Math.random() * 50);
+        const binCapacity = Math.floor(Math.random() * 100);
+
+        document.getElementById(
+          "wasteGenerated"
+        ).innerText = `${wasteGenerated}%`;
+        document.getElementById(
+          "wasteProgress"
+        ).style.width = `${wasteGenerated}%`;
+        document.getElementById(
+          "wasteProgress"
+        ).innerText = `${wasteGenerated}%`;
+
+        document.getElementById(
+          "wasteRecycled"
+        ).innerText = `${wasteRecycled}%`;
+        document.getElementById(
+          "recycleProgress"
+        ).style.width = `${wasteRecycled}%`;
+        document.getElementById(
+          "recycleProgress"
+        ).innerText = `${wasteRecycled}%`;
+
+        document.getElementById("binCapacity").innerText = `${binCapacity}%`;
+        document.getElementById(
+          "capacityProgress"
+        ).style.width = `${binCapacity}%`;
+        document.getElementById(
+          "capacityProgress"
+        ).innerText = `${binCapacity}%`;
+      }
+
+      setInterval(updateDashboard, 5000);
+    </script>
+
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text/plain", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        // Get the dragged item ID
+        let data = ev.dataTransfer.getData("text/plain");
+
+        // Ensure we append to the drop target's parent (bin), not internal elements like images
+        let draggedElement = document.getElementById(data);
+        if(ev.target.classList.contains('bin')){
+          ev.currentTarget.appendChild(draggedElement);
+        } else {
+          ev.currentTarget.closest('.bin').appendChild(draggedElement);
+        }
+    }
+    </script>
+  </body>
+</html>

@@ -225,8 +225,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
-  /* Text color */
+  color: #c8e6c9;
 }
 
 .hero-btn {
@@ -355,12 +354,7 @@ main {
   justify-content: center;
   margin-bottom: 5px;
 }
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 20px;
-}
+
 
 .classification-info {
   max-width: 1200px;
@@ -1658,6 +1652,257 @@ footer.dark-mode {
   color: #28a428;
 }
 
+   /* Slider container */
+   .feature-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Feature Cards Wrapper */
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300%;
+}
+
+/* Individual Feature Card */
+.feature-card {
+    flex: 1 0 100%;
+    padding: 2rem;
+    text-align: center;
+    background-color: #EDF6F9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Feature card specific styles */
+.feature-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #006D77;
+}
+
+.feature-card p, blockquote {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+blockquote {
+    background-color: #C8E6C9;
+    padding: 1rem;
+    border-left: 4px solid #43A047;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+}
+
+#fact-highlight {
+    font-weight: bold;
+    color: #E53935;
+}
+
+.highlight {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Call-to-action button */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-image: linear-gradient(to right, #006D77, #EDF6F9);
+}
+
+/* Slider navigation buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem;
+}
+
+.slider-btn.left {
+    left: 10px;
+}
+
+.slider-btn.right {
+    right: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .feature-card {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+#BacktoTop {
+  display: block;
+  /* Ensure the button is part of the layout */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: #004d40;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s, visibility 1.5s, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 2px #FFF, 0 0 0 3px #262626, 0 0 6px 2px rgba(255, 255, 255, 0.2);
+  /* Adjusted outer rings */
+  overflow: hidden;
+}
+
+.circle1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#BacktoTop:hover {
+  background-color: #008c85;
+  /* Darker shade on hover */
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+}
+
+#BacktoTop svg {
+  fill: #b4a933;
+  transition: fill 0.3s ease-in-out;
+}
+
+#BacktoTop:hover svg {
+  fill: #ffd700;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.toggle-button {
+  background-color: #26a69a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode header {
+  background-color: #1f1f1f;
+  /* Darker header */
+}
+
+.dark-mode .hero {
+  background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+}
+
+.dark-mode .feature-card {
+  background-color: #00796b;
+  /* Card color in dark mode */
+}
+
+.dark-mode .feedback {
+  background-color: #1f1f1f;
+  /* Feedback section background */
+}
+
+.dark-mode .feedback button {
+  background-color: #1c1c1c;
+  /* Dark mode button color (matches dark header) */
+  color: #ffffff;
+  /* Light text color for contrast */
+}
+
+#newsletter-form input:focus {
+  outline: none;
+}
+
+.moon-icon {
+  font-size: 30px;
+  /* Adjust size of the moon icon */
+  margin-right: 8px;
+  /* Match the header color */
+  color: white;
+  /* Set the icon color to white for contrast */
+  border-radius: 50%;
+  /* Optional: add rounded corners */
+  padding: 5px;
+  /* Optional: add some padding */
+}
+
+body.dark-mode {
+  background-color: black;
+  /* Dark background matching navbar */
+  color: white;
+  /* Light text color */
+}
+
+#dark-mode-toggle {
+  background-color: #00796b;
+  /* Match the navbar color */
+  color: white;
+  /* White text for contrast */
+
+  border: none;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode #dark-mode-toggle {
+  background-color: #1c1c1c;
+  /* Dark mode button color */
+  color: white;
+  /* Keep text white */
+}
+
+.social-media a:hover {
+  scale: 1.01;
+  transition: all 0.3s ease-in-out;
+}
+=======
 
 .btn-nav{
   display: flex;
@@ -1785,3 +2030,5 @@ footer.dark-mode {
   user-select: none;
  }
  
+
+
