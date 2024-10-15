@@ -53,7 +53,7 @@ a {
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333; 
+  color: #333;
   margin: 0;
   padding: 0;
 }
@@ -287,6 +287,19 @@ main {
   /* Center items horizontally */
   gap: 15px;
 }
+#drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  /* width: 100%; */
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#drop-area.highlight {
+  border-color: purple;
+}
 
 /* Text section styling */
 .upload-text h2 {
@@ -355,6 +368,7 @@ main {
   justify-content: center;
   margin-bottom: 5px;
 }
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
@@ -381,26 +395,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .card {
   position: relative;
-  width: 400px; 
+  width: 400px;
   height: 300px;
-  perspective: 1000px; 
+  perspective: 1000px;
 }
 
 .card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d; 
+  transform-style: preserve-3d;
   transition: transform 0.6s;
 }
 
 .card:hover .card-inner {
-  transform: rotateY(180deg); 
+  transform: rotateY(180deg);
 }
 
 .card-front,
@@ -410,20 +424,21 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  backface-visibility: hidden; 
+  backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #ddd; 
+  border: 2px solid #ddd;
   border-radius: 10px;
-  background-color: #99e4ab; 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  background-color: #99e4ab;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-front {
   color: #333;
   font-size: 30px;
 }
+
 @media (max-width:500px) {
   .card-front {
     color: #333;
@@ -433,8 +448,8 @@ body {
 }
 
 .card-back {
-  transform: rotateY(180deg); 
-  padding: 10px; 
+  transform: rotateY(180deg);
+  padding: 10px;
   color: #444;
 }
 
@@ -443,7 +458,7 @@ body {
 }
 
 .card-back p {
-  text-align: justify; 
+  text-align: justify;
 }
 
 
@@ -533,22 +548,25 @@ body {
 
 
 .hero-btn {
-  background-color: #e0f7fa; 
-  color: black; 
-  padding: 10px 20px; 
+  background-color: #e0f7fa;
+  color: black;
+  padding: 10px 20px;
   border: none;
-  border-radius: 5px; 
-  text-decoration: none; 
-  transition: background-color 0.3s, color 0.3s; 
-  cursor: pointer; 
-  
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+
 }
 
 /* Hover effect */
 .hero-btn:hover {
-  background-color: darkgreen; /* Change to dark green */
-  color: white; /* Change text color to white */
-  cursor: pointer; /* Pointer on hover */
+  background-color: darkgreen;
+  /* Change to dark green */
+  color: white;
+  /* Change text color to white */
+  cursor: pointer;
+  /* Pointer on hover */
 }
 
 #eco-friendly {
@@ -1659,14 +1677,16 @@ footer.dark-mode {
 }
 
 
-.btn-nav{
+.btn-nav {
   display: flex;
   gap: 20px;
 }
-.btn-nav a{
+
+.btn-nav a {
   color: wheat;
 }
-/* From Uiverse.io by nikk7007 */ 
+
+/* From Uiverse.io by nikk7007 */
 .button {
   --color: #00A97F;
   padding: 0.8em 1.7em;
@@ -1683,9 +1703,10 @@ footer.dark-mode {
   text-transform: uppercase;
   color: var(--color);
   z-index: 1;
- }
- 
- .button::before, .button::after {
+}
+
+.button::before,
+.button::after {
   content: '';
   display: block;
   width: 50px;
@@ -1696,39 +1717,40 @@ footer.dark-mode {
   z-index: -1;
   background-color: var(--color);
   transition: 1s ease;
- }
- 
- .button::before {
+}
+
+.button::before {
   top: -1em;
   left: -1em;
- }
- 
- .button::after {
+}
+
+.button::after {
   left: calc(100% + 1em);
   top: calc(100% + 1em);
- }
- 
- .button:hover::before, .button:hover::after {
+}
+
+.button:hover::before,
+.button:hover::after {
   height: 410px;
   width: 410px;
- }
- 
- .button:hover {
+}
+
+.button:hover {
   color: rgb(10, 25, 30);
- }
- 
- .button:active {
+}
+
+.button:active {
   filter: brightness(.8);
- }
- 
+}
+
 .checkbox-con {
   margin: 10px;
   display: flex;
   align-items: center;
   color: white;
- }
- 
- .checkbox-con input[type="checkbox"] {
+}
+
+.checkbox-con input[type="checkbox"] {
   appearance: none;
   width: 48px;
   height: 27px;
@@ -1737,9 +1759,9 @@ footer.dark-mode {
   background: #f1e1e1;
   position: relative;
   box-sizing: border-box;
- }
- 
- .checkbox-con input[type="checkbox"]::before {
+}
+
+.checkbox-con input[type="checkbox"]::before {
   content: "";
   width: 14px;
   height: 14px;
@@ -1751,37 +1773,36 @@ footer.dark-mode {
   left: 0;
   transform: translate(13%, 15%);
   transition: all 0.3s ease-in-out;
- }
- 
- .checkbox-con input[type="checkbox"]::after {
+}
+
+.checkbox-con input[type="checkbox"]::after {
   content: url("data:image/svg+xml,%3Csvg xmlns='://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.55021 5.84315L17.1568 16.4498L16.4497 17.1569L5.84311 6.55026L6.55021 5.84315Z' fill='%23EA0707' fill-opacity='0.89'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.1567 6.55021L6.55012 17.1568L5.84302 16.4497L16.4496 5.84311L17.1567 6.55021Z' fill='%23EA0707' fill-opacity='0.89'/%3E%3C/svg%3E");
   position: absolute;
   top: 0;
   left: 20px;
- }
- 
- .checkbox-con input[type="checkbox"]:checked {
+}
+
+.checkbox-con input[type="checkbox"]:checked {
   border: 2px solid #02c202;
   background: #e2f1e1;
- }
- 
- .checkbox-con input[type="checkbox"]:checked::before {
+}
+
+.checkbox-con input[type="checkbox"]:checked::before {
   background: rgba(2, 194, 2, 0.5);
   border: 2px solid #02c202;
   transform: translate(133%, 13%);
   transition: all 0.3s ease-in-out;
- }
- 
- .checkbox-con input[type="checkbox"]:checked::after {
+}
+
+.checkbox-con input[type="checkbox"]:checked::after {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='13' viewBox='0 0 15 13' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.8185 0.114533C15.0314 0.290403 15.0614 0.605559 14.8855 0.818454L5.00187 12.5L0.113036 6.81663C-0.0618274 6.60291 -0.0303263 6.2879 0.183396 6.11304C0.397119 5.93817 0.71213 5.96967 0.886994 6.18339L5.00187 11L14.1145 0.181573C14.2904 -0.0313222 14.6056 -0.0613371 14.8185 0.114533Z' fill='%2302C202' fill-opacity='0.9'/%3E%3C/svg%3E");
   position: absolute;
   top: 5px;
   left: 5px;
- }
- 
- .checkbox-con label {
+}
+
+.checkbox-con label {
   margin-left: 10px;
   cursor: pointer;
   user-select: none;
- }
- 
+}
