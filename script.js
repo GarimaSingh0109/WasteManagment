@@ -213,3 +213,50 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 });
+
+
+
+//Ecotips.html
+
+const tipsSlider = document.querySelector('.eco-tips-content');
+const slides = document.querySelectorAll('.eco-tip');
+const prevSlide = document.getElementById('prev-slide');
+const nextSlide = document.getElementById('next-slide');
+let currentIndex = 0;
+
+// Function to update the slider's position
+const updateSlider = () => {
+  const slideWidth = slides[0].clientWidth; // Calculate the width of a single slide
+  tipsSlider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+};
+
+// Set the transition for smooth sliding
+tipsSlider.style.transition = 'transform 0.3s ease-in-out';
+
+// Handle next slide button click
+nextSlide.addEventListener('click', () => {
+  if (currentIndex < slides.length - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0; // Loop back to the first slide
+  }
+  updateSlider();
+});
+
+// Handle previous slide button click
+prevSlide.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = slides.length - 1; // Loop back to the last slide
+  }
+  updateSlider();
+});
+
+// Update slider position on window resize to ensure it adapts to the new slide width
+window.addEventListener('resize', () => {
+  updateSlider();
+});
+
+// Make sure the slider position is correct when the page loads
+window.addEventListener('load', updateSlider);
