@@ -12,17 +12,15 @@
 </head>
 
 <body>
-
+<!-- Progress Bar -->
     <div id="progress-container">
         <div id="progress-bar"></div>
     </div>
-
+<!-- Navbar section -->
     <header>
-        <a href="index.html">
-            <h1>Waste Management</h1>
-        </a>
-
+        <a href="index.html"><h1>Waste Management</h1></a>
         <nav>
+
             <div class="btn-nav">
 
                 <button class="button"> <a href="#upload">Upload</a></button>
@@ -43,21 +41,14 @@
             </div>
 
 
-            <!-- <ul>
-                <li><a href="#upload">Upload</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#feedback">Feedback</a></li>
-
-                <li><a href="#about">About Me</a></li>
-
-                <li><a href="register.html">Sign up</a></li>
-
-                <li><a href="#footer">Contact</a></li>
-                <li class="theme-switch" id="theme-switch"></li>
-            </ul> -->
         </nav>
+        <div class="nav-controls">
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+            <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
     </header>
 
+    <!--Hero section  -->
     <section class="hero">
         <div class="hero-content">
             <h2>Efficient Waste Management</h2>
@@ -66,6 +57,8 @@
         </div>
     </section>
 
+<!-- Upload Section -->
+ <br>
     <main>
         <section class="upload" id="upload">
             <div class="upload-container">
@@ -82,89 +75,38 @@
             </div>
         </section>
 
+        <section class="classification">
+            <h2>Waste Classification</h2>
+            <p id="classification-result"></p>
+        </section>
 
-        <main><br>
-            <!-- Existing sections remain unchanged -->
-            <section class="upload" id="upload">
-                <div class="upload-container">
-                    <div class="upload-text">
-                        <h2> Upload Your Files Here </h2><br>
-                        <label for="image-input" class="custom-file-upload">
-                            <input type="file" id="image-input" accept="image/*" hidden>
-                            <span> Select Image </span>
-                        </label>
-                    </div>
-                    <div class="upload-submit">
-                        <button id="upload-button"> Submit </button>
-                    </div>
-                </div>
-            </section>
+        <section class="disposal">
+            <h2>Disposal Information</h2>
+            <p id="disposal-information"></p>
+        </section>
 
-            <section class="classification">
-                <h2>Waste Classification</h2>
-                <p id="classification-result"></p>
-            </section>
-
-            <section class="disposal">
-                <h2>Disposal Information</h2>
-                <p id="disposal-information"></p>
-            </section>
-
-            <section class="classification-info" id="classification-info">
-                <h2>Waste Categories</h2>
-                <div class="card-container">
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <span>Biodegradable Waste</span>
-                            </div>
-                            <div class="card-back">
-                                <h3>Biodegradable Waste</h3>
-                                <p>Includes food remains and garden waste. These can be composted to create manure and
-                                    naturally decompose over time.</p>
-                            </div>
+        <section class="classification-info" id="classification-info">
+            <h2>Waste Categories</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span>Biodegradable Waste</span>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <span>Non-Biodegradable Waste</span>
-                            </div>
-                            <div class="card-back">
-                                <h3>Non-Biodegradable Waste</h3>
-                                <p>Items like old newspapers, broken glass, and plastics. These do not decompose and are
-                                    major pollutants, but can be recycled and reused.</p>
-                            </div>
+                        <div class="card-back">
+                            <h3>Biodegradable Waste</h3>
+                            <p>Includes food remains and garden waste. These can be composted to create manure and naturally decompose over time.</p>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="classification-info" id="classification-info">
-                <h2> Waste Classification</h2>
-                <div class="card-container">
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <span>Biodegradable Waste</span>
-                            </div>
-                            <div class="card-back">
-                                <h3>Biodegradable Waste</h3>
-                                <p>These wastes come from our kitchen and include food remains, garden waste, etc. They
-                                    can be composted to obtain manure and decompose over time.</p>
-                            </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span>Non-Biodegradable Waste</span>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <span>Non-Biodegradable Waste</span>
-                            </div>
-                            <div class="card-back">
-                                <h3>Non-Biodegradable Waste</h3>
-                                <p>This type includes old newspapers, broken glass, plastics, etc. They do not decompose
-                                    and are major pollutants but can be recycled and reused.</p>
-                            </div>
+                        <div class="card-back">
+                            <h3>Non-Biodegradable Waste</h3>
+                            <p>Items like old newspapers, broken glass, and plastics. These do not decompose and are major pollutants, but can be recycled and reused.</p>
                         </div>
                     </div>
                 </div>
@@ -435,8 +377,5 @@
     </footer>
 
     <script src="script.js"></script>
-
-
 </body>
-
 </html>
