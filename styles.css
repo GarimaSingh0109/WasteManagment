@@ -1785,4 +1785,32 @@ footer.dark-mode {
   cursor: pointer;
   user-select: none;
  }
- 
+
+
+/* Style for the scroll-to-top button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none; /* Initially hidden */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0px;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+/* Change color on hover */
+.scroll-top-btn:hover {
+  background-color: #0056b3;
+}
+
+/* FontAwesome icon */
+.scroll-top-btn i {
+  font-size: 20px;
+}
+
