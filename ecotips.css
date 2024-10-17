@@ -1,0 +1,161 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background :linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8));
+
+  }
+  
+  header {
+    background-color:#00796b;
+    color: #fff;
+    padding: 20px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+  header h1 {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #ddd;
+  }
+  
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-image: url("./assets/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  }
+  
+  .hero-text {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .hero-text h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .hero-image img {
+    width: 400px;
+    border-radius: 10px;
+  }
+  
+  #eco-tips-container {
+    padding: 50px;
+    background-color: #bff8ef;
+  }
+  
+  .eco-tips-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .eco-tips-header h3,
+  .eco-tips-header p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .eco-tips-header em {
+    font-style: italic;
+  }
+  
+  .eco-tip {
+    flex: 0 0 33.33%;
+    padding: 20px;
+    font-size: large;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    background-color: rgb(226, 247, 255);
+  }
+  
+  .eco-tip:last-child {
+    margin-right: 0;
+  }
+  
+  .eco-tip img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #prev-slide {
+    left: 10px;
+  }
+  
+  #next-slide {
+    right: 10px;
+  }
+  
+  .eco-blogs {
+    padding: 50px;
+  }
+  
+  .eco-blogs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .eco-blogs-card {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .eco-blogs-card .card-header {
+    background-size: cover;
+    background-position: center;
+  }
+
+  footer{
+    padding: 50px;
+    background-color: #000000;
+    color:white;
+  }
+
+  footer a{
+    color: #00796b;
+  }
+
+  footer form{
+    padding: 10px 0px;
+  }
