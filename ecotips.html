@@ -13,16 +13,22 @@
 </head>
 
 <body>
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+</div>
   <header>
-    
     <a href="index.html"><h1>Waste Management</h1></a>
     <nav>
-      <ul>
+      <ul id="nav-menu">
         <li><a href="#eco-tips-container"><i class="fa-brands fa-pagelines"></i> Tips</a></li>
         <li><a href="#eco-blogs"><i class="fa-solid fa-bookmark"></i> Blogs</a></li>
         <li><a href="#footer"><i class="fa-solid fa-envelopes-bulk"></i> Contact Us</a></li>
       </ul>
     </nav>
+    <div class="nav-controls">
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+      <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
   </header>
 
   <div class="hero-container">
@@ -43,12 +49,13 @@
         Remember, we are all together in this journey and <span>every single contribution counts!</span></p>
       <em>Cuz, You matter and so does our Environment!</em>
     </div>
-    <div class="eco-tips-slider">
 
+    
+    <div class="eco-tips-slider">
       <button class="slider-control" id="prev-slide">
         <i class="fa-solid fa-chevron-left"></i>
       </button>
-
+    
       <div class="eco-tips-content">
         <div class="eco-tip" data-type="image">
           <h3>Waste Segregation</h3>
@@ -58,84 +65,79 @@
           </p>
           <img src="./assets/img4.jpg" alt="Waste Segregation" />
         </div>
-
-        <div class="eco-tip" data-type="video">
+    
+        <div class="eco-tip" data-type="image">
           <h3>Composting Tips</h3>
           <p>
             Convert organic waste into nutrient-rich compost by setting up a small compost bin in your garden.
           </p>
-          <img src="./assets/composting.avif" />
+          <img src="assets/composting.avif" alt="Composting Tips" />
         </div>
-
+    
         <div class="eco-tip" data-type="image">
           <h3>Reduce Plastic Usage</h3>
           <p>
             Opt for reusable items like metal water bottles and cloth bags to reduce plastic waste and pollution.
           </p>
-          <img src="./assets/reduce.avif" alt="Reduce Plastic Usage" />
+          <img src="assets/reduce.avif" alt="Reduce Plastic Usage" />
         </div>
-
+    
         <div class="eco-tip" data-type="image">
           <h3>Avoid Single-Use Plastics</h3>
           <p>
-            Reduce your dependence on single-use plastics by switching to reusable straws, utensils, and food
-            containers.
+            Reduce your dependence on single-use plastics by switching to reusable straws, utensils, and food containers.
           </p>
-          <img src="./assets/single.avif" alt="Avoid Single-Use Plastics" />
+          <img src="assets/single.avif" alt="Avoid Single-Use Plastics" />
         </div>
-
+    
         <div class="eco-tip" data-type="image">
           <h3>Switch to Cloth Napkins</h3>
           <p>
             Replace paper napkins with reusable cloth napkins to cut down on disposable paper waste in your daily life.
           </p>
-          <img src="./assets/napkins.avif" alt="Cloth Napkins" />
+          <img src="assets/napkins.avif" alt="Switch to Cloth Napkins" />
         </div>
-
+    
         <div class="eco-tip" data-type="image">
           <h3>Eco-Friendly Cleaning Products</h3>
           <p>
             Choose biodegradable, non-toxic cleaning products to minimize chemical runoff and pollution in waterways.
           </p>
-          <img src="./assets/diy.avif" alt="Eco-Friendly Cleaning Products" />
+          <img src="assets/diy.avif" alt="Eco-Friendly Cleaning Products" />
         </div>
-
+    
         <div class="eco-tip" data-type="image">
           <h3>DIY Household Cleaners</h3>
           <p>
-            Make your own natural cleaning solutions using ingredients like vinegar and baking soda to reduce chemical
-            waste.
+            Make your own natural cleaning solutions using ingredients like vinegar and baking soda to reduce chemical waste.
           </p>
-          <img src="./assets/clean.avif" alt="DIY Household Cleaners" />
+          <img src="assets/clean.avif" alt="DIY Household Cleaners" />
         </div>
-
-        <div class="eco-tip" data-type="image">
+    
+        <div class="eco-tip" data-type="video">
           <h3>Switch to Solar Energy</h3>
           <p>
-            Reduce your carbon footprint by installing solar panels or using solar-powered devices. Harnessing renewable
-            energy from the sun lowers energy bills and decreases reliance on fossil fuels.
+            Reduce your carbon footprint by installing solar panels or using solar-powered devices. Harnessing renewable energy from the sun lowers energy bills and decreases reliance on fossil fuels.
           </p>
           <video src="./assets/vd1.webm" controls></video>
         </div>
-
+    
         <div class="eco-tip" data-type="image">
           <h3>Buy in Bulk</h3>
           <p>
-            Purchase items in bulk to minimize packaging waste and reduce the environmental impact of frequent shopping
-            trips.
+            Purchase items in bulk to minimize packaging waste and reduce the environmental impact of frequent shopping trips.
           </p>
           <img src="./assets/bulk.avif" alt="Buy in Bulk" />
         </div>
-
+    
         <div class="eco-tip" data-type="image">
           <h3>Upcycling Old Items</h3>
           <p>
-            Repurpose old or broken household items instead of throwing them away. This reduces waste and promotes
-            creativity.
+            Repurpose old or broken household items instead of throwing them away. This reduces waste and promotes creativity.
           </p>
           <img src="./assets/upcycle.avif" alt="Upcycling Old Items" />
         </div>
-
+    
         <div class="eco-tip" data-type="image">
           <h3>Donate Instead of Disposing</h3>
           <p>
@@ -143,7 +145,7 @@
           </p>
           <img src="./assets/old.avif" alt="Donate Instead of Disposing" />
         </div>
-
+    
         <div class="eco-tip" data-type="image">
           <h3>Reduce Food Waste</h3>
           <p>
@@ -151,155 +153,122 @@
           </p>
           <img src="./assets/food.webp" alt="Reduce Food Waste" />
         </div>
-
+    
         <div class="eco-tip" data-type="image">
           <h3>Choose Recycled Products</h3>
           <p>
             Opt for products made from recycled materials, such as paper, plastic, and glass, to support sustainable
             production.
           </p>
-          <img src="./assets/recycled.avif" alt="Recycled Products" />
+          <img src="./assets/recycled.avif" alt="Choose Recycled Products" />
         </div>
-
+    
         <div class="eco-tip" data-type="image">
           <h3>Grow Your Own Food</h3>
           <p>
-            Start a home garden or grow herbs indoors to reduce your carbon footprint and minimize packaging waste from
-            store-bought produce.
+            Start a home garden or grow herbs indoors to reduce your carbon footprint and minimize packaging waste from store-bought produce.
           </p>
           <img src="./assets/grow.avif" alt="Grow Your Own Food" />
         </div>
       </div>
-
+    
       <button class="slider-control" id="next-slide">
         <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
+    
+    <!-- Eco-blogs -->
+    <section class="eco-blogs" id="eco-blogs">
+      <h2 class="blogs-section-title">Essential Eco Blogs: Your Guide to a Greener Tomorrow!</h2>
+      <div class="eco-blogs-container">
+        <div class="eco-blogs-card">
+          <div class="card-header" style="background-image: url('./assets/img5.jpg')"></div>
+          <div class="card-content">
+            <h4>The Future of Waste Management</h4>
+            <p>
+              Explore how modern technologies are transforming the way we manage waste, promoting sustainability for
+              future generations.
+            </p>
+            <a href="https://www.rts.com/blog/smart-waste-management-technologies/" class="read-more">Read more</a>
+          </div>
+        </div>
+    
+        <div class="eco-blogs-card">
+          <div class="card-header" style="background-image: url('./assets/compost.webp')"></div>
+          <div class="card-content">
+            <h4>Composting: Nature’s Recycling</h4>
+            <p>
+              Learn how composting organic waste can enrich soil, reduce landfill use, and contribute to a greener
+              environment.
+            </p>
+            <a href="https://www.nrdc.org/stories/composting-101#types" class="read-more">Read more</a>
+          </div>
+        </div>
+    
+        <div class="eco-blogs-card">
+          <div class="card-header" style="background-image: url('./assets/pkg.webp')"></div>
+          <div class="card-content">
+            <h4>Eco-Friendly Packaging Trends</h4>
+            <p>
+              Uncover the latest innovations in sustainable packaging that reduce environmental impact while meeting
+              consumer needs.
+            </p>
+            <a href="https://filestage.io/blog/sustainable-packaging-ideas/" class="read-more">Read more</a>
+          </div>
+        </div>
+    
+        <div class="eco-blogs-card">
+          <div class="card-header" style="background-image: url('./assets/zero.jpg')"></div>
+          <div class="card-content">
+            <h4>Zero Waste Living: A Beginner’s Guide</h4>
+            <p>
+              A comprehensive guide to adopting a zero-waste lifestyle, including simple steps to minimize waste and live
+              sustainably.
+            </p>
+            <a href="https://learn.eartheasy.com/guides/zero-waste-a-beginners-guide/" class="read-more">Read more</a>
+          </div>
+        </div>
+    
+        <div class="eco-blogs-card">
+          <div class="card-header" style="background-image: url('./assets/plastic.webp')"></div>
+          <div class="card-content">
+            <h4>Plastic Alternatives You Should Know</h4>
+            <p>
+              Discover eco-friendly alternatives to plastics and how you can incorporate them into your daily life to
+              reduce pollution.
+            </p>
+            <a href="https://blog.cleanhub.com/alternatives-to-single-use-plastic" class="read-more">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-
-  <!-- Eco-blogs -->
-  <section class="eco-blogs" id="eco-blogs">
-    <h2 class="blogs-section-title">Essential Eco Blogs: Your Guide to a Greener Tomorrow!</h2>
-    <div class="eco-blogs-container">
-
-      <div class="eco-blogs-card">
-        <div class="card-header" style="background-image: url('./assets/img5.jpg')"></div>
-        <div class="card-content">
-          <h4>The Future of Waste Management</h4>
-          <p>
-            Explore how modern technologies are transforming the way we manage waste, promoting sustainability for
-            future generations.
-          </p>
-          <a href="https://www.rts.com/blog/smart-waste-management-technologies/" class="read-more">Read more</a>
-        </div>
-      </div>
-
-      <div class="eco-blogs-card">
-        <div class="card-header" style="background-image: url('./assets/compost.webp')"></div>
-        <div class="card-content">
-          <h4>Composting: Nature’s Recycling</h4>
-          <p>
-            Learn how composting organic waste can enrich soil, reduce landfill use, and contribute to a greener
-            environment.
-          </p>
-          <a href="https://www.nrdc.org/stories/composting-101#types" class="read-more">Read more</a>
-        </div>
-      </div>
-
-      <div class="eco-blogs-card">
-        <div class="card-header" style="background-image: url('./assets/pkg.webp')"></div>
-        <div class="card-content">
-          <h4>Eco-Friendly Packaging Trends</h4>
-          <p>
-            Uncover the latest innovations in sustainable packaging that reduce environmental impact while meeting
-            consumer needs.
-          </p>
-          <a href="https://filestage.io/blog/sustainable-packaging-ideas/" class="read-more">Read more</a>
-        </div>
-      </div>
-
-      <div class="eco-blogs-card">
-        <div class="card-header" style="background-image: url('./assets/zero.jpg')"></div>
-        <div class="card-content">
-          <h4>Zero Waste Living: A Beginner’s Guide</h4>
-          <p>
-            A comprehensive guide to adopting a zero-waste lifestyle, including simple steps to minimize waste and live
-            sustainably.
-          </p>
-          <a href="https://learn.eartheasy.com/guides/zero-waste-a-beginners-guide/" class="read-more">Read more</a>
-        </div>
-      </div>
-
-      <div class="eco-blogs-card">
-        <div class="card-header" style="background-image: url('./assets/plastic.webp')"></div>
-        <div class="card-content">
-          <h4>Plastic Alternatives You Should Know</h4>
-          <p>
-            Discover eco-friendly alternatives to plastics and how you can incorporate them into your daily life to
-            reduce pollution.
-          </p>
-          <a href="https://blog.cleanhub.com/alternatives-to-single-use-plastic" class="read-more">Read more</a>
-        </div>
-      </div>
-
-
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer id="footer">
     <h2>Stay Connected</h2>
     <form id="newsletter-form">
-      <input type="email" placeholder="Your Email" required>
-      <button type="submit">Subscribe</button>
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe</button>
     </form>
     <div class="social-media">
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">Instagram</a>
+        <a href="#">
+            <box-icon type="logo" name="facebook"></box-icon>
+        </a>
+        <a href="#">
+            <box-icon type="logo" name="twitter"></box-icon>
+        </a>
+        <a href="#">
+            <box-icon type="logo" name="instagram"></box-icon>
+        </a>
     </div>
+    <div class="community-message">
+        <h3>Our Commitment to Sustainability</h3>
+        <p>At Waste Management, we are dedicated to building a greener future. Through our community recycling programs and sustainability initiatives, we strive to reduce waste and protect the environment for generations to come. Join us in our mission to create a cleaner, healthier planet.</p>
+    </div>
+    <br>
     <p>&copy; 2024 Waste Management. All rights reserved.</p>
-  </footer>
-
-
-  <script>
-    const tipsSlider = document.querySelector('.eco-tips-content');
-    const slides = document.querySelectorAll('.eco-tip');
-    const prevSlide = document.getElementById('prev-slide');
-    const nextSlide = document.getElementById('next-slide');
-    let currentIndex = 0;
-
-    const updateSlider = () => {
-      const slideWidth = slides[0].clientWidth;
-      tipsSlider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-    };
-
-    tipsSlider.style.transition = 'transform 0.3s ease-in-out';
-
-    nextSlide.addEventListener('click', () => {
-      if (currentIndex < slides.length - 1) {
-        currentIndex++;
-      } else {
-        currentIndex = 0;
-      }
-      updateSlider();
-    });
-
-    prevSlide.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-      } else {
-        currentIndex = slides.length - 1;
-      }
-      updateSlider();
-    });
-
-    window.addEventListener('resize', updateSlider);
-
-    window.addEventListener('load', updateSlider);
-    // updateSlider();
-
-  </script>
+</footer>
+<script src="script.js"></script>
 </body>
 
 </html>
