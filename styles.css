@@ -921,3 +921,71 @@ body.dark-mode {
       width: 100%;
   }
 }
+
+/* Global styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9; /* Light background to make the mission section stand out */
+}
+
+.mission-container {
+  padding: 50px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.mission-container h3 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.mission-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+}
+
+.mission-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mission-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission-item img {
+  max-width: 80px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.mission-item:hover img {
+  transform: scale(1.1);
+}
+
+.mission-item h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.mission-item p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive grid layout for smaller screens */
+@media (max-width: 768px) {
+  .mission-box {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
