@@ -10,12 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
-
+ 
 <body>
+<!-- Progress Bar -->
+
     <div id="progress-container">
         <div id="progress-bar"></div>
     </div>
-
+<!-- Navbar section -->
     <header>
 
         <a href="index.html">
@@ -23,6 +25,7 @@
         </a>
 
         <nav>
+
             <div class="btn-nav">
 
                 <button class="button"> <a href="#upload">Upload</a></button>
@@ -32,32 +35,25 @@
 
                 <button class="button"><a href="#about">About Me</a></button>
 
-                <button class="button"><a href="#register.html">Sign up</a></button>
+                <button class="button"><a href="register.html">Sign up</a></button>
 
                 <button class="button"><a href="#footer">Contact</a></button>
 
-                <div class="checkbox-con">
+                <!-- <div class="checkbox-con">
                     <input id="checkbox" type="checkbox">
-                </div>
+                </div> -->
 
             </div>
 
 
-            <!-- <ul>
-                <li><a href="#upload">Upload</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#feedback">Feedback</a></li>
-
-                <li><a href="#about">About Me</a></li>
-
-                <li><a href="register.html">Sign up</a></li>
-
-                <li><a href="#footer">Contact</a></li>
-                <li class="theme-switch" id="theme-switch"></li>
-            </ul> -->
         </nav>
+        <div class="nav-controls">
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+            <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
     </header>
 
+    <!--Hero section  -->
     <section class="hero">
         <div class="hero-content">
             <h2>Efficient Waste Management</h2>
@@ -66,6 +62,8 @@
         </div>
     </section>
 
+<!-- Upload Section -->
+ <br>
     <main>
         <section class="upload" id="upload">
             <div class="upload-container">
@@ -81,89 +79,30 @@
                 </div>
             </div>
         </section>
-    
-    <main><br>
-      <section class="upload" id="upload">
-    <div class="upload-container">
-        <div class="upload-text">
-            <h2> Upload Your Files Here </h2><br>
-            <label for="image-input" class="custom-file-upload">
-                <input type="file" id="image-input" accept="image/*" hidden>
-                <span> Select Image </span>
-            </label>
-        </div>
-        <div class="upload-submit">
-            <button id="upload-button"> Submit </button>
-        </div>
-    </div>
-</section>
         
 
-            <section class="classification">
-                <h2>Waste Classification</h2>
-                <p id="classification-result"></p>
-            </section>
-
-            <section class="disposal">
-                <h2>Disposal Information</h2>
-                <p id="disposal-information"></p>
-            </section>
-
-            <section class="classification-info" id="classification-info">
-                <h2>Waste Categories</h2>
-                <div class="card-container">
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <span>Biodegradable Waste</span>
-                            </div>
-                            <div class="card-back">
-                                <h3>Biodegradable Waste</h3>
-                                <p>Includes food remains and garden waste. These can be composted to create manure and
-                                    naturally decompose over time.</p>
-                            </div>
+        <section class="classification-info" id="classification-info">
+            <h2>Waste Categories</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span>Biodegradable Waste</span>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <span>Non-Biodegradable Waste</span>
-                            </div>
-                            <div class="card-back">
-                                <h3>Non-Biodegradable Waste</h3>
-                                <p>Items like old newspapers, broken glass, and plastics. These do not decompose and are
-                                    major pollutants, but can be recycled and reused.</p>
-                            </div>
+                        <div class="card-back">
+                            <h3>Biodegradable Waste</h3>
+                            <p>Includes food remains and garden waste. These can be composted to create manure and naturally decompose over time.</p>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section class="classification-info" id="classification-info">
-                <h2> Waste Classification</h2>
-                <div class="card-container">
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <span>Biodegradable Waste</span>
-                            </div>
-                            <div class="card-back">
-                                <h3>Biodegradable Waste</h3>
-                                <p>These wastes come from our kitchen and include food remains, garden waste, etc. They
-                                    can be composted to obtain manure and decompose over time.</p>
-                            </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <span>Non-Biodegradable Waste</span>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-inner">
-                            <div class="card-front">
-                                <span>Non-Biodegradable Waste</span>
-                            </div>
-                            <div class="card-back">
-                                <h3>Non-Biodegradable Waste</h3>
-                                <p>This type includes old newspapers, broken glass, plastics, etc. They do not decompose
-                                    and are major pollutants but can be recycled and reused.</p>
-                            </div>
+                        <div class="card-back">
+                            <h3>Non-Biodegradable Waste</h3>
+                            <p>Items like old newspapers, broken glass, and plastics. These do not decompose and are major pollutants, but can be recycled and reused.</p>
                         </div>
                     </div>
                 </div>
@@ -199,10 +138,7 @@
                         </p>
                         <a href="ecotips.html" id="eco-tips" class="cta-button">I'm in!</a>
                     </div>
-                    <!-- <div class="feature-card">
-                        <h3>Community Engagement</h3>
-                        <p>Join community efforts to promote waste management.</p>
-                    </div> -->
+                   
                     <div class="feature-card">
                         <h3>Community Engagement</h3>
                         <p>Join community efforts to promote effective waste management.</p>
@@ -312,18 +248,22 @@
                             <h3>Our Mission</h3>
                             <div class="mission-box">
                                 <div class="mission-item">
+                                    <img src="./assets/recycling-bin_532768.png" alt="Reduce Waste">
                                     <h4>Reduce Waste</h4>
                                     <p>Minimize waste generation through innovative technologies and education.</p>
                                 </div>
                                 <div class="mission-item">
+                                    <img src="./assets/aluminum_4381614.png" alt="Promote Recycling">
                                     <h4>Promote Recycling</h4>
                                     <p>Encourage responsible disposal and recycling practices in every community.</p>
                                 </div>
                                 <div class="mission-item">
+                                    <img src="./assets/solidarity_16825525.png" alt="Empower Communities">
                                     <h4>Empower Communities</h4>
                                     <p>Equip individuals with knowledge and tools for sustainable living.</p>
                                 </div>
                                 <div class="mission-item">
+                                    <img src="./assets/exterior-cleaning_17073146.png" alt="Build a Cleaner Future">
                                     <h4>Build a Cleaner Future</h4>
                                     <p>Protect the environment for future generations.</p>
                                 </div>
@@ -364,7 +304,38 @@
 
 
 
+
+                <div class="container">
+                    <div class="form_area">
+                        <p class="title">SIGN UP</p>
+                        <form action="">
+                            <div class="form_group">
+                                <label class="sub_title" for="name">Name</label>
+                                <input placeholder="Enter your full name" class="form_style" type="text">
+                            </div>
+                            <div class="form_group">
+                                <label class="sub_title" for="email">Email</label>
+                                <input placeholder="Enter your email" id="email" class="form_style" type="email">
+                            </div>
+                            <div class="form_group">
+                                <label class="sub_title" for="password">Password</label>
+                                <input placeholder="Enter your password" id="password" class="form_style"
+                                    type="password">
+                            </div>
+                            <div>
+                                <button class="btn">SIGN UP</button>
+                                <p>Have an Account? <a class="link" href="">Login Here!</a></p><a class="link" href="">
+                                </a>
+                            </div><a class="link" href="">
+
+                            </a>
+                        </form>
+                    </div><a class="link" href="">
+                    </a>
+                </div>
+
         </main>
+
 
     <footer id="footer">
         <h2>Stay Connected</h2>
@@ -409,7 +380,5 @@
     </footer>
     <script src="script.js"></script>
     
-
 </body>
-
 </html>
