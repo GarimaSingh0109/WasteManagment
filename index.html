@@ -13,12 +13,17 @@
  
 <body>
 <!-- Progress Bar -->
+
     <div id="progress-container">
         <div id="progress-bar"></div>
     </div>
 <!-- Navbar section -->
     <header>
-        <a href="index.html"><h1>Waste Management</h1></a>
+
+        <a href="index.html">
+            <h1>Waste Management</h1>
+        </a>
+
         <nav>
 
             <div class="btn-nav">
@@ -74,16 +79,7 @@
                 </div>
             </div>
         </section>
-
-        <section class="classification">
-            <h2>Waste Classification</h2>
-            <p id="classification-result"></p>
-        </section>
-
-        <section class="disposal">
-            <h2>Disposal Information</h2>
-            <p id="disposal-information"></p>
-        </section>
+        
 
         <section class="classification-info" id="classification-info">
             <h2>Waste Categories</h2>
@@ -112,46 +108,56 @@
                 </div>
             </section>
 
-            <section class="features" id="features">
-                <h2>Discover Our Features</h2>
-                <div class="features-container">
-
-
-                </div>
-
-            </section>
-
-            <section class="features" id="features">
-                <div class="feature-card" id="eco-friendly">
-                    <div class="icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Eco-Friendly Tips</h3>
-                    <blockquote id="eco-fact">
-                        Did you know <span id="fact-highlight">only 9% of all plastic ever produced has been
-                            recycled?</span>
-                    </blockquote>
-                    <p>Make a difference by embracing eco-friendly practices from home. Learn tips to help manage
-                        waste efficiently and reduce your environmental impact.</p>
-                    <a href="ecotips.html" class="cta-button">Get Tips!</a>
-                </div>
-                </div>
-                <div>
-                    <div class="feature-card1">
-                        <div class="icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
+        <section class="features" id="features">
+            <h2>Our Features</h2>
+            <div class="feature-slider">
+                <div class="slider-wrapper">
+                    
+                    <div class="feature-card">
                         <h3>Real-time Monitoring</h3>
-                        <p>Keep track of your waste management activities instantly, with up-to-the-minute updates.</p>
+                        <blockquote id="eco-fact">
+                            Did you know that <span id="fact-highlight">over 2 billion tons of waste are generated 
+                            globally every year, but only 16% is recycled?</span>
+                        </blockquote>
+                    
+                        <p><span class="highlight">Track, Reduce, and Make a Difference</span> With real-time waste monitoring, you can be part of the solution by tracking 
+                            your waste habits, identifying areas for improvement, and contributing to a greener planet. 
+                            Take control of your impact – start monitoring your waste today and help reduce the overwhelming waste burden
+                             on our environment. <strong>Every action counts.</strong></p>
+                        <a href="realtime-monitoring.html" class="cta-button">Let's be on right track</a>
                     </div>
-
+                    <div class="feature-card" id="eco-friendly">
+                        <h3>Eco-Friendly Tips</h3>
+                        <blockquote id="eco-fact">
+                            Do you know <span id="fact-highlight">only 9% of plastic ever produced has been recycled?</span>
+                        </blockquote>
+                        <p>
+                            Be <span class="highlight">Eco-savvy</span> by embracing simple, comprehensive, and quick solutions from the comfort of your home.
+                            Contribute in managing the overwhelming burden of waste generation. Get personalized tips to manage waste sustainably and
+                            <strong>be the change you want to see in the world!</strong>.
+                        </p>
+                        <a href="ecotips.html" id="eco-tips" class="cta-button">I'm in!</a>
+                    </div>
+                   
                     <div class="feature-card">
                         <h3>Community Engagement</h3>
                         <p>Join community efforts to promote effective waste management.</p>
                         <a href="community.html" class="hero-btn">Join Community</a>
                     </div>
+        
+         <div class="community-message">
+                        <h3>Our Commitment to Sustainability</h3>
+                        <p>At Waste Management, we are dedicated to building a greener future. Through our community recycling
+                            programs and sustainability initiatives, we strive to reduce waste and protect the environment for
+                            generations to come. Join us in our mission to create a cleaner, healthier planet.</p>
+</div>        
 
-            </section>
+                </div>
+                <button class="slider-btn left" id="prev">&#10094;</button>
+                <button class="slider-btn right" id="next">&#10095;</button>
+            </div>
+            
+        </section>
 
 
             <section class="faqs" id="faqs">
@@ -330,56 +336,49 @@
 
         </main>
 
-        <footer id="footer">
-            <h2>Stay Connected</h2>
-            <form id="newsletter-form">
-                <input type="email" placeholder="Your Email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-            <div class="social-media">
 
-                <a href="#">Facebook</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
+    <footer id="footer">
+        <h2>Stay Connected</h2>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Your Email" required>
+            <span id="newsletter-error-message" style="color: red;"></span> <!-- Error message for newsletter -->
+            <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="community-message">
+            <h3>Our Commitment to Sustainability</h3>
+            <p>At Waste Management, we are dedicated to building a greener future. Through our community recycling
+                programs and sustainability initiatives, we strive to reduce waste and protect the environment for
+                generations to come. Join us in our mission to create a cleaner, healthier planet.</p>
+
+            <a href="#">
+                <box-icon type="logo" name="facebook"></box-icon>
+            </a>
+<a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+                    <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+                </svg>
+            </a>
+            
+            <a href="#">
+                <box-icon type="logo" name="instagram"></box-icon>
+            </a>
+</div>
+
+        <p>&copy; 2024 Waste Management. All rights reserved.</p>
+        <button id="BacktoTop">
+            <div class="circle1">
+                <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
+                </svg>
             </div>
-
-            <div class="community-message">
-                <h3>Our Commitment to Sustainability</h3>
-                <p>At Waste Management, we are dedicated to building a greener future. Through our community recycling
-                    programs and sustainability initiatives, we strive to reduce waste and protect the environment for
-                    generations to come. Join us in our mission to create a cleaner, healthier planet.</p>
-
-                <a href="#">
-                    <box-icon type="logo" name="facebook"></box-icon>
-                </a>
-                <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
-                        <path
-                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                    </svg>
-                </a>
-
-                <a href="#">
-                    <box-icon type="logo" name="instagram"></box-icon>
-                </a>
-
-            </div>
-
-            <p>&copy; 2024 Waste Management. All rights reserved.</p>
-        </footer>
-
-        <script src="script.js"></script>
-        </section>
-    </main>
-
-
-    <script src="script.js"></script>
-
-
-    </div>
-    <p>&copy; 2024 Waste Management. All rights reserved.</p>
+    </button>
     </footer>
-
     <script src="script.js"></script>
+    
 </body>
 </html>
