@@ -989,3 +989,52 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
+
+.btn-nav .button {
+  background: linear-gradient(135deg, #98c6a7, #629584);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  margin: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-nav .button a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-nav .button:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-nav .button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-nav .button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(38, 166, 154, 0.5);
+}
+
+.btn-nav .checkbox-con {
+  display: flex;
+  align-items: center;
+}
+
+.btn-nav #checkbox {
+  margin-left: 10px;
+  transform: scale(1.5);
+  transition: transform 0.2s ease;
+}
+
+.btn-nav #checkbox:hover {
+  transform: scale(1.7);
+}
