@@ -1,3 +1,19 @@
+// Function For Smooth Scrolling
+function smoothScrolling() {    
+const lenis = new Lenis();
+
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+}
+smoothScrolling();
 function validateSignup() {
     const fullName = document.querySelector('input[name="fullName"]').value;
     const email = document.querySelector('input[name="email"]').value;
