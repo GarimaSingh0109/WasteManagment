@@ -1326,8 +1326,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 body.dark-mode {
-  background-color: black;
-  /* Dark background matching navbar */
+  background-color: #1f1f1f;
+  /* Consistent dark background */
   color: white;
   /* Light text color */
 }
