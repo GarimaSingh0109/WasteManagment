@@ -14,14 +14,54 @@
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <style>
+.chatbot-container {
+          position: fixed;
+          bottom: 20px; /* Adjust as needed */
+          right: 20px; /* Adjust as needed */
+          z-index: 1000; /* Ensure it appears above other elements */
+      }
+
+      .chatbot-button {
+          background-color: #1c7e3b; /* Change to your preferred color */
+          border: none;
+          border-radius: 50%;
+          padding: 5px; /* Smaller padding */
+          cursor: pointer;
+          position: relative;
+          width: 50px; /* Adjusted size */
+          height: 50px; /* Adjusted size */
+      }
+
+      .chatbot-button img {
+          width: 30px; /* Adjusted image size */
+          height: 30px; /* Adjusted image size */
+      }
+
+      .tooltip-text {
+          display: none; /* Hide by default */
+          position: absolute;
+          bottom: 100%; /* Position above the button */
+          right: 50%;
+          transform: translateX(50%);
+          background-color: #333; /* Background color for tooltip */
+          color: #fff; /* Tooltip text color */
+          padding: 5px;
+          border-radius: 5px;
+          white-space: nowrap; /* Prevent text from wrapping */
+      }
+
+      .chatbot-button:hover .tooltip-text {
+          display: block; /* Show on hover */
+      }
+      
       /* Scroll to Top Button  style*/
       #scrollToTopBtn {
         display: none; /* Hidden by default */
         position: fixed;
-        bottom: 20px;
+        bottom: 75px;
         right: 20px;
         z-index: 1000; 
-        background-color: #007bff; 
+        background-color: #1c7e3b; 
         color: white;
         border: none;
         padding: 20px;
@@ -450,6 +490,17 @@
           </section>
         </div>
       </section>
+      <a href="chatbot.html">
+        <div class="fixed bottom-0 right-2 chatbot-container">
+          <button class="chatbot-button group">
+            <img class="h-20" src="chatbot.gif" alt="chatbot">
+            <span class="tooltip-text">
+              Welcome to Waste Management! <br>
+              How can I help You? ^_^ 
+            </span>
+          </button>
+        </div>
+      </a>
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" title="Go to top">↑</button>  
