@@ -13,7 +13,42 @@
     <!-- CSS CDN For Smooth Scrolling -->
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <style>
+      /* Scroll to Top Button  style*/
+      #scrollToTopBtn {
+        display: none; /* Hidden by default */
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000; 
+        background-color: #007bff; 
+        color: white;
+        border: none;
+        padding: 20px;
+        border-radius: 50%; /* Circular shape */
+        font-size: 30px;
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out; /* Smooth transition */
+        opacity: 0.7;
+      }
+  
+      #scrollToTopBtn:hover {
+        opacity: 1; /* Full opacity on hover */
+      }
+  
+      /* Mobile Responsive */
+      @media screen and (max-width: 600px) {
+        #scrollToTopBtn {
+          padding: 10px;
+          font-size: 14px;
+          bottom: 15px;
+          right: 15px;
+        }
+      }
+  
+    </style>
   </head>
+
   <body>
 </head>
  
@@ -415,6 +450,10 @@
           </section>
         </div>
       </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">↑</button>  
+
     </main>
     <footer id="footer">
       <h2>Stay Connected</h2>
@@ -445,13 +484,13 @@
           >
             <path
               d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-            ></path></svg
-        ></a>
+            ></path></svg></a>
         <a href="#"></a>
       </div>
       <p>© 2024 Waste Management. All rights reserved.</p>
     </footer>
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
     <script src="script.js"></script>
+    <script src="scroll.js"></script>
   </body>
 </html>
