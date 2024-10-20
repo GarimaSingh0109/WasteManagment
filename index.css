@@ -1,0 +1,910 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Progress Bar */
+  #progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9px;
+    z-index: 99990;
+  }
+  
+  #progress-bar {
+    height: 9px;
+    width: 0;
+    background: linear-gradient(90deg, rgb(38, 166, 154) 0%, rgb(102, 187, 106) 50%, rgb(76, 175, 80) 100%);
+    box-shadow: 0 0 4px rgba(38, 166, 154, 0.7), 0 0 10px rgba(76, 175, 80, 0.7);
+    transition: width 0.09s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  /* Header and Navigation */
+  header {
+    background-color: #00796b;
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #e0f7fa;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+  }
+  
+  .nav-controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  #theme-toggle, #menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+
+  /* From Uiverse.io by uiverse-astronaut */ 
+button {
+    background: #94fb1f;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+  }
+  
+  button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  
+  button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+  
+/* General styling */
+.hero {
+   
+   
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .hero-text {
+    flex: 1;
+  }
+  
+  .hero-img {
+    flex: 1;
+  }
+  
+  .hero-img img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 8px;
+  }
+  
+  /* Hero button styling */
+  .hero-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive styling */
+  @media screen and (max-width: 768px) {
+    .hero-content {
+      flex-direction: column-reverse; /* Stack content and image */
+      text-align: center;
+    }
+  
+    .hero-img {
+      margin-bottom: 20px;
+    }
+  
+    .hero-text h2 {
+      font-size: 24px;
+    }
+  
+    .hero-btn {
+      padding: 12px 24px;
+    }
+  }
+  
+  /* General Styling for Upload Card */
+.upload-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: 20px auto;
+  }
+  
+  .upload-container {
+    text-align: center;
+  }
+  
+  .upload-img img {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .upload-text h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-file-upload:hover {
+    background-color: #0056b3;
+  }
+  
+  .custom-file-upload span {
+    font-size: 16px;
+  }
+  
+  .upload-submit button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-submit button:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 480px) {
+    .upload-card {
+      max-width: 100%;
+      padding: 15px;
+    }
+    
+    .upload-img img {
+      max-width: 150px;
+    }
+  }
+
+  /* General Section Styling */
+section h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .classification p, .disposal p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  /* General Section Styling */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Card Container Styling */
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .card {
+    width: 450px;
+    height: 450px;
+    perspective: 1000px; /* 3D perspective for the card flipping effect */
+  }
+  
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg); /* Flip card on hover */
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .card-front {
+    background-color: #4CAF50; /* Front side background */
+    color: white;
+  }
+  
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image will cover the entire card size */
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .card-front span {
+    position: absolute;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .card-back {
+    background-color: #fff;
+    color: #333;
+    transform: rotateY(180deg);
+  }
+  
+  .card-back h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .card-back p {
+    font-size: 14px;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* General Section Styling */
+.features {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .features-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .feature-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #4CAF50;
+  }
+  
+  .feature-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-card .cta-button, .feature-card .hero-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .feature-card .cta-button:hover, .feature-card .hero-btn:hover {
+    background-color: #388E3C;
+  }
+  
+  /* Styling for icons - Placeholder for now */
+  .icon {
+    width: 50px;
+    height: 50px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  /* Blockquote for eco-fact */
+  blockquote {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #777;
+  }
+  
+  #fact-highlight {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .features-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .feature-card {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+  /* FAQ Section */
+  .faqisection{
+    padding: 60px 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    text-align: left;
+
+  }
+.faqs {
+  padding: 60px 20px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.faqs h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* FAQ Items Styling */
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.faq-item h3 {
+  font-size: 20px;
+  color: #4CAF50;
+  margin-bottom: 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.faq-item h3::after {
+  content: '\002B'; /* Plus sign icon */
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active h3::after {
+  content: '\2212'; /* Minus sign icon */
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* FAQ Item Expanded */
+.faq-item.active p {
+  max-height: 500px;
+}
+
+/* FAQ Hover Effect */
+.faq-item:hover h3 {
+  color: #388E3C;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faqs h2 {
+    font-size: 24px;
+  }
+
+  .faq-item h3 {
+    font-size: 18px;
+  }
+
+  .faq-item p {
+    font-size: 14px;
+  }
+}
+/* FAQ Section */
+.faqs {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: left;
+  }
+  
+  .faqs h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* FAQ Items Styling */
+  .faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .faq-item h3 {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .faq-item h3::after {
+    content: '\002B'; /* Plus sign icon */
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-item.active h3::after {
+    content: '\2212'; /* Minus sign icon */
+  }
+  
+  .faq-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  /* FAQ Item Expanded */
+  .faq-item.active p {
+    max-height: 500px;
+  }
+  
+  /* FAQ Hover Effect */
+  .faq-item:hover h3 {
+    color: #388E3C;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .faqs h2 {
+      font-size: 24px;
+    }
+  
+    .faq-item h3 {
+      font-size: 18px;
+    }
+  
+    .faq-item p {
+      font-size: 14px;
+    }
+  }
+  
+  /* feedback */
+.feedback {
+    margin-top: 30px;
+    background-color: #ffffff;
+    /* White background for better contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .feedback h2 {
+    text-align: center;
+    color: #00796b;
+    /* Consistent color with the theme */
+    margin-bottom: 20px;
+  }
+  
+  .feedback form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .feedback input,
+  .feedback textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #e0f7fa;
+    /* Matches the background theme */
+  }
+  
+  .feedback textarea {
+    min-height: 100px;
+    /* Larger space for feedback text */
+  }
+  
+  .feedback button {
+    background-color: #00796b;
+    /* Light mode button color (same as header) */
+    color: white;
+    /* Text color for contrast */
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .feedback button:hover {
+    background-color: #004d40;
+    /* Darker teal on hover */
+  }
+
+  /* About Us Section */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.about-heading h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* About Text Styling */
+.about-text {
+    max-width: 800px; /* Restrict max width for readability */
+    margin-bottom: 20px;
+    text-align: center; /* Center align text */
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+/* About Image Styling */
+.about-image {
+    width: 100%;
+    max-width: 600px; /* Restrict max width for images */
+    margin: 0 auto; /* Center the image */
+}
+
+.about-image img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-heading h2 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 14px; /* Smaller font size on mobile */
+    }
+}
+/* Mission Section */
+section {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.mission-container {
+    max-width: 1200px; /* Restrict max width for content */
+    margin: 0 auto; /* Center align the container */
+    text-align: center; /* Center align the text */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.mission-container h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Mission Box Styling */
+.mission-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+}
+
+.mission-item {
+    background-color: #fff; /* White background for items */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Inner spacing */
+    transition: transform 0.3s; /* Animation on hover */
+}
+
+.mission-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.mission-item img {
+    width: 60px; /* Fixed width for icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.mission-item h4 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0; /* Space around the heading */
+}
+
+.mission-item p {
+    font-size: 14px;
+    color: #555; /* Dark gray for better readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-container h3 {
+        font-size: 24px; /* Smaller heading size on mobile */
+    }
+
+    .mission-item h4 {
+        font-size: 18px; /* Smaller subheading on mobile */
+    }
+
+    .mission-item p {
+        font-size: 12px; /* Smaller paragraph size on mobile */
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .form_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EDDCD9;
+    height: auto;
+    width: auto;
+    border: 2px solid #264143;
+    border-radius: 20px;
+    box-shadow: 3px 4px 0px 1px #E99F4C;
+  }
+  
+  .title {
+    color: #264143;
+    font-weight: 900;
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  
+  .sub_title {
+    font-weight: 600;
+    margin: 5px 0;
+  }
+  
+  .form_group {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 10px;
+  }
+  
+  .form_style {
+    outline: none;
+    border: 2px solid #264143;
+    box-shadow: 3px 4px 0px 1px #E99F4C;
+    width: 490px;
+    padding: 12px 10px;
+    border-radius: 4px;
+    font-size: 15px;
+  }
+  
+  .form_style:focus, .btn:focus {
+    transform: translateY(4px);
+    box-shadow: 1px 2px 0px 0px #E99F4C;
+  }
+  
+  .btn {
+    padding: 15px;
+    margin: 25px 0px;
+    width: 290px;
+    font-size: 15px;
+    background: #DE5499;
+    border-radius: 10px;
+    font-weight: 800;
+    box-shadow: 3px 3px 0px 0px #E99F4C;
+  }
+  
+  .btn:hover {
+    opacity: .9;
+  }
+  
+  .link {
+    font-weight: 800;
+    color: #264143;
+    padding: 5px;
+  }
