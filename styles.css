@@ -12,7 +12,9 @@ body {
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
 }
-
+.container, h1{
+  text-align: center;
+}
 a {
   text-decoration: none;
   color: inherit;

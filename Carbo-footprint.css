@@ -13,6 +13,7 @@ body {
     border: 1px solid #006D77;
     border-radius: 10px;
     background-color: #FFDDD2;
+   
 }
 
 label {
@@ -45,6 +46,6 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
 }
-h1{
+.container, h1{
     text-align: center;
 }
