@@ -1258,7 +1258,7 @@ body.dark-mode {
   gap: 20px
 }
 
-.form-title {
+.sub_title {
   font-size: 1.25em;
   color: black;
   margin-bottom: 2px;
@@ -1271,7 +1271,7 @@ body.dark-mode {
   gap: 15px;
 }
 
-.form_input {
+.form_style {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
