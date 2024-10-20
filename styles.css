@@ -1292,13 +1292,17 @@ body.dark-mode {
   background-color: #005f46;
 }
 
-.form_link{
+.form-link{
   font-size: 1em;
   color: #00796b;
   text-decoration: none;
   margin-top: 5px;
 }
 
-.form_link:hover{
+.form-link:hover{
   text-decoration: underline;
+}
+
+.btn-nav{
+
 }
