@@ -1,0 +1,152 @@
+<html>
+ <head>
+  <title>
+   Carbon Calculator
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="house.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ </head>
+ <body>
+  <div class="container">
+    <div class="back-to-home">
+        <a href="/WasteManagment/index.html" class="home-icon">
+            <i class="fa-solid fa-house"></i> 
+          </a>
+       </div>
+   <h1>
+    CARBON CALCULATOR
+   </h1>
+   <h2>
+    Carbon Footprint Calculator for Individuals and Households
+   </h2>
+   <div class="info-text">
+    <p>
+     This carbon calculator is provided free to use
+    </p>
+    <p>
+     Show you care for the environment and communities across the World by Carbon Offsetting.
+    </p>
+    <p>
+     You can support
+     <a href="#">
+      Carbon Offsetting Projects
+     </a>
+     that both tackle climate change and support impoverished communities across the world. Just click the 'Offset' button after you have finished your calculation. It takes only a few easy clicks and costs only a few Pounds/Dollars/Euros per tonne CO
+     <sub>
+      2
+     </sub>
+     . You also get a personalised Certificate recognising your offsetting - makes an ideal gift too!
+    </p>
+   </div>
+   <div class="icons">
+    <i class="fas fa-info-circle">
+    </i>
+    <i class="fas fa-bolt">
+    </i>
+    <i class="fas fa-users">
+    </i>
+   </div>
+   <div class="language-select">
+    <label for="language">
+     Language:
+    </label>
+    <select id="language">
+     <option>
+      English (United Kingdom)
+     </option>
+    </select>
+   </div>
+   <div class="like-button">
+    <a href="#">
+     <img alt="Like button" src="https://placehold.co/100x20"/>
+    </a>
+   </div>
+   <div class="tabs">
+    <div class="tab active"><a href="../CARBON FOOTPRINT CALC/welcome.html">Welcome</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/house.html">House</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/flights.html">Flights</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/car.html">Car</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/motorbike.html">Motorbike</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/transport.html">Bus & Rail</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/secondary.html">Secondary</a></div>
+    <div class="tab"><a href="../CARBON FOOTPRINT CALC/results.html">Results</a></div>
+</div>
+   <div class="calculator">
+    <h3>
+     Household carbon footprint calculator
+    </h3>
+    <p>
+     Enter your consumption of each type of energy, and press the Calculate button
+    </p>
+    <p>
+     Your individual footprint is calculated by dividing the amount of total energy used in the house by the number of people in your household.
+    </p>
+    <label for="household">
+     How many people are in your household?
+    </label>
+    <select id="household">
+     <option>
+      1
+     </option>
+    </select>
+    <p>
+     Note: If you are calculating your full household footprint e.g. for your family, keep this as "1".
+    </p>
+    <label for="electricity">
+     Electricity:
+    </label>
+    <input id="electricity" placeholder="kWh at a factor of 0.2250 kgCO2e/kWh" type="text"/>
+    <a href="#">
+     what's this?
+    </a>
+    <label for="natural-gas">
+     Natural gas:
+    </label>
+    <input id="natural-gas" placeholder="kWh" type="text"/>
+    <label for="heating-oil">
+     Heating oil:
+    </label>
+    <input id="heating-oil" placeholder="litres" type="text"/>
+    <label for="coal">
+     Coal:
+    </label>
+    <input id="coal" placeholder="tonnes" type="text"/>
+    <label for="lpg">
+     LPG:
+    </label>
+    <input id="lpg" placeholder="litres" type="text"/>
+    <label for="propane">
+     Propane:
+    </label>
+    <input id="propane" placeholder="litres" type="text"/>
+    <label for="wood">
+     Wood:
+    </label>
+    <input id="wood" placeholder="tonnes" type="text"/>
+    <button>
+     Calculate Household Footprint
+    </button>
+    <div class="result">
+     <p>
+      Total House Footprint =
+      <span>
+       0.00 tonnes of CO2e
+      </span>
+     </p>
+     <button>
+      Offset Now
+     </button>
+    </div>
+   </div>
+   <div class="footer">
+    <p>
+     powered by Carbon Footprint
+    </p>
+    <p>
+     developed by RADsite
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

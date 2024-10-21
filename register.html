@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management</title>
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <script src="styles.js"></script>
+</head>
+<style>
+/* Container and Layout */
+.container-register {
+  max-width: 400px;
+  margin: auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-register {
+  margin-top: 20px;
+}
+
+.buttons-register {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.button_1 {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+  color: rgb(7, 7, 7);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.label_1 {
+  display: block;
+  margin: 10px 0 5px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.input_1 {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.button_2 {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button_2:hover {
+  background-color: #218838;
+}
+
+/* Google Button */
+.google-button {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.button-google {
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s;
+}
+
+.button-google img {
+  height: 20px;  /* Adjusted image size */
+  width: auto;   /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.button-google:hover {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some hover effects to buttons */
+.button_1:hover, .button_2:hover, .button-google:hover {
+  transform: translateY(-2px);
+}
+
+
+</style>
+
+<body class="register-body">
+    
+    <header>
+        <a href="index.html"><h1>Waste Management</h1></a>
+        
+        <nav>
+             <ul>
+                <ul>
+                <li><a href="index.html"> Home</a></li>
+                <li><a href ="../WasteManagment/CARBON FOOTPRINT CALC/welcome.html">Carbon footprint</a></li>
+                <li><a href="register.html">Sign up</a></li>
+                 <li><a href="#footer">Contact</a></li>
+                <li class="theme-switch" id="theme-switch"></li>
+            </ul>
+            </ul>
+        </nav>
+    </header>
+    <main>
+     
+      <div class="container">
+          <div class="form_area">
+              <p class="title">SIGN UP</p>
+              <form action="">
+                  <div class="form_group">
+                      <label class="sub_title" for="name">Name</label>
+                      <input placeholder="Enter your full name" class="form_style" type="text">
+                  </div>
+                  <div class="form_group">
+                      <label class="sub_title" for="email">Email</label>
+                      <input placeholder="Enter your email" id="email" class="form_style" type="email">
+                  </div>
+                  <div class="form_group">
+                      <label class="sub_title" for="password">Password</label>
+                      <input placeholder="Enter your password" id="password" class="form_style" type="password">
+                  </div>
+                  <div>
+                      <button class="btn">SIGN UP</button>
+                      <p>Have an Account? <a class="link" href="">Login Here!</a></p><a class="link" href="">
+                  </a></div><a class="link" href="">
+              
+          </a></form></div><a class="link" href="">
+      </a></div>
+      
+    </main>
+    
+      
+
+  
+    <footer id="footer">
+        <h2>Stay Connected</h2>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-media">
+
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+
+        </div>
+        
+        <div>
+            <a href="#">
+                <box-icon type="logo" name="facebook"></box-icon>
+            </a>
+            <a href="#">
+                <box-icon type="logo" name="twitter"></box-icon>
+            </a>
+            <a href="#">
+                <box-icon type="logo" name="instagram"></box-icon>
+            </a>
+
+        </div>
+        <p>&copy; 2024 Waste Management. All rights reserved.</p>
+    </footer>
+      
+    <script src="script.js"></script>
+    <script>
+        function validateSignup() {
+    const fullName = document.querySelector('input[name="fullName"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const password1 = document.querySelector('input[name="password1"]').value;
+    const password2 = document.querySelector('input[name="password2"]').value;
+    const errorMessage = document.getElementById('error-message');
+
+    // Clear previous error message
+    errorMessage.innerText = '';
+
+    // Check if fields are empty
+    if (!fullName || !email || !password1 || !password2) {
+        errorMessage.innerText = 'Please fill all the details.';
+        return false; // Prevent form submission
+    }
+
+    // Password validation: at least 8 characters, one uppercase, one lowercase, and one special character
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
+    if (!passwordRegex.test(password1)) {
+        errorMessage.innerText = 'Password must be at least 8 characters long, including uppercase, lowercase, and special characters.';
+        return false; // Prevent form submission
+    }
+
+    // Check if passwords match
+    if (password1 !== password2) {
+        errorMessage.innerText = 'Passwords do not match.';
+        return false; // Prevent form submission
+    }
+
+    return true; // Allow form submission
+}
+
+function validateLogin() {
+    const email = document.querySelector('input[name="email"]').value;
+    const password1 = document.querySelector('input[name="password1"]').value;
+    const errorMessage = document.getElementById('error-message');
+
+    // Clear previous error message
+    errorMessage.innerText = '';
+
+    // Check if fields are empty
+    if (!email || !password1) {
+        errorMessage.innerText = 'Please fill all the details.';
+        return false; // Prevent form submission
+    }
+
+    return true; // Allow form submission
+}
+
+    </script>
+    
+
+</body>
+</html>
