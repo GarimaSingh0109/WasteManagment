@@ -17,6 +17,12 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.btn-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
 
 /* Progress Bar */
 #progress-container {
@@ -36,24 +42,69 @@ a {
   transition: width 0.09s ease-in-out;
   border-radius: 10px;
 }
+.form_style {
+  border-radius: 15px;
+  padding: 5px;
+  background-color:#99e4ab ;
 
-/* Header and Navigation */
-header {
-  background-color: #00796b;
-  color: white;
-  padding: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
 }
+                        
 
+/* Styling the header and centering the h1 */
 header h1 {
-  font-size: 1.5rem;
-  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px; /* Adds some space between h1 and buttons */
+  color: #333;
+  padding: 10px;
+  background-color: #99e4ab;
+  border-radius: 8px;
+  
 }
+
+/* Centering the buttons and adding spacing */
+.btn-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping if screen is too narrow */
+  gap: 20px; /* Adds equal space between buttons */
+  margin-top: 20px;
+}
+
+/* Button styling */
+.button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+/* Hover effect for buttons */
+.button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Media query to adjust the layout on smaller screens */
+@media (max-width: 768px) {
+  .btn-nav {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+    gap: 10px;
+  }
+}
+header{
+  background-color: #99e4ab;
+
+}
+
+
 
 nav ul {
   list-style-type: none;
@@ -307,6 +358,12 @@ nav ul li a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
+  object-fit: cover;
+  
+}
+.mission-item img{
+  width: 300px;
+  height: 300px;
 }
 
 /* Hover Effect for Mission Items */
@@ -327,6 +384,8 @@ nav ul li a:hover {
   color: black;
   line-height: 1.6;
 }
+
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -515,14 +574,16 @@ nav ul li a:hover {
 /* General styling for the section */
 .features {
   padding: 60px 20px;
-  background-color: #f9f9f9;
+  
   text-align: center;
+ 
 }
 
 .features h2 {
   font-size: 36px;
   margin-bottom: 40px;
   color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Container for feature cards */
