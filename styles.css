@@ -1287,26 +1287,37 @@ nav ul li a:hover {
   display: none;
 }
 
-/* From Uiverse.io by uiverse-astronaut */ 
-button {
-  background: #94fb1f;
-  font-family: inherit;
-  padding: 0.6em 1.3em;
-  font-weight: 900;
-  font-size: 18px;
-  border: 3px solid black;
-  border-radius: 0.4em;
-  box-shadow: 0.1em 0.1em;
+/* CSS for transparent navbar buttons */
+.btn-nav {
+  display: flex;
+  gap: 10px;
 }
 
-button:hover {
-  transform: translate(-0.05em, -0.05em);
-  box-shadow: 0.15em 0.15em;
+.button {
+  background-color: transparent;
+  padding: 10px 20px;
+  border: none; /* No border */
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  font-size: 16px;
+  font-weight: bold; /* Bold font */
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
-button:active {
-  transform: translate(0.05em, 0.05em);
-  box-shadow: 0.05em 0.05em;
+.button a {
+  text-decoration: none;
+  color: #fff; /* White text color by default */
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.button:hover {
+  transform: scale(1.1); /* Scale the button slightly on hover */
+}
+
+.button a:hover {
+  color: #adff2f; /* Light yellow-green text color on hover */
 }
 
 /* General styling */
