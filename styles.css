@@ -127,6 +127,71 @@ nav ul li a:hover {
   background-color: #004d40;
 }
 
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-top: 100px;
+  }
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #c8e6c9;
+}
+
+.hero-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .hero-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+main {
+  padding: 20px;
+}
+
+.upload,
+.classification,
+.disposal,
+.feedback {
+  margin-bottom: 30px;
+}
+
+/* Styling for the upload section */
 /* Upload Section */
 .upload {
   background-color: #f5f9ff;
@@ -169,7 +234,6 @@ nav ul li a:hover {
   background-color: #0056b3;
 }
 
-/* Card Section */
 .classification-info {
   max-width: 1200px;
   margin: 0 auto;
@@ -181,6 +245,15 @@ nav ul li a:hover {
   margin-bottom: 20px;
   color: #333;
 }
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+/* Card Section */
 
 .card-container {
   display: flex;
@@ -765,6 +838,121 @@ body.dark-mode {
       width: 100%;
   }
 
+  
+   /* Slider container */
+   .feature-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Feature Cards Wrapper */
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 300%;
+}
+
+/* Individual Feature Card */
+.feature-card {
+    flex: 1 0 100%;
+    padding: 2rem;
+    text-align: center;
+    background-color: #EDF6F9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Feature card specific styles */
+.feature-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #006D77;
+}
+
+.feature-card p, blockquote {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+blockquote {
+    background-color: #C8E6C9;
+    padding: 1rem;
+    border-left: 4px solid #43A047;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+}
+
+#fact-highlight {
+    font-weight: bold;
+    color: #E53935;
+}
+
+.highlight {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Call-to-action button */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-image: linear-gradient(to right, #006D77, #EDF6F9);
+}
+
+/* Slider navigation buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem;
+}
+
+.slider-btn.left {
+    left: 10px;
+}
+
+.slider-btn.right {
+    right: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .feature-card {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+  
+  /*MISSION SECTION*/
   .mission-box {
       grid-template-columns: 1fr;
   }
@@ -992,6 +1180,131 @@ body.dark-mode {
       max-width: 33.333%;
   }
 }
+
+
+
+#BacktoTop {
+  display: block;
+  /* Ensure the button is part of the layout */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: #004d40;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  font-size: 24px;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s, visibility 1.5s, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 2px #FFF, 0 0 0 3px #262626, 0 0 6px 2px rgba(255, 255, 255, 0.2);
+  /* Adjusted outer rings */
+  overflow: hidden;
+}
+
+.circle1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#BacktoTop:hover {
+  background-color: #008c85;
+  /* Darker shade on hover */
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+}
+
+#BacktoTop svg {
+  fill: #b4a933;
+  transition: fill 0.3s ease-in-out;
+}
+
+#BacktoTop:hover svg {
+  fill: #ffd700;
+}
+
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.toggle-button {
+  background-color: #26a69a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode header {
+  background-color: #1f1f1f;
+  /* Darker header */
+}
+
+.dark-mode .hero {
+  background: linear-gradient(rgba(0, 77, 64, 0.7), rgba(0, 77, 64, 0.8)), url('https://images.unsplash.com/photo-1628638428099-48fc6fdb98c2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+}
+
+.dark-mode .feature-card {
+  background-color: #00796b;
+  /* Card color in dark mode */
+}
+
+.dark-mode .feedback {
+  background-color: #1f1f1f;
+  /* Feedback section background */
+}
+
+.dark-mode .feedback button {
+  background-color: #1c1c1c;
+  /* Dark mode button color (matches dark header) */
+  color: #ffffff;
+  /* Light text color for contrast */
+}
+
+#newsletter-form input:focus {
+  outline: none;
+}
+
+.moon-icon {
+  font-size: 30px;
+  /* Adjust size of the moon icon */
+  margin-right: 8px;
+  /* Match the header color */
+  color: white;
+  /* Set the icon color to white for contrast */
+  border-radius: 50%;
+  /* Optional: add rounded corners */
+  padding: 5px;
+  /* Optional: add some padding */
+}
+
+body.dark-mode {
+  background-color: #1f1f1f;
+  /* Consistent dark background */
+  color: white;
+  /* Light text color */
+}
+
+#dark-mode-toggle {
+  background-color: #00796b;
+  /* Match the navbar color */
+  color: white;
+  /* White text for contrast */
+
+  border: none;
+
 
 @media (max-width: 767px) {
   .slider-control {
@@ -1430,9 +1743,155 @@ nav ul li a:hover {
   color: white;
   background-color: #007bff;
   border-radius: 4px;
+
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
+
+body.dark-mode #dark-mode-toggle {
+  background-color: #1c1c1c;
+  /* Dark mode button color */
+  color: white;
+  /* Keep text white */
+}
+
+.social-media a:hover {
+  scale: 1.01;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-nav{
+  display: flex;
+  gap: 20px;
+}
+.btn-nav a{
+  color: wheat;
+}
+/* From Uiverse.io by nikk7007 */ 
+.button {
+  --color: #00A97F;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+ .button::before, .button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button:hover::before, .button:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button:hover {
+  color: rgb(10, 25, 30);
+ }
+ 
+ .button:active {
+  filter: brightness(.8);
+ }
+ 
+.checkbox-con {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+ }
+ 
+ .checkbox-con input[type="checkbox"] {
+  appearance: none;
+  width: 48px;
+  height: 27px;
+  border: 2px solid #ff0000;
+  border-radius: 20px;
+  background: #f1e1e1;
+  position: relative;
+  box-sizing: border-box;
+ }
+ 
+ .checkbox-con input[type="checkbox"]::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: rgba(234, 7, 7, 0.5);
+  border: 2px solid #ea0707;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(13%, 15%);
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ .checkbox-con input[type="checkbox"]::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.55021 5.84315L17.1568 16.4498L16.4497 17.1569L5.84311 6.55026L6.55021 5.84315Z' fill='%23EA0707' fill-opacity='0.89'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17.1567 6.55021L6.55012 17.1568L5.84302 16.4497L16.4496 5.84311L17.1567 6.55021Z' fill='%23EA0707' fill-opacity='0.89'/%3E%3C/svg%3E");
+  position: absolute;
+  top: 0;
+  left: 20px;
+ }
+ 
+ .checkbox-con input[type="checkbox"]:checked {
+  border: 2px solid #02c202;
+  background: #e2f1e1;
+ }
+ 
+ .checkbox-con input[type="checkbox"]:checked::before {
+  background: rgba(2, 194, 2, 0.5);
+  border: 2px solid #02c202;
+  transform: translate(133%, 13%);
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ .checkbox-con input[type="checkbox"]:checked::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='13' viewBox='0 0 15 13' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.8185 0.114533C15.0314 0.290403 15.0614 0.605559 14.8855 0.818454L5.00187 12.5L0.113036 6.81663C-0.0618274 6.60291 -0.0303263 6.2879 0.183396 6.11304C0.397119 5.93817 0.71213 5.96967 0.886994 6.18339L5.00187 11L14.1145 0.181573C14.2904 -0.0313222 14.6056 -0.0613371 14.8185 0.114533Z' fill='%2302C202' fill-opacity='0.9'/%3E%3C/svg%3E");
+  position: absolute;
+  top: 5px;
+  left: 5px;
+ }
+ 
+ .checkbox-con label {
+  margin-left: 10px;
+  cursor: pointer;
+  user-select: none;
+ }
+ 
+
+.btn-nav #checkbox:hover {
+  transform: scale(1.7);
+}
+
 
 .custom-file-upload:hover {
   background-color: #0056b3;
