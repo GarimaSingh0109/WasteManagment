@@ -406,10 +406,33 @@ nav ul li a:hover {
 }
 
 
+  #eco-tips-container {
+    /* position: relative; */
+    overflow: hidden;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 5.2rem auto;
+    border-top: 4px solid #006D77;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+.highlight {
+    font-weight: bold;
+    color:#004d40;
+}
+.eco-tips-header {
+  background-color: #EDF6F9;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+
 .values-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 20px;
+
   text-align: center;
 }
 
