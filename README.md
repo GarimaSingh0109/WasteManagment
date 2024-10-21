@@ -122,12 +122,49 @@ The color palette used in the Waste Management website is fixed to ensure a cons
 **Reference**: [Coolors.co Palette](https://coolors.co/palette/006d77-83c5be-edf6f9-ffddd2-e29578)
 
 
+<div>
+  <h2><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2728/512.webp" width="35" height="35"> Ready to Contribute?</h2>
+</div>
 
+If you would like to contribute to the project, please follow our contribution guidelines.
+Here’s a more detailed version of the "Steps for Contributing" section:
 
+### Steps for Contributing
+**For steps on how to contribute refer to CONTRIBUTING.md**
+<hr>
+<!-- Open Source Programs -->
+  <div>
+    <h2><img src="https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Hand%20gestures/Flexed%20Biceps.png?raw=true" width="35" height="35" > Open Source Programs</h2>
+  </div>
 
----
+  <table border="1" cellpadding="10">
+        <tr>
+            <td rowspan="2">
+                <img src="https://github.com/Its-Aman-Yadav/Community-Site/assets/133582566/d3bf4882-8e12-40ea-b300-af4e3cfc5545" alt="GSSOC Logo" width="100" height="55">
+            </td>
+            <td>
+                <strong>GSSOC 2024</strong>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                This project is part of GirlScript Summer of Code. We enthusiastically invite community contributions to contribute to Community-Site.
+            </td>
+        </tr>
+    </table>
 
-## License 📝
+<hr>
+
+<!-- Code of conduct -->
+<div>
+<h2><img src = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="35" height="35"> Code of Conduct</h2>
+</div>
+
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+
+<hr>    
+
+### License 📝
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
