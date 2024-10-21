@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carbon Footprint Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Carbo-footprint.css">
 </head>
 <body>
+
+    <!-- Progress Bar -->
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <!-- Navbar section -->
+    <header>
+        <a href="index.html"><h1>Waste Management</h1></a>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#upload">Upload</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="#about">About US</a></li>
+                <li><a href="register.html">Sign up</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-controls">
+            <button id="theme-toggle" aria-label="Toggle dark mode">🌓</button>
+            <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+
+
+    <main>
     <div class="container">
         <h1>Carbon Footprint Calculator</h1>
         <form id="footprintForm">
@@ -21,8 +48,104 @@
 
         <div id="result" class="result"></div>
         <div id="tips" class="tips"></div>
+    
     </div>
+</main>
+    <footer id="footer">
+        <h2>Stay Connected</h2>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-media">
+            <a href="#">
+                <box-icon type="logo" name="facebook"></box-icon>
+            </a>
+            <a href="#">
+                <box-icon type="logo" name="twitter"></box-icon>
+            </a>
+            <a href="#">
+                <box-icon type="logo" name="instagram"></box-icon>
+            </a>
+        </div>
+        <div class="community-message">
+            <h3>Our Commitment to Sustainability</h3>
+            <p>At Waste Management, we are dedicated to building a greener future. Through our community recycling programs and sustainability initiatives, we strive to reduce waste and protect the environment for generations to come. Join us in our mission to create a cleaner, healthier planet.</p>
+        </div>
+        <br>
+        <p>&copy; 2024 Waste Management. All rights reserved.</p>
+    </footer>
 
-    <script src="script.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Menu toggle functionality
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+    }
+
+    // Theme toggle functionality
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            themeToggle.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌓';
+        });
+    }
+    });
+
+    document.getElementById('footprintForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get input values
+    const wasteAmount = parseFloat(document.getElementById('wasteAmount').value);
+    const recycledAmount = parseFloat(document.getElementById('recycledAmount').value);
+
+    // Validate inputs
+    if (isNaN(wasteAmount) || isNaN(recycledAmount)) {
+        alert("Please enter valid numbers.");
+        return;
+    }
+
+    // Calculate carbon footprint
+    const netWaste = wasteAmount - recycledAmount;
+    const carbonFootprint = netWaste * 0.5; // Example factor
+
+    // Display results
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `Your estimated carbon footprint is <strong>${carbonFootprint.toFixed(2)} kg CO2</strong> per week.`;
+
+    // Provide tips based on the result
+    let tips = '';
+    if (carbonFootprint < 10) {
+        tips = 'Great job! Keep reducing waste and recycling more.';
+    } else if (carbonFootprint >= 10 && carbonFootprint < 20) {
+        tips = 'You are doing well, but there’s room for improvement. Try to recycle more!';
+    } else {
+        tips = 'Consider reducing your waste and increasing your recycling efforts to lower your carbon footprint.';
+    }
+    
+    const tipsDiv = document.getElementById('tips');
+    tipsDiv.innerHTML = `<strong>Tips:</strong> ${tips}`;
+});
+
+const progressBar = document.getElementById('progress-bar');
+    if (progressBar) {
+        window.addEventListener('scroll', () => {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
+
+            progressBar.style.width = scrollPercentage + '%';
+        });
+    }
+</script>
 </body>
 </html>
