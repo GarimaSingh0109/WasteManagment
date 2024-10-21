@@ -148,7 +148,7 @@ Here’s a more detailed version of the "Steps for Contributing" section:
         </tr>
         <tr>
             <td>
-                This project is part of GirlScript Summer of Code. We enthusiastically invite community contributions to contribute to Community-Site.
+                This project is part of GirlScript Summer of Code. We enthusiastically invite community contributions to contribute to Waste Managment.
             </td>
         </tr>
     </table>
