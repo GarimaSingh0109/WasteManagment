@@ -1,626 +1,776 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Waste Management</title>
-    <link rel="icon" href="./assets/logo.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="index.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&amp;display=swap" rel="stylesheet" />
-    <!-- CSS CDN For Smooth Scrolling -->
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.14/dist/lenis.css">
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-
 <body>
-
-<!-- Progress Bar -->
-
-
-    <div id="progress-container">
-        <div id="progress-bar"></div>
-    </div>
     <header>
-
-
-        <a href="index.html">
-            <h1>Waste Management</h1>
-        </a>
-
-        <a href="index.html">
-            <h1>Waste Management</h1>
-        </a>
-
-        <nav>
-            <div class="btn-nav">
-                <button class="button"> <a href="#upload">Upload</a></button>
-                <button class="button"><a href="#features">Features</a></button>
-                <button class="button"><a href="#feedback">Feedback</a></button>
-                <button class="button"><a href="#about">About Me</a></button>
-                <button class="button"><a href="register.html">Sign up</a></button>
-                <button class="button"><a href="#footer">Contact</a></button>
-            </div>
-        </nav>
-        </nav>
-        <div class="nav-controls">
-            <div id="theme-toggle" aria-label="Toggle darok mde">🌓</div>
-            <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        <div class="navbar-container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Waste Management Logo">
+                Waste Management
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#upload">Upload</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#signup">Signup</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
+
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-text">
-                <h2>Efficient Waste Management</h2>
-                <p>Join our mission for a cleaner, greener planet. We strive to minimize waste through effective
-                    recycling, composting, and sustainable practices.</p>
-                <p>Together, we can reduce the environmental impact and create a more sustainable future for generations
-                    to come. Let’s make the world a better place by reducing our carbon footprint and managing waste
-                    efficiently.</p>
-                <a href="#features" class="hero-btn">Discover Features</a>
-            </div>
-            <div class="hero-img">
-                <img src="./assets/rb_8795.png" alt="Waste Management Image">
-            </div>
+            <h2>Manage Your Waste Effectively</h2>
+            <p>Join us in making a cleaner, greener planet.</p>
+            <a href="#features" class="hero-btn">Explore Features</a>
         </div>
     </section>
-    <section class="upload" id="upload">
-        <div class="upload-card">
-            <div class="upload-container">
-                <div class="upload-img">
-                    <img src="./assets/rb_2148298503.png" alt="Upload Preview">
-                </div>
-                <div class="upload-text">
-                    <h2>Upload Your Files</h2>
-                    <label for="image-input" class="custom-file-upload">
-                        <input type="file" id="image-input" accept="image/*" hidden />
-                        <span>Select Image</span>
-                    </label>
-                </div>
-                <div class="upload-submit">
-                    <button id="upload-button">Submit</button>
-                </div>
-            </div>
 
+    <main>
+        <section class="upload" id="upload">
+            <h2>Upload Image</h2>
+            <input type="file" id="image-input" accept="image/*">
+            <button id="upload-button" class="mui-btn">Upload</button>
         </section>
-        
-        </div>
-    </section>
-    <section class="classification">
-        <h2>Waste Classification</h2>
-        <p id="classification-result">Your classification result will appear here.</p>
-    </section>
 
-    <section class="disposal">
-        <h2>Disposal Information</h2>
-        <p id="disposal-information">Disposal information will be displayed here.</p>
-    </section>
-    <div>
-        <h2>Waste Categories</h2>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="./assets/arrangement-cooked-fish-leftovers-recycle-symbol.jpg"
-                            alt="Biodegradable Waste">
-                        <span>Biodegradable Waste</span>
-                    </div>
+        <section class="classification">
+            <h2>Classification</h2>
+            <p id="classification-result"></p>
+        </section>
 
-                </div>
-            </section>
+        <section class="disposal">
+            <h2>Disposal Information</h2>
+            <p id="disposal-information"></p>
+        </section>
 
         <section class="features" id="features">
             <h2>Our Features</h2>
-            <div class="feature-slider">
-                <div class="slider-wrapper">
-                    
-                    <div class="feature-card">
-                        <h3>Real-time Monitoring</h3>
-                        <blockquote id="eco-fact">
-                            Did you know that <span id="fact-highlight">over 2 billion tons of waste are generated 
-                            globally every year, but only 16% is recycled?</span>
-                        </blockquote>
-                    
-                        <p><span class="highlight">Track, Reduce, and Make a Difference</span> With real-time waste monitoring, you can be part of the solution by tracking 
-                            your waste habits, identifying areas for improvement, and contributing to a greener planet. 
-                            Take control of your impact – start monitoring your waste today and help reduce the overwhelming waste burden
-                             on our environment. <strong>Every action counts.</strong></p>
-                        <a href="realtime-monitoring.html" class="cta-button">Let's be on right track</a>
-                    </div>
-                    <div class="feature-card" id="eco-friendly">
-                        <h3>Eco-Friendly Tips</h3>
-                        <blockquote id="eco-fact">
-                            Do you know <span id="fact-highlight">only 9% of plastic ever produced has been recycled?</span>
-                        </blockquote>
-                        <p>
-                            Be <span class="highlight">Eco-savvy</span> by embracing simple, comprehensive, and quick solutions from the comfort of your home.
-                            Contribute in managing the overwhelming burden of waste generation. Get personalized tips to manage waste sustainably and
-                            <strong>be the change you want to see in the world!</strong>.
-                        </p>
-                        <a href="ecotips.html" id="eco-tips" class="cta-button">I'm in!</a>
-                    </div>
-                   
-                    <div class="feature-card">
-                        <h3>Community Engagement</h3>
-                        <p>Join community efforts to promote effective waste management.</p>
-                        <a href="community.html" class="hero-btn">Join Community</a>
-                    </div>
-        
-         <div class="community-message">
-                        <h3>Our Commitment to Sustainability</h3>
-                        <p>At Waste Management, we are dedicated to building a greener future. Through our community recycling
-                            programs and sustainability initiatives, we strive to reduce waste and protect the environment for
-                            generations to come. Join us in our mission to create a cleaner, healthier planet.</p>
-</div>        
-
-                </div>
-                <button class="slider-btn left" id="prev">&#10094;</button>
-                <button class="slider-btn right" id="next">&#10095;</button>
+            <div class="feature-card">
+                <h3>Real-time Monitoring</h3>
+                <p>Track your waste management activities in real-time.</p>
             </div>
-            
+            <div class="feature-card" id="eco-friendly">
+                <h3>Eco-Friendly Tips</h3>
+                <blockquote id="eco-fact">Do you know <span id="fact-highlight">only 9% of plastic ever produced has been recycled?</span></blockquote>
+                <p>Be <span class="highlight">Eco-savvy</span> by embracing simple, comprehensive, and quick solutions from home.</p>
+                <a href="ecotips.html" id="eco-tips" class="cta-button">I'm in!</a>
+            </div>
+            <div class="feature-card">
+                <h3>Community Engagement</h3>
+                <p>Join community efforts to promote waste management.</p>
+            </div>
         </section>
 
+       
+      
 
-            <section class="faqs" id="faqs">
 
-                <section class="faqs" id="faqs">
-
+        <section class="faqs" id="faqs">
+            <div class="faq-container">
+                <!-- Top: Image -->
+                <div class="faq-image">
+                    <img src="assets/faq-w.jpg" alt="FAQs Image">
+                </div>
+        
+                <!-- Below: FAQ Content -->
+                <div class="faq-content">
                     <h2>Frequently Asked Questions (FAQs)</h2>
-
+                    
                     <div class="faq-item">
-                        <h3>What is the difference between biodegradable and non-biodegradable waste?</h3>
-                        <p>Biodegradable waste refers to organic materials such as food scraps and garden waste that
-                            decompose naturally over time. Non-biodegradable waste includes plastics, metals, and other
-                            materials that do not decompose easily and require recycling or special disposal methods.
-                        </p>
+                        <h3 class="faq-question">What is the difference between biodegradable and non-biodegradable waste?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">Biodegradable waste refers to organic materials such as food scraps and garden waste that decompose naturally. Non-biodegradable waste includes plastics and metals that require special disposal.</p>
                     </div>
-
+        
                     <div class="faq-item">
-                        <h3>How can I reduce household waste?</h3>
-                        <p>You can reduce waste by buying reusable products, composting organic waste, recycling
-                            materials like plastic and paper, and avoiding single-use items. Participating in community
-                            waste reduction programs is also helpful.</p>
+                        <h3 class="faq-question">How can I reduce household waste?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">You can reduce household waste by recycling, composting organic waste, and avoiding single-use plastics.</p>
                     </div>
-
+        
                     <div class="faq-item">
-                        <h3>What should I do with hazardous waste?</h3>
-                        <p>Hazardous waste, such as batteries, chemicals, and electronic waste, should be taken to
-                            designated disposal sites or collection events. Do not dispose of them in regular household
-                            trash as they can be harmful to the environment.</p>
+                        <h3 class="faq-question">What items can be recycled at home?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">Common recyclable items include paper, cardboard, glass, plastic bottles, and aluminum cans. Check with your local recycling center for more details.</p>
                     </div>
-
+        
                     <div class="faq-item">
-                        <h3>Can all plastics be recycled?</h3>
-                        <p>No, not all plastics are recyclable. Look for recycling symbols with numbers on plastic
-                            products. Most recycling centers accept plastics marked with numbers 1 and 2, but it's
-                            important to check with your local center for specific guidelines.</p>
+                        <h3 class="faq-question">What is composting and how can I do it?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">Composting is the process of turning organic waste into nutrient-rich soil. You can compost food scraps, leaves, and other biodegradable materials in a bin or pile in your backyard.</p>
                     </div>
-
+        
                     <div class="faq-item">
-                        <h3>How do I start composting at home?</h3>
-                        <p>To start composting, collect food scraps like fruit peels, vegetable leftovers, and coffee
-                            grounds. Combine them with yard waste like leaves and grass clippings in a compost bin. Turn
-                            the compost regularly to ensure proper aeration and decomposition.</p>
+                        <h3 class="faq-question">Why is plastic waste harmful to the environment?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">Plastic waste takes hundreds of years to decompose and can harm wildlife, pollute oceans, and contribute to climate change.</p>
                     </div>
-
+        
                     <div class="faq-item">
-                        <h3>Why is it important to sort waste?</h3>
-                        <p>Sorting waste ensures that recyclable materials like paper, glass, and plastics are properly
-                            processed, reducing the amount of waste sent to landfills. Proper sorting helps reduce
-                            pollution, conserve resources, and protect the environment.</p>
-                    </div>
-                </section>
-
-
-                <section class="feedback" id="feedback">
-                    <h2>Your Feedback</h2>
-                    <form id="feedback-form">
-                        <input type="text" placeholder="Your Name" required>
-                        <textarea placeholder="Your Feedback" required></textarea>
-                        <button type="submit">Submit</button>
-                    </form>
-                </section>
-                <section id="about" class="about-us">
-                    <div class="about-container">
-                        <!-- About Us Heading -->
-                        <div class="about-heading">
-                            <h2>About Us</h2>
-                        </div>
-
-                        <!-- About Content -->
-                        <div class="about-text">
-                            <p><strong>At Waste Management</strong>, we are passionate about creating a sustainable
-                                future through effective waste disposal solutions. Our goal is to not only reduce
-                                environmental pollution but also <strong>educate communities</strong> and empower
-                                individuals with sustainable waste practices.</p>
-                            <p>By leveraging our <strong>state-of-the-art waste classification system</strong> and
-                                encouraging community engagement, we aim to inspire everyone to adopt eco-friendly
-                                habits. Together, we can make a significant impact in reducing waste, promoting
-                                recycling, and preserving the environment for future generations.</p>
-                        </div>
-
-                        <!-- About Image -->
-                        <div class="about-image">
-                            <img src="./assets/about-us.jpg" alt="Waste Management team working towards sustainability">
-                        </div>
-
-                    <div class="card-back">
-                        <h3>Biodegradable Waste</h3>
-                        <p>Includes food remains and garden waste. These can be composted to create manure and naturally
-                            decompose over time.</p>
+                        <h3 class="faq-question">How can I safely dispose of hazardous waste?
+                            <span class="arrow">&#9654;</span>
+                        </h3>
+                        <p class="faq-answer">Hazardous waste, such as batteries, chemicals, and electronics, should be taken to specialized disposal centers. Do not throw them in regular trash.</p>
                     </div>
                 </div>
             </div>
+        
+            <style>
+                /* FAQ section container layout */
+                .faq-container {
+                    max-width: 1200px;
+                    margin: 20px auto;
+                    padding: 20px;
+                    font-family: Arial, sans-serif;
+                    text-align: center; /* Center align for a neat look */
+                }
+        
+                /* Top: FAQ image */
+                .faq-image img {
+                    width: 250px; /* Set the image width */
+                    height: auto; /* Maintain aspect ratio */
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 20px; /* Space between image and content */
+                }
+        
+                /* FAQ content */
+                .faq-content {
+                    padding: 20px;
+                }
+        
+                .faq-content h2 {
+                    margin-bottom: 20px;
+                    font-size: 28px;
+                    color: #333;
+                }
+        
+                /* FAQ item styling */
+                .faq-item {
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    margin-bottom: 10px;
+                    padding: 15px;
+                    background-color: #f9f9f9;
+                    text-align: left; /* Align text to the left for better readability */
+                }
+        
+                .faq-question {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 18px;
+                    margin: 0;
+                    padding: 0;
+                    color: #333;
+                }
+        
+                .faq-answer {
+                    display: none;
+                    margin-top: 10px;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: #555;
+                }
+        
+                /* Arrow styling and transition */
+                .faq-question .arrow {
+                    font-size: 18px;
+                    transition: transform 0.3s ease;
+                }
+        
+                .faq-question.active .arrow {
+                    transform: rotate(90deg);
+                }
+        
+                /* Responsive design for mobile */
+                @media (max-width: 768px) {
+                    .faq-container {
+                        padding: 10px; /* Adjust padding for smaller screens */
+                    }
+                    .faq-content h2 {
+                        font-size: 24px;
+                    }
+                    .faq-question {
+                        font-size: 16px;
+                    }
+                    .faq-answer {
+                        font-size: 14px;
+                    }
+                }
+            </style>
+        
+            <script>
+                const faqQuestions = document.querySelectorAll('.faq-question');
+        
+                faqQuestions.forEach((question) => {
+                    question.addEventListener('click', () => {
+                        question.classList.toggle('active');
+                        const answer = question.nextElementSibling;
+                        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                    });
+                });
+            </script>
+        </section>
+        
+        
 
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="./assets/front-view-recycling-basket-grass-with-trash.jpg"
-                            alt="Non-Biodegradable Waste">
-                        <span>Non-Biodegradable Waste</span>
-                    </div>
-                    <div class="card-back">
-                        <h3>Non-Biodegradable Waste</h3>
-                        <p>Items like old newspapers, broken glass, and plastics. These do not decompose and are major
-                            pollutants, but can be recycled and reused.</p>
-                    </div>
+        
+
+
+
+
+
+
+        
+
+
+        <section class="feedback" id="feedback">
+            <!-- Above: Image -->
+            <div class="feedback-image">
+                <img src="assets/feed-w.avif" alt="Feedback Image">
+            </div>
+        
+            <h2>Your Feedback</h2>
+            <p>We value your feedback. Please let us know your thoughts on how we can improve our services.</p>
+            
+            <form id="feedback-form">
+                <div class="form-group">
+                    <input type="text" class="mui-input" id="feedback-name" placeholder="Your Name" required>
                 </div>
+                <div class="form-group">
+                    <input type="email" class="mui-input" id="feedback-email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="mui-input" id="feedback-message" placeholder="Your Feedback" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">Submit</button>
+                </div>
+                <div class="form-error" id="form-error-message"></div>
+                <div class="form-success" id="form-success-message"></div>
+            </form>
+        </section>
+        
+        <style>
+            /* Feedback section styling */
+            .feedback {
+                max-width: 600px;
+                margin: 20px auto;
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                color: #333; /* Change text color to dark for better visibility */
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center; /* Center align for a neat look */
+            }
+        
+            .feedback h2, .feedback p {
+                color: #333; /* Change text color to dark for better visibility */
+            }
+        
+            .form-group {
+                margin-bottom: 15px;
+            }
+        
+            .mui-input {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                box-sizing: border-box;
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+        
+            .mui-input:focus {
+                border-color: #0077cc;
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+            }
+        
+            .mui-btn {
+                width: 100%;
+                padding: 12px;
+                background-color: #0077cc;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+        
+            .mui-btn:hover {
+                background-color: #005fa3;
+            }
+        
+            /* Feedback image styling */
+            .feedback-image img {
+                max-width: 100%;
+                height: auto; /* Maintain aspect ratio */
+                border-radius: 8px; /* Rounded corners */
+                margin-bottom: 20px; /* Space between the image and the content below */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        
+            /* Error and success messages */
+            .form-error, .form-success {
+                text-align: center;
+                font-size: 14px;
+                margin-top: 10px;
+                display: none;
+            }
+        
+            .form-error {
+                color: #ff3333;
+            }
+        
+            .form-success {
+                color: #28a745;
+            }
+        
+            /* Responsive design */
+            @media (max-width: 768px) {
+                .feedback h2 {
+                    font-size: 22px;
+                }
+        
+                .feedback p {
+                    font-size: 14px;
+                }
+        
+                .mui-input {
+                    font-size: 14px;
+                }
+        
+                .mui-btn {
+                    font-size: 16px;
+                }
+            }
+        </style>
+        
 
 
-        </main>
 
+
+
+        
+        <section class="signup" id="signup">
+            <h2>Sign Up</h2>
+            <p>Join our community for updates on waste management tips, events, and more. Sign up below!</p>
+            <form id="signup-form">
+                <div class="form-group">
+                    <input type="text" class="mui-input" placeholder="Full Name" required aria-label="Full Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="mui-input" placeholder="Email Address" required aria-label="Email Address">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="mui-input" placeholder="Password" required aria-label="Password">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="mui-input" placeholder="Confirm Password" required aria-label="Confirm Password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">Create Account</button>
+                </div>
+                <div class="form-error" id="signup-error-message"></div>
+                <div class="form-success" id="signup-success-message"></div>
+            </form>
+        </section>
+        
+        <style>
+            /* Feedback and Sign Up form styling */
+            .feedback, .signup {
+                max-width: 600px;
+                margin: 20px auto;
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+            }
+        
+            .feedback h2, .signup h2 {
+                font-size: 26px;
+                text-align: center;
+                margin-bottom: 10px;
+                color: #333;
+            }
+        
+            .feedback p, .signup p {
+                font-size: 16px;
+                text-align: center;
+                color: #555;
+                margin-bottom: 20px;
+            }
+        
+            .form-group {
+                margin-bottom: 15px;
+            }
+        
+            .mui-input {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+                box-sizing: border-box;
+            }
+        
+            .mui-input:focus {
+                border-color: #0077cc;
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+            }
+        
+            .mui-btn {
+                width: 100%;
+                padding: 12px;
+                background-color: #0077cc;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                font-size: 18px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+        
+            .mui-btn:hover {
+                background-color: #005fa3;
+            }
+        
+            /* Error and success messages */
+            .form-error, .form-success {
+                text-align: center;
+                font-size: 14px;
+                margin-top: 10px;
+                display: none;
+            }
+        
+            .form-error {
+                color: #ff3333;
+            }
+        
+            .form-success {
+                color: #28a745;
+            }
+        
+            /* Responsive design for mobile */
+            @media (max-width: 768px) {
+                .feedback h2, .signup h2 {
+                    font-size: 22px;
+                }
+        
+                .feedback p, .signup p {
+                    font-size: 14px;
+                }
+        
+                .mui-input {
+                    font-size: 14px;
+                }
+        
+                .mui-btn {
+                    font-size: 16px;
+                }
+            }
+        </style>
+        
+        <script>
+            // Feedback form validation and submission
+            document.getElementById('feedback-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = document.getElementById('feedback-name').value.trim();
+                const email = document.getElementById('feedback-email').value.trim();
+                const message = document.getElementById('feedback-message').value.trim();
+                const errorMessage = document.getElementById('form-error-message');
+                const successMessage = document.getElementById('form-success-message');
+        
+                if (!name || !email || !message) {
+                    errorMessage.textContent = 'Please fill in all fields.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                } else if (!validateEmail(email)) {
+                    errorMessage.textContent = 'Please enter a valid email address.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                } else {
+                    errorMessage.style.display = 'none';
+                    successMessage.textContent = 'Thank you for your feedback!';
+                    successMessage.style.display = 'block';
+                }
+            });
+        
+            // Signup form validation and submission
+            document.getElementById('signup-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const fullName = document.querySelector('#signup-form input[aria-label="Full Name"]').value.trim();
+                const email = document.querySelector('#signup-form input[aria-label="Email Address"]').value.trim();
+                const password = document.querySelector('#signup-form input[aria-label="Password"]').value.trim();
+                const confirmPassword = document.querySelector('#signup-form input[aria-label="Confirm Password"]').value.trim();
+                const errorMessage = document.getElementById('signup-error-message');
+                const successMessage = document.getElementById('signup-success-message');
+        
+                if (!fullName || !email || !password || !confirmPassword) {
+                    errorMessage.textContent = 'Please fill in all fields.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                } else if (password !== confirmPassword) {
+                    errorMessage.textContent = 'Passwords do not match.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                } else if (!validateEmail(email)) {
+                    errorMessage.textContent = 'Please enter a valid email address.';
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                } else {
+                    errorMessage.style.display = 'none';
+                    successMessage.textContent = 'Account created successfully!';
+                    successMessage.style.display = 'block';
+                }
+            });
+        
+            // Email validation function
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+        </script>
+
+
+
+
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <div class="contact-image">
+            <img src="assets/contact-w.avif" alt="Contact Us">
+        </div>
+        <div class="contact-form-container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, concerns, or feedback, feel free to reach out to us using the form below. We would love to hear from you!</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" class="mui-input" id="contact-name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="mui-input" id="contact-email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="mui-input" id="contact-message" placeholder="Your Message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="mui-btn mui-btn--raised mui-btn--primary">Send Message</button>
+                </div>
+                <div class="form-error" id="contact-error-message"></div>
+                <div class="form-success" id="contact-success-message"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Contact section styling */
+    .contact {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .contact-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-form-container {
+        max-width: 600px;
+    }
+
+    .contact h2 {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .contact p {
+        font-size: 16px;
+        text-align: center;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .mui-input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    .mui-input:focus {
+        border-color: #0077cc;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+    }
+
+    .mui-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #0077cc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .mui-btn:hover {
+        background-color: #005fa3;
+    }
+
+    /* Error and success messages */
+    .form-error, .form-success {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .form-error {
+        color: #ff3333;
+    }
+
+    .form-success {
+        color: #28a745;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact h2 {
+            font-size: 22px;
+        }
+
+        .contact p {
+            font-size: 14px;
+        }
+
+        .mui-input {
+            font-size: 14px;
+        }
+
+        .mui-btn {
+            font-size: 16px;
+        }
+
+        .contact-image {
+            width: 100%;
+        }
+
+        .contact-form-container {
+            width: 100%;
+        }
+    }
+</style>
+
+<script>
+    // Contact form validation and submission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('contact-name').value.trim();
+        const email = document.getElementById('contact-email').value.trim();
+        const message = document.getElementById('contact-message').value.trim();
+        const errorMessage = document.getElementById('contact-error-message');
+        const successMessage = document.getElementById('contact-success-message');
+
+        if (!name || !email || !message) {
+            errorMessage.textContent = 'Please fill in all fields.';
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+        } else if (!validateEmail(email)) {
+            errorMessage.textContent = 'Please enter a valid email address.';
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+        } else {
+            errorMessage.style.display = 'none';
+            successMessage.textContent = 'Your message has been sent!';
+            successMessage.style.display = 'block';
+        }
+    });
+
+    // Email validation function
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+</script>
+
+
+
+
+
+
+    </main>
 
     <footer id="footer">
         <h2>Stay Connected</h2>
         <form id="newsletter-form">
             <input type="email" placeholder="Your Email" required>
-            <span id="newsletter-error-message" style="color: red;"></span> <!-- Error message for newsletter -->
-            <button type="submit">Subscribe</button>
+            <span id="newsletter-error-message" style="color: red;"></span>
+            <button type="submit" class="mui-btn">Subscribe</button>
         </form>
         <div class="social-media">
             <a href="#">Facebook</a>
             <a href="#">Twitter</a>
             <a href="#">Instagram</a>
         </div>
-        <div class="community-message">
-            <h3>Our Commitment to Sustainability</h3>
-            <p>At Waste Management, we are dedicated to building a greener future. Through our community recycling
-                programs and sustainability initiatives, we strive to reduce waste and protect the environment for
-                generations to come. Join us in our mission to create a cleaner, healthier planet.</p>
-
-            <a href="#">
-                <box-icon type="logo" name="facebook"></box-icon>
-            </a>
-<a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
-                    <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
-                </svg>
-            </a>
-            
-            <a href="#">
-                <box-icon type="logo" name="instagram"></box-icon>
-            </a>
-</div>
-
         <p>&copy; 2024 Waste Management. All rights reserved.</p>
-        <button id="BacktoTop">
-            <div class="circle1">
-                <svg id="back-to-top" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"></path>
-                </svg>
-            </div>
-    </button>
     </footer>
 
-            </div>
-        </div>
-    </div>
-    <section class="features" id="features">
-        <h2>Discover Our Features</h2>
-        <div class="features-container">
-            <div class="feature-card" id="eco-friendly">
-                <div class="icon"></div>
-                <h3>Eco-Friendly Tips</h3>
-                <blockquote id="eco-fact">
-                    Did you know
-                    <span id="fact-highlight">only 9% of all plastic ever produced has been recycled?</span>
-                </blockquote>
-                <p>
-                    Make a difference by embracing eco-friendly practices from home. Learn tips to help manage waste
-                    efficiently and reduce your environmental impact.
-                </p>
-                <a href="ecotips.html" class="cta-button">Get Tips!</a>
-            </div>
-
-            <div class="feature-card">
-                <div class="icon"></div>
-                <h3>Real-time Monitoring</h3>
-                <p>
-                    Keep track of your waste management activities instantly, with up-to-the-minute updates.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <h3>Community Engagement</h3>
-                <p>
-                    Join community efforts to promote effective waste management.
-                </p>
-                <a href="community.html" class="hero-btn">Join Community</a>
-            </div>
-        </div>
-    </section>
-<section class="faqisection">
-    <section class="faqs" id="faqs">
-        <div>
-            <h2>Frequently Asked Questions (FAQs)</h2>
-        <div class="faq-item">
-            <h3>
-                What is the difference between biodegradable and
-                non-biodegradable waste?
-            </h3>
-            <p>
-                Biodegradable waste refers to organic materials such as
-                food scraps and garden waste that decompose naturally over
-                time. Non-biodegradable waste includes plastics, metals,
-                and other materials that do not decompose easily and
-                require recycling or special disposal methods.
-            </p>
-        </div>
-        <div class="faq-item">
-            <h3>How can I reduce household waste?</h3>
-            <p>
-                You can reduce waste by buying reusable products,
-                composting organic waste, recycling materials like plastic
-                and paper, and avoiding single-use items. Participating in
-                community waste reduction programs is also helpful.
-            </p>
-        </div>
-        <div class="faq-item">
-            <h3>What should I do with hazardous waste?</h3>
-            <p>
-                Hazardous waste, such as batteries, chemicals, and
-                electronic waste, should be taken to designated disposal
-                sites or collection events. Do not dispose of them in
-                regular household trash as they can be harmful to the
-                environment.
-            </p>
-        </div>
-        <div class="faq-item">
-            <h3>Can all plastics be recycled?</h3>
-            <p>
-                No, not all plastics are recyclable. Look for recycling
-                symbols with numbers on plastic products. Most recycling
-                centers accept plastics marked with numbers 1 and 2, but
-                it's important to check with your local center for
-                specific guidelines.
-            </p>
-        </div>
-        <div class="faq-item">
-            <h3>How do I start composting at home?</h3>
-            <p>
-                To start composting, collect food scraps like fruit peels,
-                vegetable leftovers, and coffee grounds. Combine them with
-                yard waste like leaves and grass clippings in a compost
-                bin. Turn the compost regularly to ensure proper aeration
-                and decomposition.
-            </p>
-        </div>
-        <div class="faq-item">
-            <h3>Why is it important to sort waste?</h3>
-            <p>
-                Sorting waste ensures that recyclable materials like
-                paper, glass, and plastics are properly processed,
-                reducing the amount of waste sent to landfills. Proper
-                sorting helps reduce pollution, conserve resources, and
-                protect the environment.
-            </p>
-        </div>
-
-        </div>
-        
-    </section>
-</section>
-<section class="feedback" id="feedback">
-    <h2>Your Feedback</h2>
-    <form id="feedback-form" name="feedback-form">
-      <input type="text" placeholder="Your Name" required="" />
-      <textarea
-        placeholder="Your Feedback"
-        required=""
-      ></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
-
-  <section class="about-container">
-    <div class="about-heading">
-        <h2>About Us</h2>
-      </div>
-      <div class="about-text">
-        <p>
-          <strong>At Waste Management</strong>, we are passionate
-          about creating a sustainable future through effective
-          waste disposal solutions. Our goal is to not only reduce
-          environmental pollution but also
-          <strong>educate communities</strong> and empower
-          individuals with sustainable waste practices.
-        </p>
-        <p>
-          By leveraging our
-          <strong
-            >state-of-the-art waste classification system</strong
-          >
-          and encouraging community engagement, we aim to inspire
-          everyone to adopt eco-friendly habits. Together, we can
-          make a significant impact in reducing waste, promoting
-          recycling, and preserving the environment for future
-          generations.
-        </p>
-      </div>
-      <div class="about-image">
-        <img
-          src="./assets/about-us.jpg"
-          alt="Waste Management team working towards sustainability"
-        />
-      </div>
-  </section>
-  <section>
-    <div class="mission-container">
-        <h3>Our Mission</h3>
-        <div class="mission-box">
-          <div class="mission-item">
-            <img
-              src="./assets/recycling-bin_532768.png"
-              alt="Reduce Waste"
-            />
-            <h4>Reduce Waste</h4>
-            <p>
-              Minimize waste generation through innovative
-              technologies and education.
-            </p>
-          </div>
-          <div class="mission-item">
-            <img
-              src="./assets/aluminum_4381614.png"
-              alt="Promote Recycling"
-            />
-            <h4>Promote Recycling</h4>
-            <p>
-              Encourage responsible disposal and recycling
-              practices in every community.
-            </p>
-          </div>
-          <div class="mission-item">
-            <img
-              src="./assets/solidarity_16825525.png"
-              alt="Empower Communities"
-            />
-            <h4>Empower Communities</h4>
-            <p>
-              Equip individuals with knowledge and tools for
-              sustainable living.
-            </p>
-          </div>
-          <div class="mission-item">
-            <img
-              src="./assets/exterior-cleaning_17073146.png"
-              alt="Build a Cleaner Future"
-            />
-            <h4>Build a Cleaner Future</h4>
-            <p>Protect the environment for future generations.</p>
-          </div>
-        </div>
-      </div>
-  </section>
-  <section>
-    <div class="values-container">
-      <h3>Our Core Values</h3>
-      <div class="values-cards">
-        <div class="value-card">
-          <h4>Innovation</h4>
-          <p>
-            We believe in continually evolving our waste
-            management practices with cutting-edge technologies to
-            improve efficiency and reduce our environmental
-            footprint.
-          </p>
-        </div>
-        <div class="value-card">
-          <h4>Sustainability</h4>
-          <p>
-            Environmental sustainability is at the heart of
-            everything we do. We prioritize reducing waste,
-            reusing materials, and promoting recycling initiatives
-            globally.
-          </p>
-        </div>
-        <div class="value-card">
-          <h4>Community</h4>
-          <p>
-            Collaboration is key. By working together with
-            communities, we aim to foster eco-consciousness and
-            sustainable living across the globe.
-          </p>
-        </div>
-        <div class="value-card">
-          <h4>Responsibility</h4>
-          <p>
-            We are committed to acting with integrity and
-            accountability, ensuring that our practices positively
-            impact both the environment and society.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-<div class="container">
-    <div class="form_area">
-        <p class="title">SIGN UP</p>
-        <form action="">
-            <div class="form_group">
-                <label class="sub_title" for="name">Name</label>
-                <input placeholder="Enter your full name" class="form_style" type="text">
-            </div>
-            <div class="form_group">
-                <label class="sub_title" for="email">Email</label>
-                <input placeholder="Enter your email" id="email" class="form_style" type="email">
-            </div>
-            <div class="form_group">
-                <label class="sub_title" for="password">Password</label>
-                <input placeholder="Enter your password" id="password" class="form_style" type="password">
-            </div>
-            <div>
-                <button class="btn">SIGN UP</button>
-                <p>Have an Account? <a class="link" href="">Login Here!</a></p><a class="link" href="">
-            </a></div><a class="link" href="">
-        
-    </a></form></div><a class="link" href="">
-</a></div>
-<footer id="footer">
-    <h2>Stay Connected</h2>
-    <form id="newsletter-form" name="newsletter-form">
-      <input type="email" placeholder="Your Email" required />
-      <button type="submit">Subscribe</button>
-    </form>
-  
-    <!-- Social Media Section -->
-    <div class="social-media">
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">Instagram</a>
-    </div>
-  
-    <!-- Community Message Section -->
-    <div class="community-message">
-      <h3>Our Commitment to Sustainability</h3>
-      <p>
-        At Waste Management, we are dedicated to building a greener future.
-        Through our community recycling programs and sustainability initiatives,
-        we strive to reduce waste and protect the environment for generations to
-        come. Join us in our mission to create a cleaner, healthier planet.
-      </p>
-    </div>
-    
-    <!-- Footer Links -->
-    <div class="footer-links">
-      <a href="#upload">Upload Waste</a>
-      <a href="#features">Features</a>
-      <a href="#feedback">Feedback</a>
-      <a href="#about">About Us</a>
-    </div>
-  
-    <!-- Copyright -->
-    <div class="footer-bottom">
-      <p>&copy; 2024 Waste Management. All rights reserved.</p>
-    </div>
-  </footer>
-  
-    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
-
     <script src="script.js"></script>
-    
 </body>
 </html>
