@@ -7,19 +7,21 @@ document.getElementById('footprintForm').addEventListener('submit', function(eve
     // Calculate carbon footprint based on a simple formula
     const carbonFootprint = (wasteAmount - recycledAmount) * 0.5; // Example factor
     const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = `Your estimated carbon footprint is ${carbonFootprint.toFixed(2)} kg CO₂/week.`;
-
+    resultDiv.classList.add('fade-in'); // Add class for animation
+    resultDiv.innerHTML = `Your estimated carbon footprint is <strong>${carbonFootprint.toFixed(2)} kg CO₂/week</strong>.`;
+    
     // Provide tips based on waste habits
     const tipsDiv = document.getElementById('tips');
+    tipsDiv.classList.add('fade-in'); // Add class for animation
     tipsDiv.innerHTML = generateTips(carbonFootprint);
 });
 
 function generateTips(footprint) {
     if (footprint < 5) {
-        return "Great job! Keep up the eco-friendly habits!";
+        return '<i class="fas fa-leaf"></i> Great job! Keep up the eco-friendly habits!';
     } else if (footprint < 10) {
-        return "Consider reducing your waste by composting and recycling more.";
+        return '<i class="fas fa-recycle"></i> Consider reducing your waste by composting and recycling more.';
     } else {
-        return "Try to minimize single-use plastics and opt for reusable items.";
+        return '<i class="fas fa-trash"></i> Try to minimize single-use plastics and opt for reusable items.';
     }
 }
