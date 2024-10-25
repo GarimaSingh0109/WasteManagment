@@ -309,6 +309,13 @@ nav ul li a:hover {
   text-align: left;
 }
 
+.mission-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
 /* Hover Effect for Mission Items */
 .mission-item:hover {
   transform: translateY(-10px);
@@ -337,39 +344,110 @@ nav ul li a:hover {
 
 
 /* Sign Up Section */
+/* Container Styling */
 .signup {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   max-width: 400px;
-  margin: 0 auto 30px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
 
-.signup form {
-  display: flex;
-  flex-direction: column;
+/* Title Styling */
+.signup .title {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.signup input {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+/* Form Group Styling */
+.form_group {
+  margin-bottom: 20px;
 }
 
-.signup button {
-  background-color: #007b5f;
+/* Label Styling */
+.sub_title {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Input Styling */
+.form_style {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  font-size: 1em;
+}
+
+.form_style:focus {
+  border-color: #007b5f;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 95, 0.2);
+}
+
+/* Button Styling */
+.btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  font-weight: bold;
   color: white;
-  padding: 10px;
+  background-color: #007b5f;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.1s;
 }
 
-.signup button:hover {
+.btn:hover {
   background-color: #005f46;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Link Styling */
+.link {
+  color: #007b5f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Text under button */
+.form_action p {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 15px;
+}
+
+/* Responsive Styling */
+@media (max-width: 500px) {
+  .signup {
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .signup .title {
+    font-size: 1.6em;
+  }
+
+  .btn, .form_style {
+    font-size: 0.95em;
+  }
 }
 
 /*About Us  */
