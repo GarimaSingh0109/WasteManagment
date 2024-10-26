@@ -1382,7 +1382,7 @@ body.dark-mode {
   /* White text for contrast */
 
   border: none;
-
+}
 
 @media (max-width: 767px) {
   .slider-control {
@@ -2594,6 +2594,16 @@ section {
   border: 2px solid #264143;
   border-radius: 20px;
   box-shadow: 3px 4px 0px 1px #E99F4C;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  width: 100%;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Add hover effect to the form for a subtle pop */
+.form_area:hover {
+  box-shadow: 5px 6px 6px 2px #E99F4C;
 }
 
 .title {
@@ -2623,12 +2633,52 @@ section {
   padding: 12px 10px;
   border-radius: 4px;
   font-size: 15px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .form_style:focus, .btn:focus {
   transform: translateY(4px);
   box-shadow: 1px 2px 0px 0px #E99F4C;
+  border-color: #E99F4C;
+  outline: none;
 }
+
+/* Button styling */
+.btn {
+  padding: 12px 20px;
+  background-color: #264143;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 3px 4px 0px 1px #E99F4C;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #E99F4C;
+  color: #264143;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .form_style {
+    width: 100%;
+  }
+
+  .form_area {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
+
 
 .btn {
   padding: 15px;
