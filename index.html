@@ -15,14 +15,98 @@
 
 </head>
 
+<style>
+    /* Preloader styling */
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 50;
+      background: linear-gradient(to right, #26a69a, #26a69a, #26a69a); /* Yellow gradient */
+    }
+    
+    /* Text animation */
+    .animate-stroke {
+      text-transform: uppercase;
+      animation: stroke 2.5s infinite alternate;
+      stroke-width: 2;
+      stroke: white;
+      font-size: 70px;
+      font-family: "Arial", sans-serif;
+    }
+    
+    /* Keyframes for the stroke animation */
+    @keyframes stroke {
+      0% {
+        fill: #fff;
+        stroke: #0b8276;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 1;
+      }
+    
+      70% {
+        fill: #fff;
+        stroke: #0b8276;
+      }
+    
+      80% {
+        fill: #fff;
+        stroke: #0b8276;
+        stroke-width: 1;
+      }
+    
+      100% {
+        fill: #fff;
+        stroke: #0b8276;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+        text-shadow: 0 0 10px #fff, 0 0 15px whitesmoke;
+      }
+    }
+    
+    /* Initially hide the main content */
+    .hidden {
+      display: none;
+    }
+    
+    /* When main content is shown */
+    .main-content {
+      display: block;
+      padding: 20px;
+      width: 100vw;
+      min-height: 100vh; /* Ensure it covers at least the full height */
+      padding: 0; /* Reset any padding */
+      margin: 0; /* Remove margin */
+    }
+</style>
 <body>
+    <div class="preloader">
+        <svg viewBox="0 0 1320 300">
+          <text
+            x="50%"
+            y="50%"
+            dy=".35em"
+            text-anchor="middle"
+            class="animate-stroke"
+            style="font-weight: bold;"
+          >
+            Waste Management
+          </text>
+        </svg>
+    </div>
 
     <!-- Progress Bar -->
-
-
     <div id="progress-container">
         <div id="progress-bar"></div>
     </div>
+    <div class="main-contetnt">
     <header>
 
 
@@ -51,6 +135,7 @@
             <button id="menu-toggle" aria-label="Toggle menu">☰</button>
         </div>
     </header>
+</div>
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
@@ -756,6 +841,15 @@
         };
     </script>
     <script src="https://www.chatbase.co/embed.min.js" chatbotId="wQJs3fix9gu515zxNshBF" domain="www.chatbase.co" defer>
+    </script>
+    <script>
+        window.addEventListener('load', function() {
+          // Show the preloader for 5 seconds
+          setTimeout(function() {
+            document.querySelector('.preloader').style.display = 'none'; // Hide preloader
+            document.querySelector('.main-content').classList.remove('hidden'); // Show main content
+          }, 5000); // 5 seconds delay
+        });
     </script>
 </body>
 
