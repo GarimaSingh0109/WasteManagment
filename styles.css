@@ -335,8 +335,11 @@ h2, h3, h4 {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
+  transition: transform 0.3s ease;
 }
-
+.feature-card:hover {
+  transform: scale(1.05);
+}
 blockquote {
   font-style: italic;
   color: #777;
@@ -427,6 +430,7 @@ blockquote {
   background-color: #1976d2;
 }
 
+
 /* About Us Section */
 .about-container {
   display: flex;
@@ -450,7 +454,9 @@ blockquote {
   flex: 1;
   padding: 15px;
 }
-
+.mission-container h3{
+  color: #333;
+}
 .mission-box {
   display: flex;
   flex-wrap: wrap;
@@ -464,8 +470,11 @@ blockquote {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease;
 }
-
+.mission-item:hover {
+  transform: scale(1.05);
+}
 .mission-item img {
   width: 50px;
   margin-bottom: 10px;
@@ -475,7 +484,9 @@ blockquote {
 .values-container {
   background-color: #f8f8f8;
 }
-
+.values-container h3{
+  color: #333;
+}
 .values-cards {
   display: flex;
   flex-wrap: wrap;
@@ -488,8 +499,11 @@ blockquote {
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
-
+.value-card:hover{
+  transform: scale(1.05);
+}
 .value-card h4 {
   margin-bottom: 10px;
 }

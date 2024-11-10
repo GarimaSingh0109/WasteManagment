@@ -572,5 +572,3 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.toggle('dark-mode');
     });
     
-    
- 
