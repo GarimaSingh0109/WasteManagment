@@ -71,11 +71,13 @@ nav .btn-nav {
 }
 
 .button {
-  background-color: #4caf50;
+  background-color: transparent;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .button a {
@@ -239,6 +241,7 @@ section {
   padding: 20px;
   margin: 20px 0;
   border-radius: 8px;
+  border: 2px solid gray;
 }
 
 h2, h3, h4 {
@@ -600,6 +603,7 @@ blockquote {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  border: 0;
 }
 
 .faqs h2 {
@@ -778,6 +782,8 @@ blockquote {
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
+  border: 2px solid gray;
+  margin-bottom: 5rem;
 }
 
 .form_area {
