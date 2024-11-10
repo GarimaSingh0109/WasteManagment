@@ -308,3 +308,231 @@ h2, h3, h4 {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px 10px;
 }
+
+/* Features Section */
+.features {
+  background-color: #f1f1f1;
+}
+.features h2{
+  text-align: center;
+  font-size: 2.3rem;
+}
+.features-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 1.5rem;
+}
+.feature-slider {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+}
+
+.feature-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #2196f3;
+}
+
+.cta-button, .hero-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #2196f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.cta-button:hover, .hero-btn:hover {
+  background-color: #1976d2;
+}
+
+.slider-btn {
+  background-color: #2196f3;
+  color: white;
+  font-size: 2em;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-btn.left {
+  left: 10px;
+}
+
+.slider-btn.right {
+  right: 10px;
+}
+
+/* FAQ Section */
+.faq-item {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Feedback Section */
+.feedback {
+  background-color: #fafafa;
+}
+
+#feedback-form input,
+#feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#feedback-form button {
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#feedback-form button:hover {
+  background-color: #1976d2;
+}
+
+/* About Us Section */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-text {
+  flex: 1;
+  padding: 15px;
+  font-size: 1.1em;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.mission-container {
+  flex: 1;
+  padding: 15px;
+}
+
+.mission-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.mission-item {
+  width: 23%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.mission-item img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+/* Values Section */
+.values-container {
+  background-color: #f8f8f8;
+}
+
+.values-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.value-card {
+  width: 23%;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.value-card h4 {
+  margin-bottom: 10px;
+}
+
+/* Sign Up Section */
+.signup .form_area {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.signup .form_group {
+  margin-bottom: 20px;
+}
+
+.form_style {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form_action button {
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form_action button:hover {
+  background-color: #1976d2;
+}
+
+.link {
+  color: #2196f3;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
