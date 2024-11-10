@@ -16,3 +16,16 @@ function showForm(formNumber) {
         }
     });
 }
+
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+const whitetext = document.querySelectorAll(".darkmodetext");
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    // Loop through each element with the .whitetext class and toggle .dark-mode3
+    whitetext.forEach(element => {
+        element.classList.toggle("dark-mode3");
+    });
+});
