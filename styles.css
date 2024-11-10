@@ -71,11 +71,13 @@ nav .btn-nav {
 }
 
 .button {
-  background-color: #4caf50;
+  background-color: transparent;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .button a {
@@ -142,10 +144,10 @@ nav .btn-nav {
 
 /* Upload Section */
 .upload {
-  background-color: #ffffff;
   padding: 2rem;
   margin: 2rem 0;
   text-align: center;
+  border: 2px solid gray;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -198,8 +200,8 @@ nav .btn-nav {
 .classification {
   padding: 2rem;
   text-align: center;
-  background-color: #f9f9f9;
   margin-top: 2rem;
+  border: 2px solid gray;
   border-top: 3px solid #4caf50;
 }
 
@@ -238,8 +240,8 @@ nav .btn-nav {
 section {
   padding: 20px;
   margin: 20px 0;
-  background-color: #f8f8f8;
   border-radius: 8px;
+  border: 2px solid gray;
 }
 
 h2, h3, h4 {
@@ -254,7 +256,7 @@ h2, h3, h4 {
 
 /* Disposal Information Section */
 .disposal {
-  background-color: #e3f2fd;
+  border: 2px solid gray;
   border-left: 5px solid #2196f3;
   padding-left: 20px;
 }
@@ -310,9 +312,6 @@ h2, h3, h4 {
 }
 
 /* Features Section */
-.features {
-  background-color: #f1f1f1;
-}
 .features h2{
   text-align: center;
   font-size: 2.3rem;
@@ -335,8 +334,11 @@ h2, h3, h4 {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
+  transition: transform 0.3s ease;
 }
-
+.feature-card:hover {
+  transform: scale(1.05);
+}
 blockquote {
   font-style: italic;
   color: #777;
@@ -401,9 +403,6 @@ blockquote {
 }
 
 /* Feedback Section */
-.feedback {
-  background-color: #fafafa;
-}
 
 #feedback-form input,
 #feedback-form textarea {
@@ -426,6 +425,7 @@ blockquote {
 #feedback-form button:hover {
   background-color: #1976d2;
 }
+
 
 /* About Us Section */
 .about-container {
@@ -450,7 +450,9 @@ blockquote {
   flex: 1;
   padding: 15px;
 }
-
+.mission-container h3{
+  color: #333;
+}
 .mission-box {
   display: flex;
   flex-wrap: wrap;
@@ -464,18 +466,20 @@ blockquote {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease;
 }
-
+.mission-item:hover {
+  transform: scale(1.05);
+}
 .mission-item img {
   width: 50px;
   margin-bottom: 10px;
 }
 
 /* Values Section */
-.values-container {
-  background-color: #f8f8f8;
+.values-container h3{
+  color: #333;
 }
-
 .values-cards {
   display: flex;
   flex-wrap: wrap;
@@ -488,8 +492,11 @@ blockquote {
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
-
+.value-card:hover{
+  transform: scale(1.05);
+}
 .value-card h4 {
   margin-bottom: 10px;
 }
@@ -589,7 +596,6 @@ blockquote {
 /* FAQ Section */
 .faqisection {
   padding: 50px 0;
-  background-color: #f9f9f9;
   color: #333;
 }
 
@@ -597,6 +603,7 @@ blockquote {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  border: 0;
 }
 
 .faqs h2 {
@@ -622,7 +629,7 @@ blockquote {
 /* Feedback Section */
 .feedback {
   padding: 50px 20px;
-  background-color: #eef4f7;
+  border: 2px solid gray;
   color: #333;
   text-align: center;
 }
@@ -666,7 +673,6 @@ blockquote {
   padding: 50px 20px;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f1f1;
 }
 
 .about-text {
@@ -695,11 +701,10 @@ blockquote {
 /* Mission Section */
 .mission-container {
   padding: 50px 20px;
-  background-color: #f9f9f9;
   text-align: center;
 }
 
-.mission-container h3 {
+.mission-container h2 {
   font-size: 32px;
   margin-bottom: 30px;
 }
@@ -738,10 +743,9 @@ blockquote {
 /* Values Section */
 .values-container {
   padding: 50px 20px;
-  background-color: #eef4f7;
 }
 
-.values-container h3 {
+.values-container h2 {
   font-size: 32px;
   text-align: center;
   margin-bottom: 30px;
@@ -778,7 +782,8 @@ blockquote {
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
-  background-color: #f9f9f9;
+  border: 2px solid gray;
+  margin-bottom: 5rem;
 }
 
 .form_area {
@@ -938,3 +943,13 @@ blockquote {
   margin: 0;
 }
 
+.dark-mode{
+  background-color: black;
+}
+.dark-mode2{
+  background-color: #2a2a2a;
+  color: white;
+}
+.dark-mode3{
+  color: #ffffff;
+}

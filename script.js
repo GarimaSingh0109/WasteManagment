@@ -565,12 +565,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', updateSlider);
     
     
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
-    
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-    });
     
     
- 
