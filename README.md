@@ -14,6 +14,7 @@ This platform is designed to empower users in managing waste efficiently and con
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Contributors](#contributors)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -74,6 +75,13 @@ This platform is designed to empower users in managing waste efficiently and con
 
 ---
 
+## Contributors
+A huge thanks to all our contributors 
+
+ <a href="https://github.com/GarimaSingh0109/WasteManagment/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GarimaSingh0109/WasteManagment" alt="Project contributors" />
+ </a>
+ 
 ## Contributing
 
 We welcome contributions to enhance the platform!
